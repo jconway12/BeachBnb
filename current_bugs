@@ -1,11 +1,9 @@
-BUGS:
-1. current user immedietly logs out in frontend (session reducer is being called?)
-2. routes are not working properly (only signup container renders)
-
 TODOS:
-1. modal
-2. logo/links
-3. css
+1. render errors
+2. fonts and colors!
+3. CSS PERCENT
+4. logo/ images
+
 
 
 

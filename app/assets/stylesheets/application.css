@@ -14,7 +14,12 @@
  *= require_self
  */
 
- form {
+ html body {
+     margin: 0; 
+     padding: 0;
+ }
+
+ /* form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -28,14 +33,25 @@
      padding-left: 50px;
  }
 
- .button {
-     color: lightblue;
+ .button input {
+     color: white;
+     background-color: blue;
  }
 
  form input {
      width: 400px;
      height: 50px;
      border-radius: 20px;
+     border: 2px solid lightgray;
+ }
+
+  form input:hover {
+     border: 2px solid pink;
+ }
+
+ form input:focus {
+     outline-width: 0;
+    border: 2px solid lightgray;
  }
 
  button {
@@ -45,17 +61,38 @@
  #signup-form {
     height: 500px;
     width: 500px;
-    border: 2px solid black;
+    border: 2px solid lightgray;
     background-color: white;
-    margin-left: 300px;
+    margin-left: 35%;
+    margin-top: 15%;
  }
 
  #login-form {
     height: 500px;
     width: 500px;
-    border: 2px solid black;
+    border: 2px solid lightgray;
     background-color: white;
-    margin-left: 300px;
+    margin-left: 35%;
+    margin-top: 15%;
+ }
+
+  #welcome-form {
+    height: 600px;
+    width: 500px;
+    border: 2px solid lightgray;
+    background-color: white;
+    margin-left: 20px;
+    margin-top: 20px;
+ }
+
+ #welcome-form .button input {
+     width: 100px;
+     margin-left: 300px;
+ }
+
+  #welcome-form p {
+     margin-left: 50px;
+     font-size: 30px;
  }
 
  #nav-bar-container {
@@ -66,13 +103,87 @@
  #nav-bar {
     display: flex;
     justify-content: flex-end;
+    position: relative;
  }
 
  #nav-bar a {
-     margin: 20px;
+     margin: 20px;    
+     color: white;
+    text-decoration: none;
+    padding-bottom: 10px;
  }
 
- #nav-bar a {
+ #nav-bar a:hover {
+    border-bottom: 2px solid white;
+ }
+
+ .login-signup input {
+    margin: 20px;    
     color: white;
     text-decoration: none;
+    padding-bottom: 10px;
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
  }
+
+  .login-signup input:hover {
+     border-bottom: 2px solid white;
+ }
+
+ #logo {
+     margin-right: 50%;
+     margin-top: 20px;
+ }
+
+ #nav-dropdown {
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     background-color: white;
+     border: 2px solid lightslategray;
+    height: 150px;
+    width: 300px;
+    position: absolute;
+    top: 60px;
+    right: 60px;
+ }
+
+ #nav-dropdown a input {   
+    color: gray;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+ }  
+
+  #nav-dropdown a {
+    color: gray;
+    margin: 20px;
+ }
+
+   #nav-dropdown a:hover {
+    border-bottom: 2px solid gray;
+ }
+
+  .modal-background {
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   background: rgba(0, 0, 0, 0.7);
+   z-index: 10;
+ }
+
+ .modal-child {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+ }
+
+ .close-x {
+   margin-left: 90%;
+   cursor: pointer;
+ } */

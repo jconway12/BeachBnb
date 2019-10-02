@@ -9,4 +9,5 @@ export default combineReducers({
   entities: EntitiesReducer,
   errors: ErrorsReducer,
   session: SessionReducer,
+  ui: UiReducer
 })

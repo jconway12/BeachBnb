@@ -16,7 +16,7 @@ class SessionForm extends React.Component {
 
   submit(e) {
     e.preventDefault();
-    this.props.action(this.state);
+    this.props.action(this.state).then(this.props.closeModal);
   }
 
   render() {
@@ -24,6 +24,7 @@ class SessionForm extends React.Component {
       return (
         <div id='signup-form'>
           <form onSubmit={this.submit}>
+            <div onClick={this.props.closeModal} className="close-x">X</div>
             <label>
               First name:
               <br/>
@@ -49,7 +50,7 @@ class SessionForm extends React.Component {
             </label>
 
             <label className='button'>
-            <input type='submit' value="Sign Up" />
+              <input type='submit' value="Sign Up" onClick={this.submit}/>
             </label>
           </form>
         </div>
@@ -58,10 +59,11 @@ class SessionForm extends React.Component {
       return (
         <div id='login-form'>
           <form onSubmit={this.submit}>
+            <div onClick={this.props.closeModal} className="close-x">X</div>
             <label>
               Email:
             <br />
-              <input type="text" value={this.state.email} onChange={this.update('first_name')}/>
+              <input type="text" value={this.state.email} onChange={this.update('email')}/>
             </label>
 
             <label>
@@ -71,7 +73,7 @@ class SessionForm extends React.Component {
             </label>
 
             <label className='button'>
-            <input type='submit' value="Log In"/>
+            <input type='submit' value="Log In" onClick={this.submit}/>
             </label>
           </form>
         </div>

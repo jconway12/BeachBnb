@@ -2,32 +2,63 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import { connect } from 'react-redux';
 import {logout} from '../../actions/session_actions';
+import NavBarDropdown from './nav_bar_dropdown';
+import { openModal } from '../../actions/modal_actions';
 
 
 class NavBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { dropDown: false }
+    this.dropDown = this.dropDown.bind(this);
+  }
+
+  dropDown() {
+    if (!this.state.dropDown) {
+    this.setState({dropDown: true});
+    } else {
+      this.setState({ dropDown: false });
+    }
+  }
+
   render() {
-    debugger
+    // debugger
     if (this.props.currentUser) {
+      let navDropDown = null;
+        if (this.state.dropDown) {
+          navDropDown = <NavBarDropdown logout={this.props.logout} user={this.props.currentUser}/>
+        }
       return (
         <div id='nav-bar'>
-          {/* <img src="" alt=""/>
+          <div id='logo'>
+            Logo
+          </div>
           <Link to="">Become a Host</Link>
           <Link to="">Saved</Link>
           <Link to="">Trips</Link>
           <Link to="">Messages</Link>
           <Link to="">Help</Link>
-          <Link to="/profile"></Link> */}
-          <h1>{this.props.currentUser.first_name}</h1>
-          <button onClick={this.props.logout}>Log Out</button>
+          <div id="prof-img" onClick={this.dropDown}>Profile IMG</div>
+          {navDropDown}
         </div>
       )
     } else {
       return (
         <div id='nav-bar'>
-          <Link to="">Become a Host</Link>
+          <div id='logo'>
+            Logo
+          </div>
+          <Link to="">Host a home</Link>
+          <Link to="">Host an experience</Link>
           <Link to="">Help</Link>
-          <Link to="/signup">Sign Up</Link>
-          <Link to="/login">Log In</Link>
+
+          {/* <Link to="/signup">Sign Up</Link>
+          <Link to="/login">Log In</Link> */}
+
+          <nav className="login-signup">
+            <input type="submit" value="Log In" onClick={() => this.props.openModal('login')} />
+            <input type="submit" value="Sign Up" onClick={() => this.props.openModal('signup')} />
+          </nav>
         </div>
       )
     }
@@ -35,7 +66,7 @@ class NavBar extends React.Component {
 }
 
 const msp = state => {
-  // debugger
+  // // debugger
   const currentUserId = state.session.id;
   const currentUser = state.entities.users[currentUserId];
   return {
@@ -45,12 +76,12 @@ const msp = state => {
 
 const mdp = dispatch => {
   return {
-    logout: () => dispatch(logout())
+    logout: () => dispatch(logout()),
+    openModal: modal => dispatch(openModal(modal))
   }
 }
 
 export default connect(msp, mdp)(NavBar);
 
 
-//INFO: (logo), become a host, saved, trips, messages, help, (userprofile) ----FIX LINKS!
 
