@@ -8,8 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
 
   let store;
-  // debugger
+  debugger
   if (window.currentUser) {
+    debugger
     const preloadedState = {
       entities: {
         users: { [window.currentUser.id]: window.currentUser }
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore(preloadedState);
     delete window.currentUser;
   } else {
+    debugger
     store = configureStore();
   }
 

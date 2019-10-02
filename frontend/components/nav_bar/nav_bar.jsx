@@ -5,12 +5,8 @@ import {logout} from '../../actions/session_actions';
 
 
 class NavBar extends React.Component {
-  componentDidMount() {
-    // debugger
-  }
-
   render() {
-    // debugger
+    debugger
     if (this.props.currentUser) {
       return (
         <div id='nav-bar'>
@@ -28,6 +24,8 @@ class NavBar extends React.Component {
     } else {
       return (
         <div id='nav-bar'>
+          <Link to="">Become a Host</Link>
+          <Link to="">Help</Link>
           <Link to="/signup">Sign Up</Link>
           <Link to="/login">Log In</Link>
         </div>

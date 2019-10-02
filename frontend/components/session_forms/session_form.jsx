@@ -16,7 +16,7 @@ class SessionForm extends React.Component {
 
   submit(e) {
     e.preventDefault();
-    this.props.action(this.state).then(() => this.props.history.push("/"));
+    this.props.action(this.state);
   }
 
   render() {
@@ -49,7 +49,7 @@ class SessionForm extends React.Component {
             </label>
 
             <label className='button'>
-            <input type='submit' onClick={this.submit} value="Sign Up" />
+            <input type='submit' value="Sign Up" />
             </label>
           </form>
         </div>
@@ -71,7 +71,7 @@ class SessionForm extends React.Component {
             </label>
 
             <label className='button'>
-            <input type='submit' onClick={this.submit} value="Log In"/>
+            <input type='submit' value="Log In"/>
             </label>
           </form>
         </div>

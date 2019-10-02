@@ -60,7 +60,7 @@
 
  #nav-bar-container {
     background-color: lightblue;
-    height: 200px;
+    height: 80px;
  }
 
  #nav-bar {
@@ -70,4 +70,9 @@
 
  #nav-bar a {
      margin: 20px;
+ }
+
+ #nav-bar a {
+    color: white;
+    text-decoration: none;
  }

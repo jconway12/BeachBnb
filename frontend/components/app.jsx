@@ -6,20 +6,19 @@ import LoginContainer from './session_forms/login_container';
 import HomepageComponent from './homepage/homepage';
 import {AuthRoute, ProtectedRoute} from '../util/route_util';
 
-const App = props => (
+const App = props => {
+  return (
   <div>
 
     <header id='nav-bar-container'>
       <NavBarContainer />
     </header>
-    
-      <Switch>
-        <AuthRoute to="/signup" exact component={SignupContainer}/>
-        <AuthRoute to="/login" exact component={LoginContainer}/>
-        <Route to="/" component={HomepageComponent}/>
-      </Switch>
+        <AuthRoute path="/login" exact component={LoginContainer} />
+        <AuthRoute path="/signup" exact component={SignupContainer}/>
+        <Route exact path="/" component={HomepageComponent}/>
  </div>
-)
+  )
+}
 
 
 
