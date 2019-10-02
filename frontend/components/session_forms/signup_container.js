@@ -4,10 +4,10 @@ import { signup } from '../../actions/session_actions';
 import { openModal, closeModal } from "../../actions/modal_actions";
 
 const msp = state => {
-  //ADD ERRORS
+  const errors = state.errors.sessionErrors;
   const user = { first_name: "", last_name: "", email: "", password: "" };
   const formType = 'Sign Up';
-  return { user, formType };
+  return { user, formType, errors };
 };
 
 const mdp = dispatch => {

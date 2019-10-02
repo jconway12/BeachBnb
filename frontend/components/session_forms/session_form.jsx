@@ -6,6 +6,7 @@ class SessionForm extends React.Component {
     this.state = this.props.user;
     this.update = this.update.bind(this);
     this.submit = this.submit.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
   }
 
   update(type) {
@@ -19,10 +20,21 @@ class SessionForm extends React.Component {
     this.props.action(this.state).then(this.props.closeModal);
   }
 
+  renderErrors() {
+    return (
+      <ul className='errors'>
+      {this.props.errors.map(error => {
+       return <li>{error}</li>
+      })}
+      </ul>
+    )
+  }
+
   render() {
     if (this.props.formType === 'Sign Up') {
       return (
         <div id='signup-form'>
+          {/* {this.renderErrors()} */}
           <form onSubmit={this.submit}>
             <div onClick={this.props.closeModal} className="close-x">X</div>
             <label>
@@ -56,8 +68,10 @@ class SessionForm extends React.Component {
         </div>
       )
     } else {
+      let uselessVar = 0;
       return (
         <div id='login-form'>
+          {/* {this.renderErrors()} */}
           <form onSubmit={this.submit}>
             <div onClick={this.props.closeModal} className="close-x">X</div>
             <label>
