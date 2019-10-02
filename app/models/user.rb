@@ -2,7 +2,7 @@ class User < ApplicationRecord
   validates :session_token, :email, :password_digest, presence: true
   validates :session_token, :email, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
-  # validates :email, :is_email
+  validates_format_of :email, :with => /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
 
   attr_reader :password 
   after_initialize :ensure_session_token
@@ -38,10 +38,4 @@ class User < ApplicationRecord
     SecureRandom::urlsafe_base64
   end
 
-  private 
-  def is_email(email)
-    return false unless email.include?('@')
-    return false unless email[-4] == '.'
-    true
-  end
 end

@@ -1,10 +1,8 @@
 TODOS:
-1. render errors
+1. input types/ styling for forms  (make more airbnby)
+1. logo/ images (more!)
 2. fonts and colors!
-3. CSS PERCENT
-4. logo/ images
-
-
-
+3. input text size
+4. color of logo??
 
 npm install webpack webpack-cli react react-dom react-redux redux redux-logger @babel/core @babel/preset-react @babel/preset-env babel-loader

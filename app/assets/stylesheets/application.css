@@ -17,7 +17,24 @@
  html body {
      margin: 0; 
      padding: 0;
+     font-family: 'Lato', sans-serif;
+    -webkit-font-smoothing: antialiased;
  }
+
+ body, input, a, div, label {
+     font-family: 'Lato', sans-serif;
+ }
+
+ #nav-homepage {
+    background-image: url("main.jpg");
+    height: 1000px;
+    width: 100%;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
+
+
 
  /* form {
     display: flex;

@@ -1,0 +1,5 @@
+.errors li {
+  list-style: none;
+  color: red;
+  margin-bottom: -5px;
+}

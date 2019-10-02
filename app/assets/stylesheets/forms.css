@@ -3,13 +3,15 @@ form {
     flex-direction: column;
     justify-content: space-around;
     align-content: center;
-    height: 500px;
-    width: 500px;
+    height: 70%;
+    width: 70%;
+    margin-left: 8px;
+    margin-top: 5px;
     background-color: white;
  }
 
  form label {
-     padding-left: 50px;
+     padding-left: 10px;
  }
 
  .button input {
@@ -17,16 +19,23 @@ form {
      background-color: blue;
  }
 
- form input {
-     width: 400px;
-     height: 50px;
-     border-radius: 20px;
-     border: 2px solid lightgray;
+  .button input:hover {
+     cursor: pointer;
  }
 
-  form input:hover {
-     border: 2px solid pink;
+ form input {
+     width: 460px;
+     height: 40px;
+     border-radius: 10px;
+     border: 2px solid rgb(233, 224, 224);
+     font-size: 15px;
+     font-family: 'Lato', sans-serif; 
+     color: 
  }
+
+  /* form input:hover {
+     border: 2px solid pink;
+ } */
 
  form input:focus {
      outline-width: 0;
@@ -40,36 +49,105 @@ form {
  #signup-form {
     height: 500px;
     width: 500px;
-    border: 2px solid lightgray;
+    /* border: 2px solid lightgray; */
     background-color: white;
-    margin-left: 35%;
-    margin-top: 15%;
+    margin-left: 5%;
+    margin-top: 10%;
  }
 
  #login-form {
-    height: 500px;
+    height: 300px;
     width: 500px;
-    border: 2px solid lightgray;
+    /* border: 2px solid lightgray; */
     background-color: white;
-    margin-left: 35%;
-    margin-top: 15%;
+    margin-left: 5%;
+    margin-top: 10%;
+ }
+
+ #login-form form {
+     height: 60%;
  }
 
   #welcome-form {
-    height: 600px;
+    height: 500px;
     width: 500px;
-    border: 2px solid lightgray;
+    /* border: 2px solid lightgray; */
     background-color: white;
-    margin-left: 20px;
-    margin-top: 20px;
+    margin-left: 150px;
+    margin-top: 60px;
+    border-radius: 4px;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.12) !important;
  }
+
+   #welcome-form form { 
+       width: 90%;
+       height: 60%;  
+    }
 
  #welcome-form .button input {
      width: 100px;
-     margin-left: 300px;
+     margin-left: 350px;
  }
 
   #welcome-form p {
+    padding-top: 20px;
      margin-left: 50px;
      font-size: 30px;
+     font-weight: bold;
+     color: rgb(55, 62, 70);
+ }
+
+ #signup-form p {
+     margin-left: 10%;
+ }
+
+  #login-form p {
+     margin-left: 10%;
+ }
+
+ div p input {
+     border: none;
+     font-family: 'Lato', sans-serif;
+     color: lightcoral;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    text-decoration: underline;
+ }
+
+  div p input:focus {
+    outline-width: 0;
+ }
+
+div p input:hover {
+    cursor: pointer;
+ }
+
+#date-select {
+    display: flex;
+    /* justify-content: center; */
+}
+
+ #date-select input {
+     width: 222px;
+ }
+
+ /* #date-select #check-in {
+    margin-right: 0;
+ }
+
+  #date-select #check-in {
+    margin-left: 0;
+ } */
+
+ select {
+     width: 460px;
+     height: 40px;
+     border-radius: 10px;
+     border: 2px solid rgb(233, 224, 224);
+     font-size: 15px;
+     font-family: 'Lato', sans-serif;  
+ }
+
+ select:focus {
+    outline-width: 0;
  }

@@ -7,27 +7,41 @@ class HomepageComponent extends React.Component {
                 <p>Book a place to stay</p>
                 <form onSubmit={this.submit}>
                     <label>
-                        Where:
+                        WHERE
                     <br />
-                        <input type="text" />
+                        <input type="text" placeholder="Anywhere"/>
                     </label>
 
-                    <label>
-                        Check In:
+                    <div id="date-select">
+                    <label id="check-in">
+                        CHECK IN
                     <br />
-                        <input type="text" />
+                        <input type="date"/>
                     </label>
 
-                    <label>
-                        Check Out:
+                   <label id="check-in">
+                        CHECK OUT
                     <br />
-                        <input type="text" />
+                        <input type="date"/>
                     </label>
+                    </div>
 
                     <label>
-                        Guests:
+                        GUESTS
                     <br />
-                        <input type="text"/>
+                        <select defaultValue="1 guest">
+                            <option value="1 guest">1 guest</option>
+                            <option value="2 guests">2 guests</option>
+                            <option value="3 guests">3 guests</option>
+                            <option value="4 guests">4 guests</option>
+                            <option value="5 guests">5 guests</option>
+                            <option value="6 guests">6 guests</option>
+                            <option value="7 guests">7 guests</option>
+                            <option value="8 guests">8 guests</option>
+                            <option value="9 guests">9 guests</option>
+                            <option value="10 guests">10 guests</option>
+                            <option value="11 guests">10+ guests</option>
+                        </select>
                     </label>
 
                     <label className='button'>

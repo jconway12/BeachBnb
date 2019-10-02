@@ -10,7 +10,8 @@ import Modal from './modal/modal';
 
 const App = props => {
   return (
-  <div>
+    <>
+  <div id="nav-homepage">
       <Modal />
     <header id='nav-bar-container'>
       <NavBarContainer />
@@ -18,7 +19,9 @@ const App = props => {
         {/* <AuthRoute path="/login" exact component={LoginContainer} />
         <AuthRoute path="/signup" exact component={SignupContainer}/> */}
         <Route exact path="/" component={HomepageComponent}/>
- </div>
+  </div>
+  <div id="search-options"></div>
+  </>
   )
 }
 

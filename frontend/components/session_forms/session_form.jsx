@@ -8,6 +8,10 @@ class SessionForm extends React.Component {
     this.submit = this.submit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
   }
+  
+  componentDidMount() {
+    this.props.resetErrors();
+  }
 
   update(type) {
     return e => {
@@ -34,62 +38,57 @@ class SessionForm extends React.Component {
     if (this.props.formType === 'Sign Up') {
       return (
         <div id='signup-form'>
-          {/* {this.renderErrors()} */}
+          <div onClick={this.props.closeModal} className="close-x">X</div>
           <form onSubmit={this.submit}>
-            <div onClick={this.props.closeModal} className="close-x">X</div>
             <label>
-              First name:
               <br/>
-              <input type="text" value={this.state.first_name} onChange={this.update('first_name')}/>
+              <input type="text" value={this.state.first_name} placeholder="First name" onChange={this.update('first_name')}/>
             </label>
 
             <label>
-              Last name:
              <br />
-              <input type="text" value={this.state.last_name} onChange={this.update('last_name')} />
+              <input type="text" value={this.state.last_name} placeholder="Last name" onChange={this.update('last_name')} />
             </label>
 
             <label>
-              Email:
               <br />
-              <input type="text" value={this.state.email} onChange={this.update('email')} />
+              <input type="text" value={this.state.email} placeholder="Email" onChange={this.update('email')} />
             </label>
 
             <label>
-              Password:
                <br />
-              <input type="password" value={this.state.password} onChange={this.update('password')} />
+              <input type="password" value={this.state.password} placeholder="Password" onChange={this.update('password')} />
             </label>
 
             <label className='button'>
               <input type='submit' value="Sign Up" onClick={this.submit}/>
             </label>
           </form>
+          {this.renderErrors()}
+          <p>Already have a Wherebnb account? <input type='submit' value="Log In" onClick={() => this.props.openModal('login')} /></p>
         </div>
       )
     } else {
-      let uselessVar = 0;
       return (
         <div id='login-form'>
-          {/* {this.renderErrors()} */}
+          <div onClick={this.props.closeModal} className="close-x">X</div>
           <form onSubmit={this.submit}>
-            <div onClick={this.props.closeModal} className="close-x">X</div>
             <label>
-              Email:
             <br />
-              <input type="text" value={this.state.email} onChange={this.update('email')}/>
+              <input type="text" value={this.state.email} placeholder="Email" onChange={this.update('email')}/>
             </label>
 
             <label>
-              Password:
             <br />
-              <input type="password" value={this.state.password} onChange={this.update('password')} />
+              <input type="password" value={this.state.password} placeholder="Password" onChange={this.update('password')} />
             </label>
 
             <label className='button'>
             <input type='submit' value="Log In" onClick={this.submit}/>
             </label>
           </form>
+          {this.renderErrors()}
+          <p>Don't have an account? <input type='submit' value="Sign Up" onClick={() => this.props.openModal('signup')} /></p>
         </div>
       )
     }

@@ -31,14 +31,14 @@ class NavBar extends React.Component {
       return (
         <div id='nav-bar'>
           <div id='logo'>
-            Logo
+            <img src={window.logoURL} />
           </div>
-          <Link to="">Become a Host</Link>
-          <Link to="">Saved</Link>
-          <Link to="">Trips</Link>
-          <Link to="">Messages</Link>
-          <Link to="">Help</Link>
-          <div id="prof-img" onClick={this.dropDown}>Profile IMG</div>
+          <Link className="nav-item" to="">Become a Host</Link>
+          <Link className="nav-item" to="">Saved</Link>
+          <Link className="nav-item" to="">Trips</Link>
+          <Link className="nav-item" to="">Messages</Link>
+          <Link className="nav-item" to="">Help</Link>
+          <div className="nav-item" id="prof-img" onClick={this.dropDown}>{this.props.currentUser.first_name}</div>
           {navDropDown}
         </div>
       )
@@ -46,18 +46,18 @@ class NavBar extends React.Component {
       return (
         <div id='nav-bar'>
           <div id='logo'>
-            Logo
-          </div>
-          <Link to="">Host a home</Link>
-          <Link to="">Host an experience</Link>
-          <Link to="">Help</Link>
+            <img src="../../../app/assets/images/main.jpg" alt="" />
+        </div>
+          <Link className="nav-item" to="">Host a home</Link>
+          <Link className="nav-item" to="">Host an experience</Link>
+          <Link className="nav-item" to="">Help</Link>
 
           {/* <Link to="/signup">Sign Up</Link>
           <Link to="/login">Log In</Link> */}
 
           <nav className="login-signup">
-            <input type="submit" value="Log In" onClick={() => this.props.openModal('login')} />
-            <input type="submit" value="Sign Up" onClick={() => this.props.openModal('signup')} />
+            <input className="nav-item" type="submit" value="Log In" onClick={() => this.props.openModal('login')} />
+            <input className="nav-item" type="submit" value="Sign Up" onClick={() => this.props.openModal('signup')} />
           </nav>
         </div>
       )

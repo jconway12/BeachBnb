@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import SessionForm from './session_form';
-import {login} from '../../actions/session_actions';
+import {login, resetErrors} from '../../actions/session_actions';
 import { openModal, closeModal } from "../../actions/modal_actions";
 
 const msp = state => {
@@ -13,7 +13,9 @@ const msp = state => {
 const mdp = dispatch => {
   return {
     action: user => dispatch(login(user)),
-    closeModal: () => dispatch(closeModal())
+    closeModal: () => dispatch(closeModal()),
+    resetErrors: () => dispatch(resetErrors()),
+    openModal: modal => dispatch(openModal(modal))
   };
 }
 
