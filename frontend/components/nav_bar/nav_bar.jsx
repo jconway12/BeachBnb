@@ -40,11 +40,11 @@ class NavBar extends React.Component {
           <div id='logo' onClick={this.backToHome}>
             <img src={window.logoURL} />
           </div>
-          <Link className="nav-item" to="">Become a Host</Link>
+          {/* <Link className="nav-item" to="">Become a Host</Link>
           <Link className="nav-item" to="">Saved</Link>
           <Link className="nav-item" to="">Trips</Link>
           <Link className="nav-item" to="">Messages</Link>
-          <Link className="nav-item" to="">Help</Link>
+          <Link className="nav-item" to="">Help</Link> */}
           <div className="nav-item" id="prof-img" onClick={this.dropDown}>{this.props.currentUser.first_name}</div>
           {navDropDown}
         </div>
@@ -55,16 +55,16 @@ class NavBar extends React.Component {
           <div id='logo'>
             <img src={window.logoURL} />
         </div>
-          <Link className="nav-item" to="">Host a home</Link>
+          {/* <Link className="nav-item" to="">Host a home</Link>
           <Link className="nav-item" to="">Host an experience</Link>
-          <Link className="nav-item" to="">Help</Link>
+          <Link className="nav-item" to="">Help</Link> */}
 
           {/* <Link to="/signup">Sign Up</Link>
           <Link to="/login">Log In</Link> */}
 
           <nav className="login-signup">
-            <input className="nav-item" type="submit" value="Log In" onClick={() => this.props.openModal('login')} />
             <input className="nav-item" type="submit" value="Sign Up" onClick={() => this.props.openModal('signup')} />
+            <input className="nav-item" type="submit" value="Log In" onClick={() => this.props.openModal('login')} />
           </nav>
         </div>
       )

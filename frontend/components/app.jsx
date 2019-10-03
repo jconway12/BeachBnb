@@ -21,7 +21,7 @@ const App = props => {
   <div>
     <Modal />
     <div id="white-nav">
-      <ProtectedRoute path="/listings" component={NavBarContainer} />
+      <Route path="/listings" component={NavBarContainer} />
     </div>
       <Route exact path="/" component={Home} />
   </div>

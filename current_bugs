@@ -1,16 +1,23 @@
 TODOS:
-4. AWS/ get images
+4. dropdown counter 
+5. react date menu
+4. AWS/ get images 
 5. fix nav underlining hover
+6. add toggle class to error inputs
 
-BNB - mvp:
-- show page - on click from index (basic google map)
-- host profile - link to bnb show page & new bnb form 
-- seed some data w/ photos
 Location - mvp: 
+- location backend/ frontend setup
 - category page 
 - add id to url path for listings index
 - search bar w/ date and guest buttons
 Google maps:
+- add map to listings showpage
 - will need to update listing for location filters
+
+
+Tomorrow:
+- 2 react components calander/ guests
+- get to work on location/ gg maps
+- AWS!
 
 npm install webpack webpack-cli react react-dom react-redux redux redux-logger @babel/core @babel/preset-react @babel/preset-env babel-loader

@@ -11,17 +11,19 @@ class ListingShow extends React.Component {
   render() {
     const listing = this.props.listing || {};
     return (
-      <div class="show-container">
+      <div className="show-container">
       <div className="image-container">
 
       </div>
       <div className="description">
-        <h1>{listing.title}</h1>
-        <p>{listing.description}</p>
+        <div>
+          <h1>{listing.title}</h1>
+          <p>{listing.description}</p>
+        </div>
       </div>
       <div className="reserve-form">
         <div >
-          ${listing.rate} per night
+            ${listing.rate} <p>per night</p>
         </div>
       </div>
       <div className="map-container">
