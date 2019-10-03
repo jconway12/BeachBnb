@@ -4,7 +4,7 @@ class HomepageComponent extends React.Component {
     render() {
         return (
             <div id='welcome-form'>
-                <p>Book a place to stay</p>
+                <p>Book unique places to stay and things to do.</p>
                 <form onSubmit={this.submit}>
                     <label>
                         WHERE

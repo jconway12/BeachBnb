@@ -1,17 +1,21 @@
 TODOS:
-1. fix CSS image/ logo deployment
-2. AWS
-3. Demo login
-2. fonts and colors!
-4. color of logo??
+0. finish index styling
+1. change to SASS and upload image
+2. bnb add location_id and num_beds
+3. fix routing/ navigation so that background image/ nav bar dont appear everywhere and only can access certain routes
+4. AWS/ get images
+5. demo login
 
 BNB - mvp:
-- bnb backend model (host/ bnb association), controller, routes, json views
-- ajax, actions, reducers
 - index page - below homepage (basic google map)
-- show page - on click from index
+- show page - on click from index (basic google map)
 - host profile - link to bnb show page & new bnb form 
 - seed some data w/ photos
--update schema to remove locations/location id?
+Location - mvp: 
+- category page 
+- add id to url path for listings index
+- search bar w/ date and guest buttons
+Google maps:
+- will need to update listing for location filters
 
 npm install webpack webpack-cli react react-dom react-redux redux redux-logger @babel/core @babel/preset-react @babel/preset-env babel-loader

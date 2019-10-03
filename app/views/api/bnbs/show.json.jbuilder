@@ -1,1 +1,0 @@
-json.partial! "api/bnbs/bnb", bnb: @bnb

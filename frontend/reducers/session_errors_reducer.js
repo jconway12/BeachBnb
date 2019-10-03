@@ -15,5 +15,3 @@ const SessionErrorsReducer = (state = [], action) => {
 };
 
 export default SessionErrorsReducer;
-
-// LOOK AT BENCHBNB SOLUTION TO HOW YOU GOT THE RIGHT TEXT

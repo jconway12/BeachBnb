@@ -24,10 +24,10 @@ form {
  }
 
  form input {
-     width: 460px;
+     width: 420px;
      height: 40px;
      border-radius: 10px;
-     border: 2px solid rgb(244, 244, 244);
+     border: 2px solid rgb(235, 232, 232);
      font-size: 15px;
      font-family: 'Lato', sans-serif; 
      color: rgb(115, 131, 147);
@@ -55,6 +55,10 @@ form {
     margin-top: 10%;
  }
 
+  #signup-form form {
+     margin-left: 25px;
+ }
+
  #login-form {
     height: 300px;
     width: 500px;
@@ -66,14 +70,15 @@ form {
 
  #login-form form {
      height: 60%;
+     margin-left: 25px;
  }
 
   #welcome-form {
     height: 500px;
-    width: 500px;
+    width: 490px;
     /* border: 2px solid lightgray; */
     background-color: white;
-    margin-left: 150px;
+    margin-left: 120px;
     margin-top: 60px;
     border-radius: 4px;
     box-shadow: 0 16px 40px rgba(0,0,0,0.12) !important;
@@ -82,16 +87,17 @@ form {
    #welcome-form form { 
        width: 90%;
        height: 60%;  
+       margin-left: 22px;
     }
 
  #welcome-form .button input {
      width: 100px;
-     margin-left: 350px;
+     margin-left: 322px;
  }
 
   #welcome-form p {
     padding-top: 20px;
-     margin-left: 50px;
+     margin-left: 40px;
      font-size: 30px;
      font-weight: bold;
      color: rgb(55, 62, 70);
@@ -128,7 +134,7 @@ div p input:hover {
 }
 
  #date-select input {
-     width: 222px;
+     width: 202px;
  }
 
  /* #date-select #check-in {
@@ -140,10 +146,10 @@ div p input:hover {
  } */
 
  select {
-     width: 460px;
+     width: 420px;
      height: 40px;
      border-radius: 10px;
-     border: 2px solid rgb(244, 244, 244);
+     border: 2px solid rgb(235, 232, 232);
      font-size: 15px;
      font-family: 'Lato', sans-serif; 
      color: rgb(115, 131, 147);

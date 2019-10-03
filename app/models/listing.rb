@@ -1,4 +1,4 @@
-class Bnb < ApplicationRecord 
+class Listing < ApplicationRecord 
     validates :title, :description, :rate, :lat, :lng, presence: true
 
     belongs_to :owner, 

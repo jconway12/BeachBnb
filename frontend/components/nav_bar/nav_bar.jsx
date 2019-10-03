@@ -11,6 +11,7 @@ class NavBar extends React.Component {
     super(props);
     this.state = { dropDown: false }
     this.dropDown = this.dropDown.bind(this);
+    this.backToHome = this.backToHome.bind(this);
   }
 
   dropDown() {
@@ -18,6 +19,12 @@ class NavBar extends React.Component {
     this.setState({dropDown: true});
     } else {
       this.setState({ dropDown: false });
+    }
+  }
+
+  backToHome() {
+    if(this.props.history) {
+      this.props.history.push("/");
     }
   }
 
@@ -30,7 +37,7 @@ class NavBar extends React.Component {
         }
       return (
         <div id='nav-bar'>
-          <div id='logo'>
+          <div id='logo' onClick={this.backToHome}>
             <img src={window.logoURL} />
           </div>
           <Link className="nav-item" to="">Become a Host</Link>
