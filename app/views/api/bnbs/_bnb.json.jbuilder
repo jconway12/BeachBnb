@@ -1,0 +1,1 @@
+json.extract! bnb, :id, :owner_id, :title, :descrition, :rate, :lat, :lng

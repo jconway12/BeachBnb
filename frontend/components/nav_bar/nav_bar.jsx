@@ -46,7 +46,7 @@ class NavBar extends React.Component {
       return (
         <div id='nav-bar'>
           <div id='logo'>
-            <img src="../../../app/assets/images/main.jpg" alt="" />
+            <img src={window.logoURL} />
         </div>
           <Link className="nav-item" to="">Host a home</Link>
           <Link className="nav-item" to="">Host an experience</Link>

@@ -8,6 +8,9 @@ class User < ApplicationRecord
   after_initialize :ensure_session_token
 
   #associations
+  has_many :listings,
+  foreign_key: :owner_id,
+  class_name: :Bnb
 
   #auth methods
   def password=(password)

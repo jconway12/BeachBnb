@@ -1,9 +1,17 @@
 TODOS:
-1. fix CSS image deployment
-1. input types/ styling for forms  (make more airbnby)
-1. logo/ images (more!)
+1. fix CSS image/ logo deployment
+2. AWS
+3. Demo login
 2. fonts and colors!
-3. input text size
 4. color of logo??
+
+BNB - mvp:
+- bnb backend model (host/ bnb association), controller, routes, json views
+- ajax, actions, reducers
+- index page - below homepage (basic google map)
+- show page - on click from index
+- host profile - link to bnb show page & new bnb form 
+- seed some data w/ photos
+-update schema to remove locations/location id?
 
 npm install webpack webpack-cli react react-dom react-redux redux redux-logger @babel/core @babel/preset-react @babel/preset-env babel-loader

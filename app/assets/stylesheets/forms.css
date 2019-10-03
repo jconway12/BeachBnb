@@ -27,9 +27,10 @@ form {
      width: 460px;
      height: 40px;
      border-radius: 10px;
-     border: 2px solid rgb(233, 224, 224);
+     border: 2px solid rgb(244, 244, 244);
      font-size: 15px;
      font-family: 'Lato', sans-serif; 
+     color: rgb(115, 131, 147);
  }
 
   /* form input:hover {
@@ -107,7 +108,7 @@ form {
  div p input {
      border: none;
      font-family: 'Lato', sans-serif;
-     color: lightcoral;
+     color: rgb(153, 178, 221);
     font-family: 'Lato', sans-serif;
     font-size: 20px;
     text-decoration: underline;
@@ -142,9 +143,10 @@ div p input:hover {
      width: 460px;
      height: 40px;
      border-radius: 10px;
-     border: 2px solid rgb(233, 224, 224);
+     border: 2px solid rgb(244, 244, 244);
      font-size: 15px;
-     font-family: 'Lato', sans-serif;  
+     font-family: 'Lato', sans-serif; 
+     color: rgb(115, 131, 147);
  }
 
  select:focus {
