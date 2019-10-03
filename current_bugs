@@ -1,6 +1,4 @@
 TODOS:
-0. finish index styling
-1. change to SASS and upload image
 2. bnb add location_id and num_beds
 3. fix routing/ navigation so that background image/ nav bar dont appear everywhere and only can access certain routes
 4. AWS/ get images
