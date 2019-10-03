@@ -7,7 +7,8 @@ const msp = state => {
   const errors = state.errors.sessionErrors;
   const user = { email: "", password: "" };
   const formType = 'Log In';
-  return { user, formType, errors };
+  const demoUser = {email: 'demo@bnb.com', password: 'password'};
+  return { user, formType, errors, demoUser };
 }
 
 const mdp = dispatch => {

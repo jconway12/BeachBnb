@@ -9,6 +9,7 @@
 User.destroy_all
 Listing.destroy_all
 
+demoUser = User.create!(first_name: 'Demo User', last_name: 'Demo User', email: 'demo@bnb.com', password: 'password')
 user1 = User.create!(first_name: 'Jesse', last_name: 'Conway', email: 'j@gmail.com', password: "password")
 user2 = User.create!(first_name: 'user2', last_name: 'user2', email: 'user2@gmail.com', password: "password")
 user2 = User.create!(first_name: 'user3', last_name: 'user3', email: 'user3@gmail.com', password: "password")

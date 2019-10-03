@@ -1,11 +1,8 @@
 TODOS:
-2. bnb add location_id and num_beds
-3. fix routing/ navigation so that background image/ nav bar dont appear everywhere and only can access certain routes
 4. AWS/ get images
-5. demo login
+5. fix nav underlining hover
 
 BNB - mvp:
-- index page - below homepage (basic google map)
 - show page - on click from index (basic google map)
 - host profile - link to bnb show page & new bnb form 
 - seed some data w/ photos

@@ -40,6 +40,10 @@
      border-bottom: 2px solid white;
  }
 
+.login-signup input:focus {
+    outline-width: 0;
+ }
+
  #logo img {
      position: absolute;
      top: 20px;
@@ -141,3 +145,15 @@
     color: rgb(55, 62, 70);
     font-weight: bold;
  }
+
+//   #white-nav a:hover {
+//     border-bottom: 2px solid rgb(55, 62, 70);
+//  }
+
+//   #white-nav input:hover {
+//     border-bottom: 2px solid rgb(55, 62, 70);
+//  }
+
+//    #white-nav div:hover {
+//    border-bottom: 2px solid rgb(55, 62, 70);   
+//  }

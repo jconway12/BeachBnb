@@ -7,6 +7,7 @@ class SessionForm extends React.Component {
     this.update = this.update.bind(this);
     this.submit = this.submit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
   }
   
   componentDidMount() {
@@ -22,6 +23,10 @@ class SessionForm extends React.Component {
   submit(e) {
     e.preventDefault();
     this.props.action(this.state).then(this.props.closeModal);
+  }
+
+  demoLogin() {
+    this.props.action(this.props.demoUser).then(this.props.closeModal);
   }
 
   renderErrors() {
@@ -89,6 +94,7 @@ class SessionForm extends React.Component {
           </form>
           {this.renderErrors()}
           <p>Don't have an account? <input type='submit' value="Sign Up" onClick={() => this.props.openModal('signup')} /></p>
+          <p>or <input type='submit' value="Demo Login" onClick={this.demoLogin} /></p>
         </div>
       )
     }

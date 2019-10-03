@@ -8,7 +8,7 @@ class NavBarDropdown extends React.Component {
   }
 
   logoutHelper() {
-    this.props.logout().then(() => this.props.history.push("/"));
+    this.props.logout();
   }
 
   render() {
