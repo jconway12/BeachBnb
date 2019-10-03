@@ -10,7 +10,7 @@ class User < ApplicationRecord
   #associations
   has_many :listings,
   foreign_key: :owner_id,
-  class_name: :Bnb
+  class_name: :Listing
 
   #auth methods
   def password=(password)
