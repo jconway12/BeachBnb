@@ -12,6 +12,7 @@
   width: 17%;
   height: 60%; 
   position: relative;
+  border-radius: 10px;
   // border: 2px solid black;
 }
 
@@ -22,14 +23,22 @@
   border-radius: 5px;
   display: flex;
   justify-content: center;
+    overflow: hidden;
+}
+
+.city-image img {
+  width: 100%;
+  height: auto;
 }
 
 .city-info {
-  font-size: 20px;
+  font-size: 30px;
   font-family: 'Lato', sans-serif; 
   color: white;
   font-weight: bold;
-  padding-top: 90%;
+  padding-top: 222px;
+  position: absolute;
+  z-index: 2;
 }
 
 #decrementer {

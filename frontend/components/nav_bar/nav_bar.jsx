@@ -52,7 +52,7 @@ class NavBar extends React.Component {
     } else {
       return (
         <div id='nav-bar'>
-          <div id='logo'>
+          <div id='logo' onClick={this.backToHome}>
             <img src={window.logoURL} />
         </div>
           {/* <Link className="nav-item" to="">Host a home</Link>

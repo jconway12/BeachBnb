@@ -5,17 +5,19 @@ import {fetchListings, getCitiesFromListings } from '../../actions/listing_actio
 class CitiesIndex extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { cities: [], lowerIdx: 0, uppderIdx: 5 }
+    this.state = { cities: ["Boston", "London", "Sydney", "New York", "Tokyo", "Buenos Aires"], lowerIdx: 0, uppderIdx: 5 }
     this.incrementRange = this.incrementRange.bind(this);
     this.decrementRange = this.decrementRange.bind(this);
   }
 
   componentDidMount() {
-    this.props.fetchListings();
+    // this.props.fetchListings();
   }
 
   incrementRange() {
+    if(this.state.uppderIdx < 6) {
      this.setState({lowerIdx: this.state.lowerIdx + 1, uppderIdx: this.state.uppderIdx + 1});
+    }
   }
 
   decrementRange() {
@@ -24,13 +26,24 @@ class CitiesIndex extends React.Component {
     }
   }
 
-  render() {
-    let cities;
-    if (this.props.listings) {
-      cities = this.props.getCities(this.props.listings).slice(this.state.lowerIdx, this.state.uppderIdx);
-    } else {
-       cities = [];
+  renderImage(city) {
+    if (city === "Boston") {
+      return <img src={window.bostonURL} />;
+    } else if (city === "New York") {
+      return <img src={window.newyorkURL} />;
+    } else if (city === "London") {
+      return <img src={window.londonURL} />;
+    } else if (city === "Sydney") {
+      return <img src={window.sydneyURL} />;
+    } else if (city === "Buenos Aires") {
+      return <img src={window.buenosairesURL} />;
+    } else if (city === "Tokyo") {
+      return <img src={window.tokyoURL} />;
     }
+  }
+
+  render() {
+    const cities = this.state.cities.slice(this.state.lowerIdx, this.state.uppderIdx);
     return (
       <>
       <div className="cities-container">
@@ -39,6 +52,7 @@ class CitiesIndex extends React.Component {
           return (
             <div key={idx} className="city-element">
               <div className="city-image">
+                {this.renderImage(city)}
                 <div className="city-info">{city}</div>
               </div>
             </div>

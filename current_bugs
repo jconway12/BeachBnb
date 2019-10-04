@@ -1,14 +1,14 @@
+Sunday:
+- reservations
+- user profile page
+
 GENERAL TODOS:
+4. add more images 
 5. react date menu
-6. on click scroll for cities index
-4. AWS/ get images 
-4. get logos for less and more/ fix double render
+4. get logos for less and more
 5. fix nav underlining hover
 6. add toggle class to error inputs
-
-Today:
-- calander/ drop down / city scroll
-- AWS
+7. better images/ colors
 
 SEARCH MVP:
 Location - mvp: 

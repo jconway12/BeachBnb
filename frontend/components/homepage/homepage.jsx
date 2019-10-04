@@ -34,14 +34,16 @@ class HomepageComponent extends React.Component {
         }
     }
 
-    increaseGuest() {
-        // debugger
+    increaseGuest(e) {
+        e.stopPropagation();
         this.setState({ guests: this.state.guests + 1, dropDown: true });
     }
 
-    decreaseGuest() {
-        // debugger
-        this.setState({ guests: this.state.guests - 1, dropDown: true });
+    decreaseGuest(e) {
+        e.stopPropagation();
+        if (this.state.guests > 0) {
+         this.setState({ guests: this.state.guests - 1, dropDown: true });
+        }
     }
 
     render() {
@@ -77,8 +79,8 @@ class HomepageComponent extends React.Component {
                         GUESTS
                     <br />
                         <input type="text" placeholder="Guests" value={this.state.guests} onClick={this.dropDown}/>
-                        <div className="dropdown-holder">{this.renderDropDown()}</div>
                     </label>
+                    <div className="dropdown-holder">{this.renderDropDown()}</div>
 
                     <label className='button'>
                         <input type='submit' value="Search"/>

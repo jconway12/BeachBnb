@@ -28,6 +28,13 @@
   width: 100%;
   background-color: lightblue;
   border-radius: 3px;
+  // border: 0.5px solid white;
+   overflow: hidden;
+}
+
+.index-img img {
+  height: 100%;
+  width: auto;
 }
 
 .index-desc {

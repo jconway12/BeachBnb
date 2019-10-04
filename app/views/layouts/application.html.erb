@@ -9,6 +9,12 @@
     <%= javascript_include_tag 'application' %>
     <script type="text/javascript">
       window.logoURL = "<%= image_url('logo.png') %>";
+      window.tokyoURL = "<%= image_url('tokyo.jpg') %>";
+      window.londonURL = "<%= image_url('london.jpg') %>";
+      window.bostonURL = "<%= image_url('boston.jpg') %>";
+      window.sydneyURL = "<%= image_url('sydney.jpg') %>";
+      window.newyorkURL = "<%= image_url('newyork.jpg') %>";
+      window.buenosairesURL = "<%= image_url('buenosaires.jpg') %>";
     </script>
 
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
@@ -18,3 +24,5 @@
     <%= yield %>
   </body>
 </html>
+
+<!-- listing.photos.attach(io: File.open("/Users/aa/Desktop/photos/listing8pic1.jpg"), filename: "listing8pic1.jpg")   -->

@@ -22,4 +22,3 @@ listing5 = Listing.create!(city: 'Tokyo', num_beds: 1, title: 'listing5', owner_
 listing6 = Listing.create!(city: 'London', num_beds: 1, title: 'listing6', owner_id: user2.id, description: "listeing description", rate: 20, lat: 42.3640, lng: 71.0585)
 listing7 = Listing.create!(city: 'Sydney', num_beds: 2, title: 'listing7', owner_id: user2.id, description: "nice", rate: 20, lat: 42.3605, lng: 71.0581)
 listing8 = Listing.create!(city: 'New York', num_beds: 1, title: 'listing8', owner_id: user2.id, description: "nice", rate: 20, lat: 42.3654, lng: 71.0510)
-

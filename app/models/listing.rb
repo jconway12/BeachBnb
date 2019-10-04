@@ -5,6 +5,8 @@ class Listing < ApplicationRecord
     foreign_key: :owner_id,
     class_name: :User
 
+    has_many_attached :photos
+
     #MAKE CLASS METHOD THAT RETURNS AVERAGE PER CITY
     def self.get_locations
         cities = []

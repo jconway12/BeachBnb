@@ -3,11 +3,12 @@ import {Link} from 'react-router-dom';
 
 class ListingItem extends React.Component {
   render() {
-    return (
+    // debugger
+     return (
       <div className="listing-item">
         <Link to={`/listings/${this.props.listing.id}`}>
         <div className="index-img">
-
+          <img src={this.props.listing.photoURL} alt=""/>
         </div>
         </Link>
         <div className="index-desc">
