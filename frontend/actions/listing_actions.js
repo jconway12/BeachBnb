@@ -50,3 +50,14 @@ export const deleteListing = (id) => dispatch => {
   return ListingAPI.deleteListing(id).then(id => {dispatch(removeListing(id))},
    errors => {dispatch({ type: RECEIVE_LISTING_ERRORS, errors })});
 }
+
+export const getCitiesFromListings = (listings) => {
+  const cities = [];
+  for(let i = 0; i < listings.length; i++) {
+    if(!cities.includes(listings[i].city)) {
+      cities.push(listings[i].city);
+    }
+  }
+  return cities;
+}
+

@@ -1,1 +1,1 @@
-json.extract! listing, :id, :owner_id, :title, :description, :rate, :lat, :lng
+json.extract! listing, :id, :owner_id, :title, :description, :rate, :lat, :lng, :city

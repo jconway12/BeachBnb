@@ -1,23 +1,26 @@
-TODOS:
+GENERAL TODOS:
 4. dropdown counter 
 5. react date menu
+6. on click scroll for cities index
 4. AWS/ get images 
+4. get logos for less and more
 5. fix nav underlining hover
 6. add toggle class to error inputs
 
+Today:
+- calander/ drop down / city scroll
+- AWS
+
+SEARCH MVP:
 Location - mvp: 
-- location backend/ frontend setup
-- category page 
-- add id to url path for listings index
-- search bar w/ date and guest buttons
+- filter for city on click of city (SEARCH)
+- search bar w/ date and guest buttons (SEARCH)
+- add ajax for location/ bnb by location fetch (SEARCH)
 Google maps:
+- API key
+- add map to search page
 - add map to listings showpage
-- will need to update listing for location filters
+- will need to update listing for location filters and add filters reducer
 
-
-Tomorrow:
-- 2 react components calander/ guests
-- get to work on location/ gg maps
-- AWS!
 
 npm install webpack webpack-cli react react-dom react-redux redux redux-logger @babel/core @babel/preset-react @babel/preset-env babel-loader

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import {fetchListing} from '../../actions/listing_actions';
 import ReservationForm from '../reservations/reservation_form';
+import ListingMap from './listing_map';
 
 class ListingShow extends React.Component {
   componentDidMount() {
@@ -27,7 +28,7 @@ class ListingShow extends React.Component {
         </div>
       </div>
       <div className="map-container">
-
+          {/* <ListingMap listings={this.props.listings}/> */}
       </div>
       </div>
     )
@@ -35,10 +36,11 @@ class ListingShow extends React.Component {
 }
 
 const msp = (state, ownProps) => {
+  const listings = state.entities.listings;
   const id = ownProps.match.params.listingId;
   const listing = state.entities.listings[id];
   return {
-    listing, listingId: id
+    listing, listingId: id, listings
   }
 }
 

@@ -1,0 +1,37 @@
+#guest-dropdown {
+  display: flex;
+  justify-content: space-around;
+     width: 385px;
+     height: 100px;
+     border-radius: 0px;
+     border: 2px solid rgb(235, 232, 232);
+     font-size: 15px;
+     font-family: 'Lato', sans-serif; 
+     color: rgb(99, 113, 128);
+     background-color: white;
+  position: absolute;
+  z-index: 2;
+  top: 512px;
+  left: 152px;
+}
+
+#label {
+  margin-right: 50%;
+  margin-top: 20px;
+}
+
+#dropdown-holder {
+  position: relative;
+}
+
+#less {
+  margin-top: 20px;
+}
+
+#more {
+  margin-top: 20px;
+}
+
+#num-guests {
+  margin-top: 20px;
+}

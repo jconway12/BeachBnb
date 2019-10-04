@@ -1,7 +1,46 @@
 import React from 'react';
 
 class HomepageComponent extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { dropDown: false, guests: 0 };
+        this.renderDropDown = this.renderDropDown.bind(this);
+        this.dropDown = this.dropDown.bind(this);
+        this.increaseGuest = this.increaseGuest.bind(this);
+        this.decreaseGuest = this.decreaseGuest.bind(this);
+    }
+
+    renderDropDown() {
+        if(this.state.dropDown) {
+            return (
+                <div id="guest-dropdown">
+                    <div id="label">Guests</div>
+                    <div id="less" onClick={this.decreaseGuest}>Less</div>
+                    <div id="num-guests">{this.state.guests}</div>
+                    <div id="more" onClick={this.increaseGuest}>More</div>
+                </div>
+            )
+        }
+    }
+
+    dropDown() {
+        if(this.state.dropDown) {
+            this.setState({dropDown: false});
+        } else {
+            this.setState({dropDown: true});
+        }
+    }
+
+    increaseGuest() {
+        this.setState({ guests: this.state.guests + 1, dropDown: true });
+    }
+
+    decreaseGuest() {
+        this.setState({ guests: this.state.guests - 1, dropDown: true });
+    }
+
     render() {
+        debugger
         return (
             <div id='welcome-form'>
                 <p>Book unique places to stay and things to do.</p>
@@ -29,19 +68,8 @@ class HomepageComponent extends React.Component {
                     <label>
                         GUESTS
                     <br />
-                        <select defaultValue="1 guest">
-                            <option value="1 guest">1 guest</option>
-                            <option value="2 guests">2 guests</option>
-                            <option value="3 guests">3 guests</option>
-                            <option value="4 guests">4 guests</option>
-                            <option value="5 guests">5 guests</option>
-                            <option value="6 guests">6 guests</option>
-                            <option value="7 guests">7 guests</option>
-                            <option value="8 guests">8 guests</option>
-                            <option value="9 guests">9 guests</option>
-                            <option value="10 guests">10 guests</option>
-                            <option value="11 guests">10+ guests</option>
-                        </select>
+                        <input type="text" placeholder="Guests" value={this.state.guests} onClick={this.dropDown}/>
+                        <div className="dropdown-holder">{this.renderDropDown()}</div>
                     </label>
 
                     <label className='button'>
