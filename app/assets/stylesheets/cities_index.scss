@@ -4,7 +4,7 @@
   margin-left: 5%;
   width: 95%;
   height: 500px;
-  margin-top: 400px;
+  margin-top: 320px;
 }
 
 .city-element {
@@ -30,4 +30,32 @@
   color: white;
   font-weight: bold;
   padding-top: 90%;
+}
+
+#decrementer {
+  margin-top: 20px;
+  padding-top: 120px;
+  height: 30%;
+  width: 20px;
+  font-size: 40px;
+  color: rgb(115, 131, 147);
+}
+
+#incrementer {
+  margin-top: 20px;
+  padding-top: 120px;
+  height: 30%;
+  width: 20px;
+  font-size: 40px;
+  color: rgb(115, 131, 147);
+}
+
+#decrementer:hover {
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#incrementer:hover {
+  cursor: pointer;
+  border-radius: 5px;
 }
