@@ -1,4 +1,5 @@
 import React from 'react';
+import DatePicker from './calendar';
 
 class HomepageComponent extends React.Component {
     constructor(props) {
@@ -11,6 +12,7 @@ class HomepageComponent extends React.Component {
     }
 
     renderDropDown() {
+        // debugger
         if(this.state.dropDown) {
             return (
                 <div id="guest-dropdown">
@@ -24,6 +26,7 @@ class HomepageComponent extends React.Component {
     }
 
     dropDown() {
+        // debugger
         if(this.state.dropDown) {
             this.setState({dropDown: false});
         } else {
@@ -32,15 +35,17 @@ class HomepageComponent extends React.Component {
     }
 
     increaseGuest() {
+        // debugger
         this.setState({ guests: this.state.guests + 1, dropDown: true });
     }
 
     decreaseGuest() {
+        // debugger
         this.setState({ guests: this.state.guests - 1, dropDown: true });
     }
 
     render() {
-        debugger
+        // debugger
         return (
             <div id='welcome-form'>
                 <p>Book unique places to stay and things to do.</p>
@@ -64,6 +69,9 @@ class HomepageComponent extends React.Component {
                         <input type="date"/>
                     </label>
                     </div>
+                    
+                    {/* <DatePicker /> */}
+
 
                     <label>
                         GUESTS

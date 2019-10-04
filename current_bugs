@@ -1,9 +1,8 @@
 GENERAL TODOS:
-4. dropdown counter 
 5. react date menu
 6. on click scroll for cities index
 4. AWS/ get images 
-4. get logos for less and more
+4. get logos for less and more/ fix double render
 5. fix nav underlining hover
 6. add toggle class to error inputs
 
