@@ -27,7 +27,6 @@ const removeListing = id => {
 }
 
 export const fetchListings = () => dispatch => {
-  // debugger
   return ListingAPI.fetchListings().then(listings => {dispatch(receiveListings(listings))},
    errors => {dispatch({ type: RECEIVE_LISTING_ERRORS, errors })});
 }

@@ -15,26 +15,36 @@ class Trips extends React.Component {
     render() {
         const reservations = this.props.reservations || [];
         const propsListings = this.props.listings || {};
-        const listings = [];
+        const new_listings = [];
+        const old_listings = [];
 
         for(let i = 0; i < reservations.length; i++) {
+            const res = reservations[i];
             const listingId = reservations[i].listing_id;
             if(propsListings[listingId]) {
-                listings.push(propsListings[listingId]);
+                const listing = propsListings[listingId];
+                // debugger
+                if (res.passed) {
+                    old_listings.push(listing);
+                } else {
+                    new_listings.push(listing);
+                }
             }
         }
         
         return (
             <div className="trips">
                 <h1>Upcoming Plans</h1>
-                <ul className="listings-index">
-                    {listings.map(lis => {
+                <ul className="trips-index">
+                    {new_listings.map(lis => {
                        return <ListingItem key={lis.id} listing={lis}/>;
                     })}
                 </ul>
                 <h1>Where You've Been</h1>
-                <ul className='listings-index'>
-                    
+                <ul className='trips-index'>
+                    {old_listings.map(lis => {
+                        return <ListingItem key={lis.id} listing={lis} />;
+                    })}
                 </ul>
             </div>
         )

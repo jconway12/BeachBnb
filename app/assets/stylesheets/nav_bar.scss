@@ -66,7 +66,7 @@
     height: 150px;
     width: 300px;
     position: absolute;
-    top: 78px;
+    top: 85px;
     right: 20px;
     z-index: 5;
  }
@@ -94,6 +94,8 @@
     color: rgb(89, 88, 88);
     margin: 20px;
     border-bottom: 1px solid rgb(216, 216, 216); 
+    padding-bottom: 40px;
+    margin-bottom: 0;
  }
 
  #nav-dropdown a:hover {
@@ -112,6 +114,8 @@
     margin: 20px; 
     margin-top: 35px;
     margin-right: 30px;  
+    padding-bottom: 20px;
+    margin-bottom: 0;
  }
 
   #prof-img:hover {
@@ -160,3 +164,11 @@
 //    #white-nav div:hover {
 //    border-bottom: 2px solid rgb(55, 62, 70);   
 //  }
+
+#prof-img img {
+   margin-top: -5px;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  border: 1px solid white;
+}

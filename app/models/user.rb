@@ -16,6 +16,8 @@ class User < ApplicationRecord
   foreign_key: :renter_id,
   class_name: :Reservation
 
+  has_one_attached :photo
+
   #auth methods
   def password=(password)
     @password = password

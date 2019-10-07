@@ -1,5 +1,6 @@
 class Listing < ApplicationRecord 
     validates :num_beds, :city, :title, :description, :rate, :lat, :lng, presence: true
+    validate :ensure_photo
 
     belongs_to :owner, 
     foreign_key: :owner_id,
@@ -10,6 +11,13 @@ class Listing < ApplicationRecord
     class_name: :Reservations
 
     has_many_attached :photos
+
+    #photo validation
+    def ensure_photo 
+        unless self.photos.attached?
+            errors[:photos] << 'Must be attached'
+        end
+    end
 
     #MAKE CLASS METHOD THAT RETURNS AVERAGE PER CITY
     def self.get_locations

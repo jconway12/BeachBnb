@@ -18,14 +18,15 @@ class Profile extends React.Component {
         const listings = [];
         for(let i = 0; i < all_listings.length; i++) {
             if(all_listings[i].owner_id == this.props.user.id) {
-                listings << all_listings[i];
+                listings.push(all_listings[i]);
             }
         }
 
         return  (
             <div className="profile-page">
                 <div className="profile-box">
-                    <img src="" alt=""/>
+                    <img src={this.props.user.photoURL} alt="" />
+                    {/* {ADD UPLOAD IMAGE FORM} */}
                 </div>
                 <div className="profile-description">
                     <h1>Hi, I'm {this.props.user.first_name}</h1>

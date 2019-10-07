@@ -14,11 +14,13 @@ export const fetchListings = () => {
   })
 }
 
-export const createListing = (listing) => {
+export const createListing = (formData) => {
   return $.ajax({
-    method: 'POST',
-    url: `api/listings`,
-    data: {listing}
+    url: "api/listings",
+    method: "POST",
+    data: formData,
+    contentType: false,
+    processData: false
   })
 }
 

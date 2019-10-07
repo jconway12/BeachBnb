@@ -6,12 +6,18 @@ class ListingForm extends React.Component {
         super(props);
         this.state = this.props.listing;
         this.state.dropDown = false;
+        this.photoFile = null;
         this.update = this.update.bind(this);
         this.submit = this.submit.bind(this);
         this.dropDown = this.dropDown.bind(this);
         this.renderDropDown = this.renderDropDown.bind(this);
         this.increaseGuest = this.increaseGuest.bind(this);
-        this.decreaseGuest = this.submit.bind(this);
+        this.decreaseGuest = this.decreaseGuest.bind(this);
+        this.handleFiles = this.handleFiles.bind(this);
+    }
+
+    handleFiles(e) {
+        this.setState({photoFile: e.currentTarget.files[0]});
     }
 
     update(type) {
@@ -23,7 +29,18 @@ class ListingForm extends React.Component {
     submit(e) {
         e.preventDefault();
         delete this.state.dropDown
-        this.props.action(this.state).then(() => this.props.history.push("/profile"));
+        const formData = new FormData();
+        formData.append('listing[owner_id]', this.state.owner_id);
+        formData.append('listing[title]', this.state.title);
+        formData.append('listing[photos]', this.state.photoFile);
+        formData.append('listing[description]', this.state.description);
+        formData.append('listing[lat]', this.state.lat);
+        formData.append('listing[lng]', this.state.lng);
+        formData.append('listing[city]', this.state.city);
+        formData.append('listing[num_beds]', this.state.num_beds);
+        formData.append('listing[rate]', this.state.rate);
+
+        this.props.action(formData).then(() => this.props.history.push("/profile"));
     }
 
     dropDown() {
@@ -51,9 +68,9 @@ class ListingForm extends React.Component {
             return (
                 <div id="guest-dropdown3">
                     <div id="label3">Guests</div>
-                    <div id="less3" onClick={this.decreaseGuest}>Less</div>
+                    <div id="less3" onClick={this.decreaseGuest}>-</div>
                     <div id="num-guests3">{this.state.num_beds}</div>
-                    <div id="more3" onClick={this.increaseGuest}>More</div>
+                    <div id="more3" onClick={this.increaseGuest}>+</div>
                 </div>
             )
         }
@@ -90,6 +107,13 @@ class ListingForm extends React.Component {
             </label>
             <div id="dropdown-holder3">{this.renderDropDown()}</div>
 
+           <label>
+            Nightly Rate per Guest
+                <br />
+            <input type="text" value={this.state.rate} onChange={this.update('rate')} />
+           </label>
+
+
             <label>
                 Latitude
                 <br/>
@@ -101,6 +125,12 @@ class ListingForm extends React.Component {
                 <br />
                 <input type="text" value={this.state.lng} onChange={this.update('lng')} />
             </label>
+
+            <label>
+              Photos
+                <br />
+            <input type="file" onChange={this.handleFiles}/>
+           </label>
 
             <label className='button'>
              <input type="submit" value={this.props.formType} onClick={this.submit}/>

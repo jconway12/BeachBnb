@@ -13,7 +13,7 @@ class Reservation < ApplicationRecord
     source: :owner
 
     #method that returns whether or not the reservation has passed
-    def passed?
+    def passed
         return true if Date.today > self.end_date
         false
     end

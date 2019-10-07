@@ -27,16 +27,24 @@
 
 #less3 {
   margin-top: 20px;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 #more3 {
   margin-top: 20px;
   margin-right: 10px;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 #num-guests3 {
   margin-top: 20px;
   font-size: 15px;
+}
+
+#more3:hover {
+  cursor: pointer;
+}
+
+#less3:hover {
+  cursor: pointer;
 }

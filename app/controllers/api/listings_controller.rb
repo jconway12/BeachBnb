@@ -1,6 +1,6 @@
 class Api::ListingsController < ApplicationController 
     def index
-        #need to add in which filters are assigned and call proper methods
+        #add filters: passed: true, city: 'name', bounds: blah blah
         @listings = Listing.all
     end
 
@@ -36,6 +36,6 @@ class Api::ListingsController < ApplicationController
 
     private
     def listing_params 
-        params.require(:listing).permit(:title, :description, :rate, :lat, :lng, :city)
+        params.require(:listing).permit(:title, :description, :rate, :lat, :lng, :city, :num_beds, :photos)
     end
 end

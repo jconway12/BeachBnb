@@ -26,10 +26,20 @@
 
 #less {
   margin-top: 20px;
+  font-size: 20px;
 }
 
 #more {
   margin-top: 20px;
+  font-size: 20px;
+}
+
+#more:hover {
+  cursor: pointer;
+}
+
+#less:hover {
+  cursor: pointer;
 }
 
 #num-guests {

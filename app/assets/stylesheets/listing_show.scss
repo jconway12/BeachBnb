@@ -9,10 +9,16 @@
   // border: 2px solid black;
 }
 
+.image-container img {
+  width: auto;
+  height: 100%;
+}
+
 .description {
   height: 500px;
   width: 100%;
   background-color: white;
+  position: relative;
 }
 
 .description div {
@@ -70,4 +76,14 @@
   width: 500px;
   background-color: pink;
   // border: 2px solid black;
+}
+
+.profile-image img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  border: 1px solid white;
+  position: absolute;
+  top: 10px;
+  left: 600px;
 }

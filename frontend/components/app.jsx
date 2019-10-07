@@ -26,7 +26,7 @@ const App = props => {
   <div>
     <Modal />
     <div id="white-nav">
-          <Route path={["/listings", "/profile", "/trips"]} component={NavBarContainer} />
+          <Route path={["/listings", "/profile", "/trips", "/users/:userId/listings"]} component={NavBarContainer} />
     </div>
       <Route exact path="/" component={Home} />
   </div>
@@ -35,7 +35,7 @@ const App = props => {
     <Switch>
       <ProtectedRoute path="/listings/new" component={CreateListingContainer} />
       <ProtectedRoute path="/listings/:listingId/edit" component={UpdateListingContainer} />
-      <ProtectedRoute path="/listings/:listingId" component={ListingShowContainer} />
+      <ProtectedRoute path="/users/:userId/listings/:listingId" component={ListingShowContainer} />
       <Route exact path="/listings" component={ListingIndexContainer} />
       <ProtectedRoute path="/profile" component={ProfileContainer} />
       <ProtectedRoute path="/trips" component={TripsContainer} />

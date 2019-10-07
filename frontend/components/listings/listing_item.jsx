@@ -6,7 +6,7 @@ class ListingItem extends React.Component {
     // debugger
      return (
       <div className="listing-item">
-        <Link to={`/listings/${this.props.listing.id}`}>
+        <Link to={`/users/${this.props.listing.owner_id}/listings/${this.props.listing.id}`}>
         <div className="index-img">
           <img src={this.props.listing.photoURL} alt=""/>
         </div>

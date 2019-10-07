@@ -27,16 +27,24 @@
 
 #less2 {
   margin-top: 20px;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 #more2 {
   margin-top: 20px;
   margin-right: 10spx;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 #num-guests2 {
   margin-top: 20px;
   font-size: 12px;
+}
+
+#more2:hover {
+  cursor: pointer;
+}
+
+#less2:hover {
+  cursor: pointer;
 }
