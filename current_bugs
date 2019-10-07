@@ -1,14 +1,16 @@
-Sunday:
-- reservations
-- user profile page
-
 GENERAL TODOS:
-4. add more images 
+0. add completed boolean to reservation table
+1. links to new/ edit bnb forms on profile page? how to handle 
+2. custom validations on reservations
+3. upload image in new bnb form
+4. style new pages!1!!
+4. add more images (/ attach?)
 5. react date menu
 4. get logos for less and more
 5. fix nav underlining hover
 6. add toggle class to error inputs
 7. better images/ colors
+8. fix seed data
 
 SEARCH MVP:
 Location - mvp: 

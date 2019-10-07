@@ -45,6 +45,7 @@ class NavBar extends React.Component {
           <Link className="nav-item" to="">Trips</Link>
           <Link className="nav-item" to="">Messages</Link>
           <Link className="nav-item" to="">Help</Link> */}
+          <Link className="nav-item" to="/trips">Trips</Link>
           <div className="nav-item" id="prof-img" onClick={this.dropDown}>{this.props.currentUser.first_name}</div>
           {navDropDown}
         </div>

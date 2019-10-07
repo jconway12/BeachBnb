@@ -2,15 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
-import { fetchListing, fetchListings, updateListing, createListing, deleteListing } from "./actions/listing_actions";
+import { fetchRes, fetchReservations, updateRes, deleteRes, createRes } from "./actions/reservation_actions";
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
-  window.fetchListing = fetchListing;
-  window.deleteListing = deleteListing;
-  window.updateListing = updateListing;
-  window.fetchListings = fetchListings;
-  window.createListing = createListing;
+  window.fetchReservations = fetchReservations;
+  window.fetchRes = fetchRes;
+  window.createRes = createRes;
+  window.updateRes = updateRes;
+  window.deleteRes = deleteRes;
 
   let store;
   if (window.currentUser) {

@@ -5,6 +5,10 @@ class Listing < ApplicationRecord
     foreign_key: :owner_id,
     class_name: :User
 
+    has_many :reservations,
+    foreign_key: :listing_id,
+    class_name: :Reservations
+
     has_many_attached :photos
 
     #MAKE CLASS METHOD THAT RETURNS AVERAGE PER CITY

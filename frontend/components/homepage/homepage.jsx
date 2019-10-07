@@ -80,7 +80,7 @@ class HomepageComponent extends React.Component {
                     <br />
                         <input type="text" placeholder="Guests" value={this.state.guests} onClick={this.dropDown}/>
                     </label>
-                    <div className="dropdown-holder">{this.renderDropDown()}</div>
+                    <div id="dropdown-holder">{this.renderDropDown()}</div>
 
                     <label className='button'>
                         <input type='submit' value="Search"/>

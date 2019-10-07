@@ -12,6 +12,10 @@ class User < ApplicationRecord
   foreign_key: :owner_id,
   class_name: :Listing
 
+  has_many :reservations, 
+  foreign_key: :renter_id,
+  class_name: :Reservation
+
   #auth methods
   def password=(password)
     @password = password

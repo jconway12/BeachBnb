@@ -26,6 +26,9 @@ class ListingShow extends React.Component {
         <div >
             ${listing.rate} <p>per night</p>
         </div>
+        <div className="reservation-form">
+        <ReservationForm listingId = {this.props.id}/>
+        </div>
       </div>
       <div className="map-container">
           {/* <ListingMap listings={this.props.listings}/> */}

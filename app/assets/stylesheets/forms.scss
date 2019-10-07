@@ -163,3 +163,24 @@ div p input:hover {
  select:focus {
     outline-width: 0;
  }
+
+ .reservation-form input {
+    margin-left: -15px;
+    width: 300px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+ }
+
+ .reservation-form form {
+     color: #484848;
+     font-size: 12px;
+ }
+
+
+.reservation-form .button {
+    margin-left: -5px;
+    border-radius: 8px;
+    color: white;
+    background-color: blue;
+    border: none;
+}

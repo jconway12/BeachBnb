@@ -1,37 +1,42 @@
-#guest-dropdown {
+#guest-dropdown2 {
   display: flex;
   justify-content: space-around;
-     width: 385px;
-     height: 100px;
+     width: 300px;
+     height: 60px;
      border-radius: 0px;
      border: 2px solid rgb(235, 232, 232);
-     font-size: 15px;
+     font-size: 10px;
      font-family: 'Lato', sans-serif; 
      color: rgb(99, 113, 128);
      background-color: white;
   position: absolute;
   z-index: 2;
-  top: -20px;
-  left: 11px;
+  top: -65px;
+  right: -69px;
 }
 
-#label {
-  margin-right: 50%;
+#label2 {
+  margin-right: 35%;
   margin-top: 20px;
+  font-size: 12px;
 }
 
-#dropdown-holder {
+#dropdown-holder2 {
   position: relative;
 }
 
-#less {
+#less2 {
   margin-top: 20px;
+  font-size: 12px;
 }
 
-#more {
+#more2 {
   margin-top: 20px;
+  margin-right: 10spx;
+  font-size: 12px;
 }
 
-#num-guests {
+#num-guests2 {
   margin-top: 20px;
+  font-size: 12px;
 }

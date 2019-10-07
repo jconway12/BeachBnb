@@ -14,7 +14,7 @@ class NavBarDropdown extends React.Component {
   render() {
     return (
       <div id="nav-dropdown">
-        <Link className="dropdown-item" to="">Profile</Link>
+        <Link className="dropdown-item" to="/profile">Profile</Link>
         <input className="dropdown-item" type="submit" value="Log Out" onClick={this.logoutHelper}/>
       </div>
     );
