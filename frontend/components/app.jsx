@@ -9,6 +9,9 @@ import Home from './home';
 import ListingShowContainer from './listings/listing_show';
 import ProfileContainer from './users/profile';
 import TripsContainer from './users/trips';
+import CreateListingContainer from './listings/create_listing_container';
+import UpdateListingContainer from './listings/edit_listing_container';
+
 
 const App = props => {
   return (
@@ -29,10 +32,15 @@ const App = props => {
   </div>
   <div id="search-options">
     {/* category pages */}
-      <Route exact path="/listings" component={ListingIndexContainer} />{/* must add location id to url path */}
+    <Switch>
+      <ProtectedRoute path="/listings/new" component={CreateListingContainer} />
+      <ProtectedRoute path="/listings/:listingId/edit" component={UpdateListingContainer} />
       <ProtectedRoute path="/listings/:listingId" component={ListingShowContainer} />
+      <Route exact path="/listings" component={ListingIndexContainer} />
       <ProtectedRoute path="/profile" component={ProfileContainer} />
       <ProtectedRoute path="/trips" component={TripsContainer} />
+      <Route exact path="/listings" component={ListingIndexContainer} />
+    </Switch>
   </div>
   </>
   )

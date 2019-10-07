@@ -9,7 +9,7 @@ import { fetchReservations } from '../../actions/reservation_actions';
 class Profile extends React.Component {
     componentDidMount() {
         this.props.fetchListings();
-        this.props.fetchReservations(this.props.user.id);
+        // this.props.fetchReservations(this.props.user.id);
     }
 
     render() {
@@ -18,30 +18,29 @@ class Profile extends React.Component {
         const listings = [];
         for(let i = 0; i < all_listings.length; i++) {
             if(all_listings[i].owner_id == this.props.user.id) {
-                lsitings << all_listings[i];
+                listings << all_listings[i];
             }
         }
 
         return  (
             <div className="profile-page">
-                <h1>Hi, I'm {this.props.user.first_name}</h1>
-                <div className="listing-form">
-                    <p>ask about how to go about host profile...</p>
+                <div className="profile-box">
+                    <img src="" alt=""/>
                 </div>
-                <div className='listings-reservations'>
-                    <ul className="reservations">
-                        <h3>Your upcoming trips: </h3>
-                        {reservations.map(res => {
-                            return <li key={res.id}>{res.city}</li>;
-                        })}
-                    </ul>
-                    <ul className='listings'>
+                <div className="profile-description">
+                    <h1>Hi, I'm {this.props.user.first_name}</h1>
+                    <div className="add-listing">
+                      <Link to="/listings/new">Add New Listing</Link>
+                    </div>
+                
+                <ul className='listings'>
                         <h3>Your listings: </h3>
                         {listings.map(lis => {
-                            return <li key={lis.id}>{lis.title}</li>;
-                        })}
-                        <Link to="/listings/new">Add Listing</Link>
-                    </ul>
+                            return (
+                                <li key={lis.id}>{lis.title}</li>
+                                )
+                        })}  
+                </ul>
                 </div>
             </div>
         )

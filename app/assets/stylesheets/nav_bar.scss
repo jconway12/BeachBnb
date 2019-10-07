@@ -46,7 +46,7 @@
 
  #logo img {
      position: absolute;
-     top: 20px;
+     top: 15px;
      left: 40px;
      color: white;
      height: 50px;
@@ -62,12 +62,13 @@
      flex-direction: column;
      justify-content: flex-start;
      background-color: white;
-     /* border: 2px solid lightslategray; */
+      border: 1px solid rgb(216, 216, 216); 
     height: 150px;
     width: 300px;
     position: absolute;
-    top: 80px;
+    top: 78px;
     right: 20px;
+    z-index: 5;
  }
 
  #nav-dropdown input {   
@@ -82,6 +83,7 @@
     margin-left: 15px;
     padding-right: 80%;
     padding-left: 5px;
+    border-bottom: 1px solid rgb(216, 216, 216); 
  }  
 
  #nav-dropdown input:focus {
@@ -91,14 +93,15 @@
   #nav-dropdown a {
     color: rgb(89, 88, 88);
     margin: 20px;
+    border-bottom: 1px solid rgb(216, 216, 216); 
  }
 
  #nav-dropdown a:hover {
-    border-bottom: 2px solid rgb(89, 88, 88);
+    border-bottom: 1px solid rgb(150, 148, 148);
  } 
 
  #nav-dropdown input:hover {
-    border-bottom: 2px solid rgb(89, 88, 88);
+    border-bottom: 1px solid rgb(150, 148, 148);
     cursor: pointer;
 
  }

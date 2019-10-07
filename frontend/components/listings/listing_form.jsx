@@ -60,7 +60,11 @@ class ListingForm extends React.Component {
     }
 
     render() {
-        <form>
+        return (
+            <>
+        <h1 id="new-listing-title">New Listing:</h1>
+        <div className="listing-form">
+        <form onSubmit={this.submit}>
             <label>
                 Title
                 <br />
@@ -98,8 +102,13 @@ class ListingForm extends React.Component {
                 <input type="text" value={this.state.lng} onChange={this.update('lng')} />
             </label>
 
-            <input type="submit" value={this.props.formType}/>
+            <label className='button'>
+             <input type="submit" value={this.props.formType} onClick={this.submit}/>
+            </label>
         </form>
+        </div >
+        </>
+        )
     }
 }
 

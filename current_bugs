@@ -1,16 +1,13 @@
 GENERAL TODOS:
-0. add completed boolean to reservation table
-1. links to new/ edit bnb forms on profile page? how to handle 
-2. custom validations on reservations
+4. fix and style trips 
 3. upload image in new bnb form
-4. style new pages!1!!
-4. add more images (/ attach?)
+4. profile image/ images for showpage
 5. react date menu
 4. get logos for less and more
-5. fix nav underlining hover
-6. add toggle class to error inputs
+9. add update listing capability/ reservation/listing show
 7. better images/ colors
 8. fix seed data
+6. add toggle class to error inputs
 
 SEARCH MVP:
 Location - mvp: 

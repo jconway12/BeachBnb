@@ -1,0 +1,42 @@
+#guest-dropdown3 {
+  display: flex;
+  justify-content: space-around;
+     width: 385px;
+     height: 60px;
+     border-radius: 0px;
+     border: 2px solid rgb(235, 232, 232);
+     font-size: 15px;
+     font-family: 'Lato', sans-serif; 
+     color: rgb(99, 113, 128);
+     background-color: white;
+  position: absolute;
+  z-index: 2;
+  top: -1px;
+  left: 11px;
+}
+
+#label3 {
+  margin-right: 35%;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+#dropdown-holder3 {
+  position: relative;
+}
+
+#less3 {
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+#more3 {
+  margin-top: 20px;
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+#num-guests3 {
+  margin-top: 20px;
+  font-size: 15px;
+}

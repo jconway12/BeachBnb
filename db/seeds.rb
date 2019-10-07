@@ -25,6 +25,17 @@ listing7 = Listing.create!(city: 'Sydney', num_beds: 2, title: 'listing7', owner
 listing8 = Listing.create!(city: 'New York', num_beds: 1, title: 'listing8', owner_id: user2.id, description: "nice", rate: 20, lat: 42.3654, lng: 71.0510)
 
 
-res1 = Reservation.create!(listing_id: listing1.id, renter_id: user1.id, start_date: Date.new(2019, 1, 1), end_date: Date.new(2019, 1, 5))
-res2 = Reservation.create!(listing_id: listing1.id, renter_id: user1.id, start_date: Date.new(2019, 1, 6), end_date: Date.new(2019, 1, 10))
-res3 = Reservation.create!(listing_id: listing2.id, renter_id: demoUser.id, start_date: Date.new(2019, 1, 1), end_date: Date.new(2019, 1, 5))
+res1 = Reservation.create!(listing_id: listing1.id, renter_id: user1.id, start_date: Date.new(2019, 1, 1), end_date: Date.new(2019, 1, 5), num_guests: 1)
+res2 = Reservation.create!(listing_id: listing1.id, renter_id: user1.id, start_date: Date.new(2019, 1, 6), end_date: Date.new(2019, 1, 10), num_guests: 3)
+res3 = Reservation.create!(listing_id: listing2.id, renter_id: demoUser.id, start_date: Date.new(2019, 1, 1), end_date: Date.new(2019, 1, 5), num_guests: 2)
+
+
+#photos 
+listing1.photos.attach(io: File.open("app/assets/images/listing1pic1.jpg"), filename: "listing1pic1.jpg")
+listing2.photos.attach(io: File.open("app/assets/images/listing2pic1.jpg"), filename: "listing2pic1.jpg")
+listing3.photos.attach(io: File.open("app/assets/images/listing3pic1.jpg"), filename: "listing3pic1.jpg")
+listing4.photos.attach(io: File.open("app/assets/images/listing4pic1.jpg"), filename: "listing4pic1.jpg")
+listing5.photos.attach(io: File.open("app/assets/images/listing5pic1.jpg"), filename: "listing5pic1.jpg")
+listing6.photos.attach(io: File.open("app/assets/images/listing6pic1.png"), filename: "listing6pic1.png")
+listing7.photos.attach(io: File.open("app/assets/images/listing7pic1.jpg"), filename: "listing7pic1.jpg")
+listing8.photos.attach(io: File.open("app/assets/images/listing8pic1.jpg"), filename: "listing8pic1.jpg")

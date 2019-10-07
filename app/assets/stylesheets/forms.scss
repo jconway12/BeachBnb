@@ -30,8 +30,8 @@ form {
  form input {
      width: 385px;
      height: 40px;
-     border-radius: 10px;
-     border: 2px solid rgb(235, 232, 232);
+     border-radius: 5px;
+     border: 2px solid rgb(237, 234, 234);
      font-size: 15px;
      font-family: 'Lato', sans-serif; 
      color: rgb(115, 131, 147);
@@ -184,3 +184,25 @@ div p input:hover {
     background-color: blue;
     border: none;
 }
+
+#new-listing-title {
+    margin-left: 100px;
+    font-size: 46px;
+    color: #484848;
+    font-family: 'Lato', sans-serif; 
+    font-weight: 200;
+}
+
+.listing-form {
+    border: 2px solid rgb(237, 234, 234);
+    margin-top: 70px;
+    margin-left: 30%;
+    height: 500px;
+    width: 500px;
+}
+
+.listing-form form {
+    margin-top: 80px;
+    margin-left: 50px;
+}
+
