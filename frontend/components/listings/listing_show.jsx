@@ -12,6 +12,10 @@ class ListingShow extends React.Component {
     // this.state = {owner: null};
   }
 
+  updateBounds() {
+    return null;
+  }
+
   componentDidMount() {
     // debugger
     this.props.fetchListing(this.props.listingId);
@@ -58,7 +62,7 @@ class ListingShow extends React.Component {
         </div>
       </div>
       <div className="map-container">
-          <ListingMap listings={[listing]}/>
+          <ListingMap listings={[listing]} updateBounds={this.updateBounds}/>
       </div>
       </div>
     )
