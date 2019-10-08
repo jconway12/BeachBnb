@@ -26,8 +26,9 @@ const removeListing = id => {
   };
 }
 
-export const fetchListings = () => dispatch => {
-  return ListingAPI.fetchListings().then(listings => {dispatch(receiveListings(listings))},
+
+export const fetchListings = (filters) => dispatch => {
+  return ListingAPI.fetchListings(filters).then(listings => {dispatch(receiveListings(listings))},
    errors => {dispatch({ type: RECEIVE_LISTING_ERRORS, errors })});
 }
 

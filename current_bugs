@@ -5,7 +5,7 @@ GENERAL TODOS:
 4. new listing form styling
 
 5. fix passed in trips? DO THIS WHEN MAKING SEARCH FILTERS
-6. better images/ colors
+6. better images/ colors BEACH THEME
 7. fix seed data (add more images to show pages)
 8. add toggle class to error inputs
 9. image preview, upload many photos?
@@ -30,3 +30,17 @@ Google maps:
 
 
 npm install webpack webpack-cli react react-dom react-redux redux redux-logger @babel/core @babel/preset-react @babel/preset-env babel-loader
+
+places:
+- uruguay
+- mexico
+- australia
+- vietnam
+- newport
+- brazil
+- bali 
+- croatia
+- france 
+- portugal
+- italy 
+- carribean 

@@ -7,7 +7,13 @@ export const fetchListing = (id) => {
   })
 }
 
-export const fetchListings = () => {
+export const fetchListings = (filters) => {
+  // const bounds = filters.bounds;
+  // const max_beds = filters.max_beds;
+  // const min_beds = filters.min_beds;
+  // const city = filters.city;
+  // dates?
+
   return $.ajax({
     method: 'GET',
     url: `api/listings`
