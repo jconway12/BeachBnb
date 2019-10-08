@@ -31,7 +31,7 @@ class ListingMap extends React.Component {
       const sW = latLngBound.getSouthWest();
 
       const bounds = { northEast: { lat: nE.lat(), lng: nE.lng() }, southWest: { lat: sW.lat(), lng: sW.lng() } };
-      debugger
+      // debugger
         this.props.updateBounds(bounds);
     });
 

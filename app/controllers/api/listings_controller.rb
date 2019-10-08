@@ -25,6 +25,10 @@ class Api::ListingsController < ApplicationController
         if params[:search_city] 
             @listings = @listings.select { |lis| lis.city == params[:search_city] }
         end
+
+        if params[:date_range] 
+            @listings = @listings.select { |lis| lis.available_in_range?(params[:date_range]) }
+        end
     end
 
     def show
@@ -60,6 +64,6 @@ class Api::ListingsController < ApplicationController
     private
     def listing_params 
         #ADD IN FILTER TYPES TO PERMITTED PARAMS
-        params.require(:listing).permit(:title, :description, :rate, :lat, :lng, :city, :num_beds, :photos, :bounds, :max_beds, :min_beds, :search_city, :min_price, :max_price)
+        params.require(:listing).permit(:title, :description, :rate, :lat, :lng, :city, :num_beds, :photos, :date_range, :bounds, :max_beds, :min_beds, :search_city, :min_price, :max_price)
     end
 end

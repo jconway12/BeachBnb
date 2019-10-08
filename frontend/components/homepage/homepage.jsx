@@ -5,7 +5,7 @@ import {withRouter} from 'react-router-dom';
 class HomepageComponent extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { city: "", min_beds: 1, max_beds: 5, max_price: 200, min_price: 10, dropDown: false, guests: 0 };
+        this.state = { city: "", min_beds: 1, max_beds: 5, max_price: 200, min_price: 10, dropDown: false, start_date: null, end_date: null };
         this.renderDropDown = this.renderDropDown.bind(this);
         this.dropDown = this.dropDown.bind(this);
         this.increaseGuest = this.increaseGuest.bind(this);
@@ -26,8 +26,9 @@ class HomepageComponent extends React.Component {
         if(this.state.city === "") {
             this.props.history.push("/listings");
         } else {
+            // debugger
             delete this.state.dropDown;
-            this.props.history.push(`/search/${{}}/${this.state.city}/${this.state.min_price}/${this.state.max_price}/${this.state.min_beds}/${this.state.max_beds}`);
+            this.props.history.push(`/search/${{}}/${this.state.city}/${this.state.min_price}/${this.state.max_price}/${this.state.min_beds}/${this.state.max_beds}/${this.state.start_date}/${this.state.end_date}`);
         }
     }
 
@@ -38,7 +39,7 @@ class HomepageComponent extends React.Component {
                 <div id="guest-dropdown">
                     <div id="label">Guests</div>
                     <div id="less" onClick={this.decreaseGuest}>-</div>
-                    <div id="num-guests">{this.state.guests}</div>
+                    <div id="num-guests">{this.state.min_beds}</div>
                     <div id="more" onClick={this.increaseGuest}>+</div>
                 </div>
             )
@@ -56,13 +57,13 @@ class HomepageComponent extends React.Component {
 
     increaseGuest(e) {
         e.stopPropagation();
-        this.setState({ guests: this.state.guests + 1, dropDown: true });
+        this.setState({ min_beds: this.state.min_beds + 1, dropDown: true });
     }
 
     decreaseGuest(e) {
         e.stopPropagation();
-        if (this.state.guests > 0) {
-         this.setState({ guests: this.state.guests - 1, dropDown: true });
+        if (this.state.min_beds > 0) {
+         this.setState({ min_beds: this.state.min_beds - 1, dropDown: true });
         }
     }
 
@@ -82,13 +83,13 @@ class HomepageComponent extends React.Component {
                     <label id="check-in">
                         CHECK IN
                     <br />
-                        <input type="date"/>
+                            <input type="date" onChange={this.update('start_date')}/>
                     </label>
 
                    <label id="check-in">
                         CHECK OUT
                     <br />
-                        <input type="date"/>
+                     <input type="date" onChange={this.update('end_date')}/>
                     </label>
                     </div>
                     
@@ -98,7 +99,7 @@ class HomepageComponent extends React.Component {
                     <label>
                         GUESTS
                     <br />
-                        <input type="text" placeholder="Guests" value={this.state.guests} onClick={this.dropDown}/>
+                        <input type="text" placeholder="Guests" value={this.state.min_beds} onClick={this.dropDown} onChange={this.update('min_beds')}/>
                     </label>
                     <div id="dropdown-holder">{this.renderDropDown()}</div>
 

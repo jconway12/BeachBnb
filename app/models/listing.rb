@@ -8,7 +8,7 @@ class Listing < ApplicationRecord
 
     has_many :reservations,
     foreign_key: :listing_id,
-    class_name: :Reservations
+    class_name: :Reservation
 
     has_many_attached :photos
 
@@ -17,6 +17,17 @@ class Listing < ApplicationRecord
         unless self.photos.attached?
             errors[:photos] << 'Must be attached'
         end
+    end
+
+    def available_in_range?(date_range)
+        # debugger
+        self.reservations.each do |res|
+            if !(date_range["start_date"] > res.end_date.to_s || 
+            date_range["end_date"] < res.start_date.to_s) 
+                return false
+            end
+        end
+        true
     end
 
     #MAKE CLASS METHOD THAT RETURNS AVERAGE PER CITY

@@ -8,7 +8,7 @@ import {withRouter} from 'react-router-dom';
 class SearchBar extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {bounds: {}, min_beds: 1, max_beds: 5, max_price: 200, min_price: 10, city: ""};
+        this.state = {bounds: {}, min_beds: 1, max_beds: 5, max_price: 200, min_price: 10, city: "", start_date: null, end_date: null};
         this.state.PriceDropDown = false;
         this.state.BedDropDown = false;
         this.update = this.update.bind(this);
@@ -31,7 +31,7 @@ class SearchBar extends React.Component {
         e.preventDefault();
         delete this.state.PriceDropDown;
         delete this.state.BedDropDown;
-        this.props.history.push(`/search/${this.state.bounds}/${this.state.city}/${this.state.min_price}/${this.state.max_price}/${this.state.min_beds}/${this.state.max_beds}`)
+        this.props.history.push(`/search/${this.state.bounds}/${this.state.city}/${this.state.min_price}/${this.state.max_price}/${this.state.min_beds}/${this.state.max_beds}/${this.state.start_date}/${this.state.end_date}`)
     }
 
     PriceDropDown() {
@@ -120,6 +120,10 @@ class SearchBar extends React.Component {
 
                 <div className="filter-button" onClick={this.BedDropDown}>Beds</div>
                 <div id="beds-dropdown-holder">{this.renderBedDropDown()}</div>
+
+                {/* <input className="filter-button" type="date" onChange={this.update("start_date")}/>
+                <input className="filter-button" type="date" onChange={this.update("end_date")}/> */}
+
                 </div>
 
                 {/* <input type="submit" value="search" onClick={this.submit}/> */}

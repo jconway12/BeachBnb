@@ -58,11 +58,11 @@ class ListingShow extends React.Component {
             ${listing.rate} <p>per night</p>
         </div>
         <div className="reservation-form">
-        <ReservationForm listingId = {this.props.id}/>
+        <ReservationForm listingId={this.props.listingId}/>
         </div>
       </div>
       <div className="map-container">
-          <ListingMap listings={[listing]} updateBounds={this.updateBounds}/>
+          {/* <ListingMap listings={[listing]} updateBounds={this.updateBounds}/> */}
       </div>
       </div>
     )

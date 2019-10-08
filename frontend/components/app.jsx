@@ -27,7 +27,7 @@ const App = props => {
   <div id="search-options">
     <Switch>
       <Route path="/temp/search" component={SearchBar} /> //TEMPORARY
-      <ProtectedRoute path="/search/:bounds/:city/:min_price/:max_price/:min_beds/:max_beds" component={SearchListings}/>
+      <ProtectedRoute path="/search/:bounds/:city/:min_price/:max_price/:min_beds/:max_beds/:start_date/:end_date" component={SearchListings}/>
       <ProtectedRoute path="/listings/new" component={CreateListingContainer} />
       <ProtectedRoute path="/listings/:listingId/edit" component={UpdateListingContainer} />
       <ProtectedRoute path="/users/:userId/listings/:listingId" component={ListingShowContainer} />

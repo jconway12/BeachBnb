@@ -176,6 +176,14 @@ div p input:hover {
      font-size: 12px;
  }
 
+ #res-errors {
+     padding: 10px;
+     margin: 0;
+     margin-top: -40px;
+     color: red;
+    //  width: 100px;
+     font-size: 18px;
+ }
 
 .reservation-form .button {
     margin-left: -5px;
@@ -183,6 +191,10 @@ div p input:hover {
     color: white;
     background-color: blue;
     border: none;
+}
+
+.reservation-form .button:hover {
+    cursor: pointer;
 }
 
 #new-listing-title {

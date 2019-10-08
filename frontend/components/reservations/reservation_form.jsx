@@ -1,6 +1,7 @@
 import React from "react";
 import {connect} from 'react-redux';
-import {createRes} from '../../actions/reservation_actions';
+import {createRes, removeResErrors} from '../../actions/reservation_actions';
+import {withRouter} from 'react-router-dom';
 
 class ReservationForm extends React.Component {
   constructor(props) {
@@ -13,6 +14,17 @@ class ReservationForm extends React.Component {
     this.renderDropDown = this.renderDropDown.bind(this);
     this.increaseGuest = this.increaseGuest.bind(this);
     this.decreaseGuest = this.decreaseGuest.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
+  }
+
+  componentDidMount() {
+    this.props.removeResErrors();
+  }
+
+  renderErrors() {
+    if(this.props.errors.length != 0) {
+      return <h6 id="res-errors">Dates unavailable</h6>
+    }
   }
 
   update(type) {
@@ -24,7 +36,7 @@ class ReservationForm extends React.Component {
   submit(e) {
     e.preventDefault();
     delete this.state.dropDown;
-    this.props.action(this.state).then(() => this.props.history.push("/profile"));
+    this.props.action(this.state).then(() => this.props.history.push("/trips"));
   }
 
   dropDown() {
@@ -62,7 +74,7 @@ class ReservationForm extends React.Component {
 
   render() {
     return (
-    <form>
+    <form onSubmit={this.submit}>
       <label>
         Start Date
         <br/>
@@ -82,23 +94,28 @@ class ReservationForm extends React.Component {
       </label>
       <div id="dropdown-holder2">{this.renderDropDown()}</div>
 
-      <input className="button" type="submit" value={this.props.formType}/>
+      {this.renderErrors()}
+
+      <input className="button" type="submit" value={this.props.formType} onClick={this.submit}/>
     </form>
     )
   }
 }
 
 const msp = (state, ownProps) => {
+  // debugger
   const listing_id = ownProps.listingId;
   const currUserId = state.session.id;
-  const reservation = {listing_id: listing_id, owner_id: currUserId, start_date: Date.today, end_date: Date.today, num_guests: 1};
-  return {reservation, formType: 'Create Reservation'};
+  const reservation = {listing_id: listing_id, owner_id: currUserId, start_date: "", end_date: "", num_guests: 1};
+  const errors = state.errors.resErrors;
+  return {reservation, formType: 'Create Reservation', errors};
 }
 
 const mdp = dispatch => {
   return {
-    action: reservation => dispatch(createRes(reservation))
+    action: reservation => dispatch(createRes(reservation)),
+    removeResErrors: () => dispatch(removeResErrors())
   };
 }
 
-export default connect(msp, mdp)(ReservationForm);
+export default withRouter(connect(msp, mdp)(ReservationForm));

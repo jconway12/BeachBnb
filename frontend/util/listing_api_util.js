@@ -14,12 +14,12 @@ export const fetchListings = (filters = {}) => {
   const search_city = filters.city;
   const min_price = filters.min_price;
   const max_price = filters.max_price;
-  // dates?
+  const date_range = {start_date: filters.start_date, end_date: filters.end_date};
 
   return $.ajax({
     method: 'GET',
     url: `api/listings`,
-    data: {bounds, max_beds, min_beds, search_city, min_price, max_price}
+    data: {bounds, max_beds, min_beds, search_city, min_price, max_price, date_range}
   })
 }
 

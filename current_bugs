@@ -1,13 +1,13 @@
 GENERAL TODOS:
-0. google maps search location/ bounds
-1. homepage search for anywhere
-2. react date menu
-3. see reservations given a listing (see available dates in calander)
-3. add filter for dates
-4. google maps w/ bounds 
 4. reviews
+0. fix reservation errors to be more specifc (EDIT MODEL VALIDATIONS)? or just react date menu
 4. README
 4. THEME
+5. react date menu
+ - bugs and styling 
+1. add filter for dates to search bar ? styling why is it so weird
+3.. google maps bounds update available listings
+3. see reservations given a listing (see available dates in calander)
 
 Bugs/ Styling to fix:
 4. new listing form styling

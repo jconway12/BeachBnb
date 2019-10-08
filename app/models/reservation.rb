@@ -16,6 +16,7 @@ class Reservation < ApplicationRecord
 
     #method that returns whether or not the reservation has passed
     def passed?
+        return false unless self.end_date && self.start_date
         return true if Date.today > self.end_date
         false
     end
@@ -35,6 +36,7 @@ class Reservation < ApplicationRecord
     end
 
     def does_overlap_any?
+        return false unless self.end_date && self.start_date
         return true if self.start_date > self.end_date
         listing_id = self.listing_id
         all_res = Reservation.all

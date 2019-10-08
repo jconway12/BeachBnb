@@ -26,7 +26,7 @@ class SearchListings extends React.Component {
     }
 
     updateBounds(bounds) {
-        debugger
+        // debugger
        this.bounds = bounds;
     //    this.props.fetchListings({...this.bounds, ...this.props.filters});
     }
@@ -34,10 +34,15 @@ class SearchListings extends React.Component {
     render() {
         const listings = this.props.listings || {};
         // debugger
+        let noFound = null;
+        if (listings.length === 0) {
+         noFound = <h1>No listings found</h1>;
+        }
         return (
             <div className="search-listings covered-by-search">
                 <div className="found-listings">
                     <ul>
+                        {noFound}
                         {listings.map(lis => {
                             return <SearchItem key={lis.id} listing={lis}/>
                         })}
@@ -58,10 +63,12 @@ const msp = (state, ownProps) => {
     const max_price = ownProps.match.params.max_price;
     const min_beds = ownProps.match.params.min_beds;
     const max_beds = ownProps.match.params.max_beds;
-
+    const start_date = ownProps.match.params.start_date;
+    const end_date = ownProps.match.params.end_date;
+    // debugger
     return {
         listings,
-        filters: { city, min_price, max_price, min_beds, max_beds}
+        filters: { city, min_price, max_price, min_beds, max_beds, start_date, end_date}
     }
 }
 
