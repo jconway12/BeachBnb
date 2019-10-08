@@ -1,0 +1,53 @@
+//whole page container
+.search-listings {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+//list of listings
+.found-listings {
+  height: 100%;
+  width: 58%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+//map contianer on right
+.side-map {
+  background-color: lightblue;
+  height: 750px;
+  width: 40%;
+  margin-top: 28px;
+}
+
+//listing square
+.search-item {
+  border-bottom: 1px solid rgb(230, 227, 227);
+  border-top: 1px solid rgb(230, 227, 227);
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  height: 200px;
+}
+
+//listing square text
+.search-description {
+  font-family: 'Lato', sans-serif;
+  color: #484848;
+  font-size: 20px;
+}
+
+//listing square image
+.search-image {
+  height: 180px;
+  width: 250px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.search-image img {
+ height: 180px;
+ width: auto;
+ margin-top: 10px;
+}

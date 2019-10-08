@@ -23,7 +23,6 @@ class Trips extends React.Component {
             const listingId = reservations[i].listing_id;
             if(propsListings[listingId]) {
                 const listing = propsListings[listingId];
-                // debugger
                 if (res.passed) {
                     old_listings.push(listing);
                 } else {
@@ -34,7 +33,7 @@ class Trips extends React.Component {
         
         return (
             <div className="trips">
-                <h1>Upcoming Plans</h1>
+                <h1 className="covered-by-search">Upcoming Plans</h1>
                 <ul className="trips-index">
                     {new_listings.map(lis => {
                        return <ListingItem key={lis.id} listing={lis}/>;
@@ -65,7 +64,7 @@ const msp = (state, ownProps) => {
 const mdp = dispatch => {
     return {
         fetchListings: () => dispatch(fetchListings()),
-        fetchReservations: userId => dispatch(fetchReservations(userId)),
+        fetchReservations: (userId) => dispatch(fetchReservations(userId)),
     }
 }
 

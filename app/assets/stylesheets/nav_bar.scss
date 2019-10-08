@@ -1,12 +1,15 @@
 #nav-bar-container {
     /* background-color: lightblue; */
     height: 80px;
+    overflow: visible;
  }
 
  #nav-bar {
     display: flex;
     justify-content: flex-end;
     position: relative;
+    overflow: visible;
+    height: 80px;
  }
 
  #nav-bar a {

@@ -1,0 +1,98 @@
+#bed-dropdown-holder, #price-dropdown-holder {
+  position: relative;
+}
+
+#price-dropdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+     width: 300px;
+     height: 200px;
+     border-radius: 0px;
+     border: 2px solid rgb(235, 232, 232);
+     font-size: 10px;
+     font-family: 'Lato', sans-serif; 
+     color: rgb(99, 113, 128);
+     background-color: white;
+  position: absolute;
+  z-index: 2;
+  top: 52px;
+  left: -65px;
+}
+
+#bed-dropdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+     width: 300px;
+     height: 200px;
+     border-radius: 0px;
+     border: 2px solid rgb(235, 232, 232);
+     font-size: 10px;
+     font-family: 'Lato', sans-serif; 
+     color: rgb(99, 113, 128);
+     background-color: white;
+  position: absolute;
+  z-index: 2;
+  top: 135px;
+  left: 98px;
+}
+
+#min-bed, #max-bed, #min-price, #max-price {
+  display: flex;
+  justify-content: space-around;
+     font-family: 'Lato', sans-serif; 
+     color: rgb(99, 113, 128);
+}
+
+#why {
+    display: flex;
+  justify-content: space-around;
+     font-family: 'Lato', sans-serif; 
+     color: rgb(99, 113, 128);
+     font-size: 20px;
+}
+
+#why .label {
+  margin-right: 5%;
+  font-size: 20px;
+}
+
+
+#min-bed, #max-bed, #min-price, #max-price .label {
+  margin-right: 35%;
+  font-size: 20px;
+}
+
+
+#min-bed, #max-bed, #min-price, #max-price .less {
+  font-size: 15px;
+}
+
+
+#min-bed, #max-bed, #min-price, #max-price .more {
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+
+#min-bed, #max-bed, #min-price, #max-price .count {
+  font-size: 20px;
+}
+
+
+#bed-dropdown .more:hover {
+  cursor: pointer;
+}
+
+#bed-dropdown .less:hover {
+  cursor: pointer;
+}
+
+#price-dropdown .more:hover {
+  cursor: pointer;
+}
+
+#price-dropdown .less:hover {
+  cursor: pointer;
+}

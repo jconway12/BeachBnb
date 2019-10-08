@@ -1,19 +1,25 @@
 class Api::ListingsController < ApplicationController 
     def index
-        #add filters: passed: true, city: 'name', bounds: blah blah
-        #if params[:bounds]...
         @listings = Listing.all
 
         if params[:bounds] 
-            # @listing = @listing.select{}
+            @listings = Listing.in_bounds(params[:bounds])
         end
 
         if params[:min_beds] 
-            @listings = @listings.select { |lis| lis.num_beds >= params[:min_beds] }
+            @listings = @listings.select { |lis| lis.num_beds >= params[:min_beds].to_i }
         end
 
         if params[:max_beds]
-            @listings = @listings.select { |lis| lis.num_beds <= params[:max_beds] }
+            @listings = @listings.select { |lis| lis.num_beds <= params[:max_beds].to_i }
+        end
+
+        if params[:min_price] 
+            @listings = @listings.select { |lis| lis.rate >= params[:min_price].to_i }
+        end
+
+        if params[:max_price]
+            @listings = @listings.select { |lis| lis.rate <= params[:max_price].to_i }
         end
 
         if params[:search_city] 
@@ -54,6 +60,6 @@ class Api::ListingsController < ApplicationController
     private
     def listing_params 
         #ADD IN FILTER TYPES TO PERMITTED PARAMS
-        params.require(:listing).permit(:title, :description, :rate, :lat, :lng, :city, :num_beds, :photos, :bounds, :max_beds, :min_beds, :search_city, :passed)
+        params.require(:listing).permit(:title, :description, :rate, :lat, :lng, :city, :num_beds, :photos, :bounds, :max_beds, :min_beds, :search_city, :min_price, :max_price)
     end
 end

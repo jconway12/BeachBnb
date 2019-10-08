@@ -2,6 +2,7 @@ import { UPDATE_FILTER } from '../actions/filter_actions';
 
 const defaultState = {
     bounds: {},
+    //passed: false,
     // min_beds: 1,
     // max_beds: 10
 }

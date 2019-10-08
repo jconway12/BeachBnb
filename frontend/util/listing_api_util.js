@@ -7,18 +7,19 @@ export const fetchListing = (id) => {
   })
 }
 
-export const fetchListings = (filters) => {
+export const fetchListings = (filters = {}) => {
   const bounds = filters.bounds;
   const max_beds = filters.max_beds;
   const min_beds = filters.min_beds;
   const search_city = filters.city;
-  const passed = filters.passed;
+  const min_price = filters.min_price;
+  const max_price = filters.max_price;
   // dates?
 
   return $.ajax({
     method: 'GET',
     url: `api/listings`,
-    data: {bounds, max_beds, min_beds, search_city, passed}
+    data: {bounds, max_beds, min_beds, search_city, min_price, max_price}
   })
 }
 

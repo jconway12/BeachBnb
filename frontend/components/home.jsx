@@ -13,7 +13,7 @@ const Home = props => {
       <div id="nav-homepage">
         <Modal />
         <header id='nav-bar-container'>
-          <NavBarContainer />
+          <NavBarContainer home={true}/>
         </header>
         <HomepageComponent />
         <CitiesIndex />

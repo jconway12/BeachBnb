@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import {logout} from '../../actions/session_actions';
 import NavBarDropdown from './nav_bar_dropdown';
 import { openModal } from '../../actions/modal_actions';
+import SearchBar from '../search/search_bar';
 
 
 class NavBar extends React.Component {
@@ -35,11 +36,18 @@ class NavBar extends React.Component {
         if (this.state.dropDown) {
           navDropDown = <NavBarDropdown logout={this.props.logout} user={this.props.currentUser}/>
         }
+        let searchBar;
+        if (this.props.home) {
+          searchBar = null;
+        } else {
+          searchBar = <SearchBar />;
+        }
       return (
         <div id='nav-bar'>
           <div id='logo' onClick={this.backToHome}>
             <img src={window.logoURL} />
           </div>
+          {searchBar}
           {/* <Link className="nav-item" to="">Become a Host</Link>
           <Link className="nav-item" to="">Saved</Link>
           <Link className="nav-item" to="">Trips</Link>

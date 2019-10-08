@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {fetchListings, getCitiesFromListings } from '../../actions/listing_actions';
+import {withRouter} from 'react-router-dom';
 
 class CitiesIndex extends React.Component {
   constructor(props) {
@@ -8,6 +9,14 @@ class CitiesIndex extends React.Component {
     this.state = { cities: ["Boston", "London", "Sydney", "New York", "Tokyo", "Buenos Aires"], lowerIdx: 0, uppderIdx: 5 }
     this.incrementRange = this.incrementRange.bind(this);
     this.decrementRange = this.decrementRange.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(city) {
+    const that = this;
+    return () => {
+      that.props.history.push(`/listings/${city}`)
+    }
   }
 
   componentDidMount() {
@@ -51,7 +60,7 @@ class CitiesIndex extends React.Component {
         {cities.map((city, idx) => {
           return (
             <div key={idx} className="city-element">
-              <div className="city-image">
+              <div className="city-image" onClick={this.handleClick(city)}>
                 {this.renderImage(city)}
                 <div className="city-info">{city}</div>
               </div>
@@ -77,4 +86,4 @@ const mdp = dispatch => {
   }
 }
 
-export default connect(msp, mdp)(CitiesIndex);
+export default withRouter(connect(msp, mdp)(CitiesIndex));

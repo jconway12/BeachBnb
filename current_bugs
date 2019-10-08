@@ -1,5 +1,4 @@
 GENERAL TODOS:
-1. profile images (profile page, nav_bar, listing_show)
 2. react date menu
 3. see reservations given a listing (see available dates in calander)
 4. new listing form styling
@@ -19,10 +18,9 @@ Thurs/Fri:
 SEARCH MVP:
 Location - mvp: 
 SEPERATE SEARCH PAGE W/ MAP
-- filter for city on click of city (SEARCH)
+- WHERE TO STAY IS A LINK TO SEARCH PAGE
+- update listings index page to filter for city, and then search page to filter for all
 - search bar w/ date and guest buttons (SEARCH)
-- add ajax for location/ bnb by location fetch (SEARCH)
-- update listings index page to filter for city, and then search page to filter for all, trips with passed?
 Google maps:
 - API key
 - add map to search page

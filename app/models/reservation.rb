@@ -2,6 +2,8 @@ class Reservation < ApplicationRecord
     validates :start_date, :end_date, :num_guests, presence: true 
     validate :no_overlap
 
+    after_initialize :set_passed
+
     belongs_to :listing
 
     belongs_to :renter,
@@ -13,11 +15,16 @@ class Reservation < ApplicationRecord
     source: :owner
 
     #method that returns whether or not the reservation has passed
-    def passed
+    def passed?
         return true if Date.today > self.end_date
         false
     end
 
+    def set_passed 
+        if self.passed?
+            self.passed = true
+        end
+    end
     #method to make sure reservations cannot overlap (custom validation)
     def overlap?(reservation)
      if !(reservation.start_date > self.end_date || 

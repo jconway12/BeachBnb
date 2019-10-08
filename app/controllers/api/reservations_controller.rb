@@ -7,6 +7,7 @@ class Api::ReservationsController < ApplicationController
     def index 
         user = User.find(params[:user_id])
         @reservations = user.reservations
+
         render :index
     end
 
@@ -39,6 +40,6 @@ class Api::ReservationsController < ApplicationController
 
     private 
     def reservation_params
-        params.require(:reservation).permit(:listing_id, :start_date, :end_date, :num_guests)
+        params.require(:reservation).permit(:listing_id, :start_date, :end_date, :num_guests, :passed)
     end
 end

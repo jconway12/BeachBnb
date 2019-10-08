@@ -4,15 +4,28 @@ import {fetchListings} from '../../actions/listing_actions';
 import ListingItem from './listing_item';
 
 class ListingIndex extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
   componentDidMount() {
-    this.props.fetchListings();
+    if (this.props.city) {
+    this.props.fetchListings({city: this.props.city});
+    } else {
+      this.props.fetchListings();
+    }
+  }
+
+  handleClick() {
+    this.props.history.push(`/search`) //update to fix correct search path
   }
 
   render() {
     const listings = this.props.listings || [];
     return (
       <>
-      <h1 className="section-heading">Where to stay</h1>
+        <h1 className="section-heading covered-by-search" onClick={this.handleClick}>Where to stay ></h1>
       <ul className="listings-index">
         {listings.map(listing => {
           return <ListingItem key={listing.id} listing={listing}/>
@@ -23,16 +36,17 @@ class ListingIndex extends React.Component {
   }
 }
 
-const msp = state => {
+const msp = (state, ownProps) => {
   const listings = Object.values(state.entities.listings);
+  const city = ownProps.match.params.city || null;
   return {
-    listings
+    listings, city
   }
 }
 
 const mdp = dispatch => {
   return {
-    fetchListings: () => dispatch(fetchListings())
+    fetchListings: (filter) => dispatch(fetchListings(filter))
   }
 }
 

@@ -11,35 +11,30 @@ import ProfileContainer from './users/profile';
 import TripsContainer from './users/trips';
 import CreateListingContainer from './listings/create_listing_container';
 import UpdateListingContainer from './listings/edit_listing_container';
-
+import SearchListings from './search/search_listings';
+import SearchBar from './search/search_bar';
 
 const App = props => {
   return (
     <>
-    {/* <div id="nav-homepage">
-      <Modal />
-    <header id='nav-bar-container'>
-      <NavBarContainer />
-    </header>
-        <Route exact path="/" component={Home}/>
-    </div> */}
   <div>
     <Modal />
     <div id="white-nav">
-          <Route path={["/listings", "/profile", "/trips", "/users/:userId/listings"]} component={NavBarContainer} />
+          <Route path={["/listings", "/profile", "/trips", "/users/:userId/listings", "/search"]} component={NavBarContainer} />
     </div>
       <Route exact path="/" component={Home} />
   </div>
   <div id="search-options">
-    {/* category pages */}
     <Switch>
+      <Route path="/temp/search" component={SearchBar} /> //TEMPORARY
+      <ProtectedRoute path="/search/:bounds/:city/:min_price/:max_price/:min_beds/:max_beds" component={SearchListings}/>
       <ProtectedRoute path="/listings/new" component={CreateListingContainer} />
       <ProtectedRoute path="/listings/:listingId/edit" component={UpdateListingContainer} />
       <ProtectedRoute path="/users/:userId/listings/:listingId" component={ListingShowContainer} />
+      <Route exact path="/listings/:city" component={ListingIndexContainer} />
       <Route exact path="/listings" component={ListingIndexContainer} />
       <ProtectedRoute path="/profile" component={ProfileContainer} />
       <ProtectedRoute path="/trips" component={TripsContainer} />
-      <Route exact path="/listings" component={ListingIndexContainer} />
     </Switch>
   </div>
   </>

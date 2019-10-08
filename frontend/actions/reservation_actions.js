@@ -11,7 +11,7 @@ export const fetchRes = id => dispatch => {
     errors => dispatch({type: RECEIVE_RES_ERRORS, errors}));
 }
 
-export const fetchReservations = userId => dispatch => {
+export const fetchReservations = (userId)=> dispatch => {
     return ResAPI.fetchReservations(userId).then(reses => { dispatch({ type: RECEIVE_RESERVATIONS, reservations: reses})});
 }
 
