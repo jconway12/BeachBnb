@@ -22,6 +22,7 @@ SEPERATE SEARCH PAGE W/ MAP
 - filter for city on click of city (SEARCH)
 - search bar w/ date and guest buttons (SEARCH)
 - add ajax for location/ bnb by location fetch (SEARCH)
+- update listings index page to filter for city, and then search page to filter for all, trips with passed?
 Google maps:
 - API key
 - add map to search page

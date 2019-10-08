@@ -1,7 +1,7 @@
-import { UPDATE_FILTER } from '../actions/filters_actions';
+import { UPDATE_FILTER } from '../actions/filter_actions';
 
 const defaultState = {
-    // bounds: {},
+    bounds: {},
     // min_beds: 1,
     // max_beds: 10
 }

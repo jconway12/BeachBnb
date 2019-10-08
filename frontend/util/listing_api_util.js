@@ -8,15 +8,17 @@ export const fetchListing = (id) => {
 }
 
 export const fetchListings = (filters) => {
-  // const bounds = filters.bounds;
-  // const max_beds = filters.max_beds;
-  // const min_beds = filters.min_beds;
-  // const city = filters.city;
+  const bounds = filters.bounds;
+  const max_beds = filters.max_beds;
+  const min_beds = filters.min_beds;
+  const search_city = filters.city;
+  const passed = filters.passed;
   // dates?
 
   return $.ajax({
     method: 'GET',
-    url: `api/listings`
+    url: `api/listings`,
+    data: {bounds, max_beds, min_beds, search_city, passed}
   })
 }
 
