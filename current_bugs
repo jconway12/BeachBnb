@@ -1,31 +1,23 @@
 GENERAL TODOS:
+0. google maps search location/ bounds
+1. homepage search for anywhere
 2. react date menu
 3. see reservations given a listing (see available dates in calander)
-4. new listing form styling
+3. add filter for dates
+4. google maps w/ bounds 
+4. reviews
+4. README
+4. THEME
 
-5. fix passed in trips? DO THIS WHEN MAKING SEARCH FILTERS
+Bugs/ Styling to fix:
+4. new listing form styling
+4. WHERE TO STAY IS A LINK TO SEARCH PAGE - fix routes??
 6. better images/ colors BEACH THEME
 7. fix seed data (add more images to show pages)
+-
 8. add toggle class to error inputs
 9. image preview, upload many photos?
 10. general UI/UX
-
-Tues/Wed:
-- search/ goog maps 
-Thurs/Fri:
-- reviews, README
-
-SEARCH MVP:
-Location - mvp: 
-SEPERATE SEARCH PAGE W/ MAP
-- WHERE TO STAY IS A LINK TO SEARCH PAGE
-- update listings index page to filter for city, and then search page to filter for all
-- search bar w/ date and guest buttons (SEARCH)
-Google maps:
-- API key
-- add map to search page
-- add map to listings showpage
-- will need to update listing for location filters and add filters reducer
 
 
 npm install webpack webpack-cli react react-dom react-redux redux redux-logger @babel/core @babel/preset-react @babel/preset-env babel-loader

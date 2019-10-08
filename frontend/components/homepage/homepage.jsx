@@ -1,14 +1,34 @@
 import React from 'react';
 import DatePicker from './calendar';
+import {withRouter} from 'react-router-dom';
 
 class HomepageComponent extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { dropDown: false, guests: 0 };
+        this.state = { city: "", min_beds: 1, max_beds: 5, max_price: 200, min_price: 10, dropDown: false, guests: 0 };
         this.renderDropDown = this.renderDropDown.bind(this);
         this.dropDown = this.dropDown.bind(this);
         this.increaseGuest = this.increaseGuest.bind(this);
         this.decreaseGuest = this.decreaseGuest.bind(this);
+        this.submit = this.submit.bind(this);
+        this.update = this.update.bind(this);
+    }
+
+
+    update(filter) {
+        return e => {
+            this.setState({ [filter]: e.target.value });
+        }
+    }
+
+    submit(e) {
+        e.preventDefault();
+        if(this.state.city === "") {
+            this.props.history.push("/listings");
+        } else {
+            delete this.state.dropDown;
+            this.props.history.push(`/search/${{}}/${this.state.city}/${this.state.min_price}/${this.state.max_price}/${this.state.min_beds}/${this.state.max_beds}`);
+        }
     }
 
     renderDropDown() {
@@ -55,7 +75,7 @@ class HomepageComponent extends React.Component {
                     <label>
                         WHERE
                     <br />
-                        <input type="text" placeholder="Anywhere"/>
+                        <input type="text" placeholder="Anywhere" value={this.state.city} onChange={this.update('city')}/>
                     </label>
 
                     <div id="date-select">
@@ -83,7 +103,7 @@ class HomepageComponent extends React.Component {
                     <div id="dropdown-holder">{this.renderDropDown()}</div>
 
                     <label className='button'>
-                        <input type='submit' value="Search"/>
+                        <input type='submit' value="Search" onClick={this.submit}/>
                     </label>
                 </form>
             </div>
@@ -91,4 +111,4 @@ class HomepageComponent extends React.Component {
     }
 }
 
-export default HomepageComponent;
+export default withRouter(HomepageComponent);

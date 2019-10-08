@@ -32,6 +32,10 @@
   height: 200px;
 }
 
+.search-item:hover {
+  cursor: pointer;
+}
+
 //listing square text
 .search-description {
   font-family: 'Lato', sans-serif;

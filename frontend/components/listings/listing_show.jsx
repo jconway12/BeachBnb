@@ -58,7 +58,7 @@ class ListingShow extends React.Component {
         </div>
       </div>
       <div className="map-container">
-          {/* <ListingMap listings={this.props.listings}/> */}
+          <ListingMap listings={[listing]}/>
       </div>
       </div>
     )

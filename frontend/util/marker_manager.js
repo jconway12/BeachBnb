@@ -10,7 +10,7 @@ export default class MarkerManager {
     const listingsObj = {};
     for (let i = 0; i < listings.length; i++) {
       if (!Object.keys(this.markers).includes(listings[i].id)) {
-        const marker = this.createMarkerFromBench(listings[i]);
+        const marker = this.createMarkerFromListing(listings[i]);
         this.markers[listings[i].id] = marker;
       }
 

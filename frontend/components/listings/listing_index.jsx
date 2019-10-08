@@ -18,7 +18,7 @@ class ListingIndex extends React.Component {
   }
 
   handleClick() {
-    this.props.history.push(`/search`) //update to fix correct search path
+    this.props.history.push(`/search/${{}}/${this.props.city}/${null}/${null}/${null}/${null}`) //FIX THIS
   }
 
   render() {

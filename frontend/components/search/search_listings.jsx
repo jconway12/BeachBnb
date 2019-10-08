@@ -32,7 +32,7 @@ class SearchListings extends React.Component {
                     </ul>
                 </div>
                 <div className="side-map">
-                    {/* <ListingMap listings={this.props.listings}/> */}
+                    <ListingMap listings={this.props.listings}/>
                 </div>
             </div>
         )

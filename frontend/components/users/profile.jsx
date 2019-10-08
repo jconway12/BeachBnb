@@ -23,7 +23,7 @@ class Profile extends React.Component {
         }
 
         return  (
-            <div className="profile-page">
+            <div className="profile-page covered-by-search">
                 <div className="profile-box">
                     <img src={this.props.user.photoURL} alt="" />
                     {/* {ADD UPLOAD IMAGE FORM} */}
