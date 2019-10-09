@@ -16,6 +16,13 @@ class User < ApplicationRecord
   foreign_key: :renter_id,
   class_name: :Reservation
 
+  has_many :authored_reviews,
+  foreign_key: :author_id,
+  class_name: :Review
+
+  has_many :reviews, 
+  as: :reviewable
+
   has_one_attached :photo
 
   #auth methods

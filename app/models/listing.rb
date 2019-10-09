@@ -10,6 +10,9 @@ class Listing < ApplicationRecord
     foreign_key: :listing_id,
     class_name: :Reservation
 
+    has_many :reviews, 
+    as: :reviewable
+
     has_many_attached :photos
 
     #photo validation
