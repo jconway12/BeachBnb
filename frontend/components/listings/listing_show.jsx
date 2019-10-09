@@ -55,7 +55,7 @@ class ListingShow extends React.Component {
         </div>
       </div>
       <div className="reserve-form">
-        <div >
+        <div className="res-text">
             ${listing.rate} <p>per night</p>
         </div>
         <div className="reservation-form">

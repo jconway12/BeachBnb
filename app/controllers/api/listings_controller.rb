@@ -1,7 +1,7 @@
 class Api::ListingsController < ApplicationController 
     def index
         @listings = Listing.all
-
+    
         if params[:bounds] 
             @listings = Listing.in_bounds(params[:bounds])
         end
@@ -10,7 +10,7 @@ class Api::ListingsController < ApplicationController
             @listings = @listings.select { |lis| lis.num_beds >= params[:min_beds].to_i }
         end
 
-        if params[:max_beds]
+        if params[:max_beds] 
             @listings = @listings.select { |lis| lis.num_beds <= params[:max_beds].to_i }
         end
 
@@ -18,14 +18,14 @@ class Api::ListingsController < ApplicationController
             @listings = @listings.select { |lis| lis.rate >= params[:min_price].to_i }
         end
 
-        if params[:max_price]
+        if params[:max_price] 
             @listings = @listings.select { |lis| lis.rate <= params[:max_price].to_i }
         end
-
-        if params[:search_city] 
+        debugger
+        if params[:search_city] && params[:search_city] != "null"
             @listings = @listings.select { |lis| lis.city == params[:search_city] }
         end
-
+        
         if params[:date_range] 
             @listings = @listings.select { |lis| lis.available_in_range?(params[:date_range]) }
         end

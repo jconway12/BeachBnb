@@ -30,7 +30,7 @@ form {
  form input {
      width: 385px;
      height: 40px;
-     border-radius: 5px;
+     border-radius: 0px;
      border: 2px solid rgb(237, 234, 234);
      font-size: 15px;
      font-family: 'Lato', sans-serif; 
@@ -164,38 +164,55 @@ div p input:hover {
     outline-width: 0;
  }
 
- .reservation-form input {
-    margin-left: -15px;
-    width: 300px;
-    margin-bottom: 20px;
-    border-radius: 3px;
- }
+//  .reservation-form input {
+//     margin-left: -15px;
+//     width: 300px;
+//     margin-bottom: 5px;
+//     border-radius: 0px;
+//  }
 
- .reservation-form form {
-     color: #484848;
-     font-size: 12px;
- }
+//  .reservation-form form {
+//      color: #484848;
+//      font-size: 12px;
+//      height: 300px;
+//      width: 300px;
+//  }
 
- #res-errors {
-     padding: 10px;
-     margin: 0;
-     margin-top: -40px;
-     color: red;
-    //  width: 100px;
-     font-size: 18px;
- }
+//  #res-errors {
+//      padding: 10px;
+//      margin: 0;
+//      margin-top: -40px;
+//      color: red;
+//     //  width: 100px;
+//      font-size: 18px;
+//  }
 
-.reservation-form .button {
-    margin-left: -5px;
-    border-radius: 8px;
-    color: white;
-    background-color: blue;
-    border: none;
-}
+// //  .reserve-form {
+// //      height: 400px;
+// //      width: 600px;
+// //  }
 
-.reservation-form .button:hover {
-    cursor: pointer;
-}
+//  .reservation-form {
+//      width: 400px;
+//  }
+
+//  .reservation-form label {
+//      width: 300px;
+//  }
+
+// .reservation-form .button {
+//     margin-left: -5px;
+//     border-radius: 8px;
+//     color: white;
+//     background-color: blue;
+//     border: none;
+//     margin-top: 0;
+//     height: 40px;
+// }
+
+// .reservation-form .button:hover {
+//     cursor: pointer;
+// }
 
 #new-listing-title {
     margin-left: 100px;
@@ -226,9 +243,13 @@ div p input:hover {
 
 #check-out input {
     width: 160px;
+    border: 2px solid #ebebeb;
 }
 
 #check-in input {
     width: 160px;
+    border: 2px solid #ebebeb;
 }
+
+
 

@@ -11,10 +11,14 @@ export const fetchListings = (filters = {}) => {
   const bounds = filters.bounds;
   const max_beds = filters.max_beds;
   const min_beds = filters.min_beds;
-  const search_city = filters.city;
+  let search_city = filters.city;
   const min_price = filters.min_price;
   const max_price = filters.max_price;
   const date_range = {start_date: filters.start_date, end_date: filters.end_date};
+
+  if (search_city === "null") {
+    search_city = undefined;
+  }
 
   return $.ajax({
     method: 'GET',

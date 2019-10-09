@@ -27,13 +27,13 @@ class HomepageComponent extends React.Component {
 
     submit(e) {
         e.preventDefault();
+        let city = this.state.city;
         if(this.state.city === "") {
-            this.props.history.push("/listings");
-        } else {
-            // debugger
-            delete this.state.dropDown;
-            this.props.history.push(`/search/${{}}/${this.state.city}/${this.state.min_price}/${this.state.max_price}/${this.state.min_beds}/${this.state.max_beds}/${this.state.start_date}/${this.state.end_date}`);
-        }
+            city = null;
+        } 
+        delete this.state.dropDown;
+        this.props.history.push(`/search/${{}}/${city}/${this.state.min_price}/${this.state.max_price}/${this.state.min_beds}/${this.state.max_beds}/${this.state.start_date}/${this.state.end_date}`);
+        
     }
 
     renderDropDown() {
@@ -98,8 +98,8 @@ class HomepageComponent extends React.Component {
                            <SingleDatePicker
                                 date={this.state.start_date} // momentPropTypes.momentObj or null
                                 onDateChange={start_date => this.setState({ start_date })} // PropTypes.func.isRequired
-                                focused={this.state.focused} // PropTypes.bool
-                                onFocusChange={({ focused }) => this.setState({ focused2: focused })} // PropTypes.func.isRequired
+                                focused={this.state.focused1} // PropTypes.bool
+                                onFocusChange={({ focused }) => this.setState({ focused1: focused })} // PropTypes.func.isRequired
                                 id="1" // PropTypes.string.isRequired,
                                 small={true}
                                 numberOfMonths={1}
@@ -111,8 +111,8 @@ class HomepageComponent extends React.Component {
                             <SingleDatePicker
                                 date={this.state.end_date} // momentPropTypes.momentObj or null
                                 onDateChange={end_date => this.setState({ end_date })} // PropTypes.func.isRequired
-                                focused={this.state.focused} // PropTypes.bool
-                                onFocusChange={({ focused }) => this.setState({ focused1: focused })} // PropTypes.func.isRequired
+                                focused={this.state.focused2} // PropTypes.bool
+                                onFocusChange={({ focused }) => this.setState({ focused2: focused })} // PropTypes.func.isRequired
                                 id="2" // PropTypes.string.isRequired,
                                 small={true}
                                 numberOfMonths={1}

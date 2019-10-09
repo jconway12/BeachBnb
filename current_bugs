@@ -1,6 +1,6 @@
 GENERAL TODOS:
-0. fix reservation errors to be more specifc (EDIT MODEL VALIDATIONS)? or just react date menu
 2. fix routes/ links from homepage and where to stay
+3. fix reservation errors to be more specifc (EDIT MODEL VALIDATIONS)? or just react date menu?
 4. THEME (better images, fix seed data)
 4. README
 
@@ -14,6 +14,7 @@ Bugs/ Styling to fix:
 1. add filter for dates to search bar ? styling why is it so weird
 3. google maps bounds update available listings 
 3. see reservations given a listing (see available dates in calander)
+3. change data fetching to result from backend (reviews!)
 4. add ratings to reviews (average rating to listings)
 5. new reservation form stays w/ scroll
 8. add toggle class to error inputs

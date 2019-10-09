@@ -1,7 +1,7 @@
 #guest-dropdown2 {
   display: flex;
   justify-content: space-around;
-     width: 300px;
+     width: 280px;
      height: 60px;
      border-radius: 0px;
      border: 2px solid rgb(235, 232, 232);
@@ -11,8 +11,8 @@
      background-color: white;
   position: absolute;
   z-index: 2;
-  top: -65px;
-  right: -69px;
+  top: -25px;
+  right: 15px;
 }
 
 #label2 {
