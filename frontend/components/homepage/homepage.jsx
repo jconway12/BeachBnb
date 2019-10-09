@@ -72,9 +72,9 @@ class HomepageComponent extends React.Component {
     }
 
     handleFocus(field) {
-        debugger
+        // debugger
         return ({ focused }) => {
-            debugger
+            // debugger
             this.setState({ [field]: focused })
         }
     }
@@ -99,7 +99,7 @@ class HomepageComponent extends React.Component {
                                 date={this.state.start_date} // momentPropTypes.momentObj or null
                                 onDateChange={start_date => this.setState({ start_date })} // PropTypes.func.isRequired
                                 focused={this.state.focused} // PropTypes.bool
-                                onFocusChange={this.handleFocus('focused1')} // PropTypes.func.isRequired
+                                onFocusChange={({ focused }) => this.setState({ focused2: focused })} // PropTypes.func.isRequired
                                 id="1" // PropTypes.string.isRequired,
                                 small={true}
                                 numberOfMonths={1}
@@ -112,7 +112,7 @@ class HomepageComponent extends React.Component {
                                 date={this.state.end_date} // momentPropTypes.momentObj or null
                                 onDateChange={end_date => this.setState({ end_date })} // PropTypes.func.isRequired
                                 focused={this.state.focused} // PropTypes.bool
-                                onFocusChange={this.handleFocus('focused2')} // PropTypes.func.isRequired
+                                onFocusChange={({ focused }) => this.setState({ focused1: focused })} // PropTypes.func.isRequired
                                 id="2" // PropTypes.string.isRequired,
                                 small={true}
                                 numberOfMonths={1}
