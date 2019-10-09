@@ -1,17 +1,21 @@
 import React from 'react';
-import DatePicker from './calendar';
+// import DatePicker from './calendar';
 import {withRouter} from 'react-router-dom';
+import 'react-dates/initialize';
+import { SingleDatePicker } from 'react-dates';
+
 
 class HomepageComponent extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { city: "", min_beds: 1, max_beds: 5, max_price: 200, min_price: 10, dropDown: false, start_date: null, end_date: null };
+        this.state = { city: "", min_beds: 1, max_beds: 5, max_price: 200, min_price: 10, dropDown: false, start_date: null, end_date: null, focused1: false, focused2: false };
         this.renderDropDown = this.renderDropDown.bind(this);
         this.dropDown = this.dropDown.bind(this);
         this.increaseGuest = this.increaseGuest.bind(this);
         this.decreaseGuest = this.decreaseGuest.bind(this);
         this.submit = this.submit.bind(this);
         this.update = this.update.bind(this);
+        this.handleFocus = this.handleFocus.bind(this);
     }
 
 
@@ -67,6 +71,14 @@ class HomepageComponent extends React.Component {
         }
     }
 
+    handleFocus(field) {
+        debugger
+        return ({ focused }) => {
+            debugger
+            this.setState({ [field]: focused })
+        }
+    }
+
     render() {
         // debugger
         return (
@@ -80,22 +92,34 @@ class HomepageComponent extends React.Component {
                     </label>
 
                     <div id="date-select">
-                    <label id="check-in">
-                        CHECK IN
-                    <br />
-                            <input type="date" onChange={this.update('start_date')}/>
-                    </label>
-
-                   <label id="check-in">
-                        CHECK OUT
-                    <br />
-                     <input type="date" onChange={this.update('end_date')}/>
-                    </label>
+                        <label id="check-in">
+                            CHECK IN
+                            <br/>
+                           <SingleDatePicker
+                                date={this.state.start_date} // momentPropTypes.momentObj or null
+                                onDateChange={start_date => this.setState({ start_date })} // PropTypes.func.isRequired
+                                focused={this.state.focused} // PropTypes.bool
+                                onFocusChange={this.handleFocus('focused1')} // PropTypes.func.isRequired
+                                id="1" // PropTypes.string.isRequired,
+                                small={true}
+                                numberOfMonths={1}
+                            />
+                        </label>
+                        <label id="check-out">
+                            CHECK OUT
+                            <br />
+                            <SingleDatePicker
+                                date={this.state.end_date} // momentPropTypes.momentObj or null
+                                onDateChange={end_date => this.setState({ end_date })} // PropTypes.func.isRequired
+                                focused={this.state.focused} // PropTypes.bool
+                                onFocusChange={this.handleFocus('focused2')} // PropTypes.func.isRequired
+                                id="2" // PropTypes.string.isRequired,
+                                small={true}
+                                numberOfMonths={1}
+                            />
+                        </label>
                     </div>
-                    
-                    {/* <DatePicker /> */}
-
-
+                
                     <label>
                         GUESTS
                     <br />

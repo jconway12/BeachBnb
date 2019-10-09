@@ -2,15 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
-import { fetchRes, fetchReservations, updateRes, deleteRes, createRes } from "./actions/reservation_actions";
+import { fetchReviews, createReview } from "./actions/review_actions";
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
-  window.fetchReservations = fetchReservations;
-  window.fetchRes = fetchRes;
-  window.createRes = createRes;
-  window.updateRes = updateRes;
-  window.deleteRes = deleteRes;
+  window.fetchReviews = fetchReviews;
+  window.createReview = createReview;
 
   let store;
   if (window.currentUser) {

@@ -1,21 +1,20 @@
 GENERAL TODOS:
-4. reviews
 0. fix reservation errors to be more specifc (EDIT MODEL VALIDATIONS)? or just react date menu
+4. THEME (better images, fix seed data)
 4. README
-4. THEME
-5. react date menu
- - bugs and styling 
-1. add filter for dates to search bar ? styling why is it so weird
-3.. google maps bounds update available listings
-3. see reservations given a listing (see available dates in calander)
-4. add ratings to reviews (average rating to listings)
 
 Bugs/ Styling to fix:
 4. new listing form styling
+4. google maps markers w/ more info on BNB
 4. WHERE TO STAY IS A LINK TO SEARCH PAGE - fix routes??
-6. better images/ colors BEACH THEME
-7. fix seed data (add more images to show pages)
+6. new review form (on where you have been?)
+4. profile for non-current user (reviews by hosts??)
 -
+1. add filter for dates to search bar ? styling why is it so weird
+3. google maps bounds update available listings 
+3. see reservations given a listing (see available dates in calander)
+4. add ratings to reviews (average rating to listings)
+5. new reservation form stays w/ scroll
 8. add toggle class to error inputs
 9. image preview, upload many photos?
 10. general UI/UX

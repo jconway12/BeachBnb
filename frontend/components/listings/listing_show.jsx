@@ -4,6 +4,7 @@ import {fetchListing} from '../../actions/listing_actions';
 import ReservationForm from '../reservations/reservation_form';
 import ListingMap from './listing_map';
 import {fetchUser} from '../../actions/user_actions';
+import ReviewIndex from '../reviews/review_index';
 
 class ListingShow extends React.Component {
   constructor(props) {
@@ -61,9 +62,12 @@ class ListingShow extends React.Component {
         <ReservationForm listingId={this.props.listingId}/>
         </div>
       </div>
-      <div className="map-container">
-          {/* <ListingMap listings={[listing]} updateBounds={this.updateBounds}/> */}
+      <div className="reviews-container">
+        <ReviewIndex reviewableId={this.props.listingId} reviewableType={"Listing"}/>
       </div>
+      {/* <div className="map-container">
+          <ListingMap listings={[listing]} updateBounds={this.updateBounds}/>
+      </div> */}
       </div>
     )
   }

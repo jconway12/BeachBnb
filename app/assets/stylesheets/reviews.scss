@@ -1,0 +1,50 @@
+//div
+.reviews-container {
+  width: 60%;
+} 
+
+//ul
+.reviews {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  list-style: none;
+  margin-left: 35%;
+}
+
+//div w/ img and h5
+.author-info {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+//prof pic
+.author-info img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  border: 1px solid white;
+  margin-right: 40px;
+}
+
+.author-info h5 {
+  color: #484848;
+  font-family: 'Lato', sans-serif; 
+  font-size: 15px;
+  font-weight: bold;
+}
+
+//li's
+.reviews li {
+  border-bottom: 2px solid lightgray;
+  width: 100%;
+  height: 150px;
+} 
+
+//body of review
+.reviews li p {
+  color: #484848;
+  font-family: 'Lato', sans-serif; 
+}

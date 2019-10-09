@@ -1,7 +1,10 @@
 class Api::ReviewsController < ApplicationController 
     def index
-        #nested? params? filters?
-        @reviews = Review.all 
+        # debugger
+        reviewable_id = params[:reviewable_id]
+        reviewed = params[:reviewable_type] == "Listing" ? Listing.find(reviewable_id) : User.find(reviewable_id)
+        # debugger
+        @reviews = reviewed.reviews
     end
 
     def create

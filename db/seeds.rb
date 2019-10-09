@@ -9,6 +9,7 @@
 User.destroy_all
 Listing.destroy_all
 Reservation.destroy_all
+Review.destroy_all
 
 demoUser = User.create!(first_name: 'Demo User', last_name: 'Demo User', email: 'demo@bnb.com', password: 'password')
 user1 = User.create!(first_name: 'Jesse', last_name: 'Conway', email: 'j@gmail.com', password: "password")
@@ -51,3 +52,7 @@ user1.photo.attach(io: File.open("app/assets/images/user1.jpg"), filename: "user
 user2.photo.attach(io: File.open("app/assets/images/user2.jpg"), filename: "user2.jpg")
 user3.photo.attach(io: File.open("app/assets/images/user3.jpg"), filename: "user3.jpg")
 demoUser.photo.attach(io: File.open("app/assets/images/demouser.jpg"), filename: "demoUser.jpg")
+
+review1 = Review.create!(author_id: demoUser.id, body: "Great place in a great location", reviewable_id: listing1.id, reviewable_type: 'Listing')
+review2 = Review.create!(author_id: user2.id, body: "Hated it", reviewable_id: listing1.id, reviewable_type: 'Listing')
+review3 = Review.create!(author_id: user3.id, body: "Wonderful place with a wonderful host, 10/10 would stay again", reviewable_id: listing1.id, reviewable_type: 'Listing')
