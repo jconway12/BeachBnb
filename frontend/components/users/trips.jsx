@@ -36,7 +36,7 @@ class Trips extends React.Component {
                 <h1 className="covered-by-search">Upcoming Plans</h1>
                 <ul className="trips-index">
                     {new_listings.map(lis => {
-                       return <ListingItem key={lis.id} listing={lis}/>;
+                       return <ListingItem key={lis.id} listing={lis}/>; //change this to link to res show? or show dates...
                     })}
                 </ul>
                 <h1>Where You've Been</h1>
