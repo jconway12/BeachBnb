@@ -54,6 +54,7 @@ listing7.save!
 listing8.save!
 
 res1 = Reservation.create!(listing_id: listing1.id, renter_id: user1.id, start_date: Date.new(2019, 12, 1), end_date: Date.new(2020, 1, 2), num_guests: 1)
+res4 = Reservation.create!(listing_id: listing2.id, renter_id: demoUser.id, start_date: Date.new(2019, 12, 20), end_date: Date.new(2020, 1, 15), num_guests: 2)
 res2 = Reservation.create!(listing_id: listing1.id, renter_id: user1.id, start_date: Date.new(2019, 1, 6), end_date: Date.new(2019, 1, 10), num_guests: 3)
 res3 = Reservation.create!(listing_id: listing2.id, renter_id: demoUser.id, start_date: Date.new(2019, 1, 1), end_date: Date.new(2019, 1, 5), num_guests: 2)
 

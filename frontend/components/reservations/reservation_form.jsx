@@ -84,13 +84,13 @@ class ReservationForm extends React.Component {
     // const tempEndDate = moment(this.state.end_date);
         // const momentString = momentObj.format('YYYY-MM-DD'); // 2016-07-15
 
-    const startDateString = this.state.start_date;
-    const dateObj1 = new Date(startDateString);
-    const momentObj1 = moment(dateObj1);
-    
-    const endDateString = this.state.end_date;
-    const dateObj2 = new Date(endDateString);
-    const momentObj2 = moment(dateObj2);
+    // const startDateString = this.state.start_date;
+    // const dateObj1 = new Date(startDateString);
+    // const momentObj1 = moment(dateObj1);
+
+    // const endDateString = this.state.end_date;
+    // const dateObj2 = new Date(endDateString);
+    // const momentObj2 = moment(dateObj2);
     // debugger
     return (
     <form onSubmit={this.submit}>
