@@ -4,9 +4,14 @@ import {Link} from 'react-router-dom';
 class ListingItem extends React.Component {
   render() {
     // debugger
+    let link = `/users/${this.props.listing.owner_id}/listings/${this.props.listing.id}`;
+    if (this.props.upcoming) {
+      link = `/listings/${this.props.listing.id}/reservations`
+    } 
+
      return (
       <div className="listing-item">
-        <Link to={`/users/${this.props.listing.owner_id}/listings/${this.props.listing.id}`}>
+        <Link to={link}>
         <div className="index-img">
           <img src={this.props.listing.photoURL} alt=""/>
         </div>

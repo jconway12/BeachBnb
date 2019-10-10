@@ -40,7 +40,7 @@ class ReservationForm extends React.Component {
     delete this.state.dropDown;
     delete this.state.focused1;
     delete this.state.focused2;
-    this.props.action(this.state).then(() => this.props.history.push("/trips"));
+    this.props.action(this.state).then(() => this.props.history.push("/trips")); //maybe go to reservation show?
   }
 
   dropDown() {

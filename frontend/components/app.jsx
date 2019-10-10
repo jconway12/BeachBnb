@@ -32,7 +32,7 @@ const App = props => {
       <ProtectedRoute path="/listings/new" component={CreateListingContainer} />
       <ProtectedRoute path="/listings/:listingId/edit" component={UpdateListingContainer} />
       <ProtectedRoute path="/users/:userId/listings/:listingId" component={ListingShowContainer} />
-      {/* <ProtectedRoute path="/listings/:listingId/reservations" component={ReservationShow}/> */}
+      <ProtectedRoute path="/listings/:listingId/reservations" component={ReservationShow}/>
       <Route exact path="/listings/:city" component={ListingIndexContainer} />
       <Route exact path="/listings" component={ListingIndexContainer} />
       <ProtectedRoute path="/profile" component={ProfileContainer} />

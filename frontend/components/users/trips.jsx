@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import { fetchListings } from '../../actions/listing_actions';
 import { fetchReservations } from '../../actions/reservation_actions';
 import ListingItem from '../listings/listing_item';
+import {Link} from 'react-router-dom';
 
 class Trips extends React.Component {
     componentDidMount() {
@@ -36,7 +37,7 @@ class Trips extends React.Component {
                 <h1 className="covered-by-search">Upcoming Plans</h1>
                 <ul className="trips-index">
                     {new_listings.map(lis => {
-                       return <ListingItem key={lis.id} listing={lis}/>; //change this to link to res show? or show dates...
+                        return <ListingItem key={lis.id} listing={lis} upcoming={true}/>;
                     })}
                 </ul>
                 <h1>Where You've Been</h1>
