@@ -25,14 +25,14 @@ user3 = User.create!(first_name: 'user3', last_name: 'user3', email: 'user3@gmai
 # listing7 = Listing.new(city: 'Sydney', num_beds: 2, title: 'listing7', owner_id: user2.id, description: "nice", rate: 20, lat: 42.3605, lng: 71.0581)
 # listing8 = Listing.new(city: 'New York', num_beds: 1, title: 'listing8', owner_id: user2.id, description: "nice", rate: 20, lat: 42.3654, lng: 71.0510)
 
-listing1 = Listing.new(city: 'Montevideo', num_beds: 1, title: 'listing1', owner_id: user1.id, description: "nice", rate: 20, lat: 42.3601, lng: 71.0589)
-listing2 = Listing.new(city: 'Cartagena', num_beds: 2, title: 'listing2', owner_id: user2.id, description: "nice", rate: 20, lat: 42.3605, lng: 71.0582)
-listing3 = Listing.new(city: 'Cabo', num_beds: 5, title: 'listing3', owner_id: user2.id, description: "cooooooool", rate: 20, lat: 42.3608, lng: 71.0581)
-listing4 = Listing.new(city: 'Phuket', num_beds: 3, title: 'listing4', owner_id: user2.id, description: "nice", rate: 20, lat: 42.3608, lng: 71.0580)
-listing5 = Listing.new(city: 'Lagos', num_beds: 1, title: 'listing5', owner_id: user1.id, description: "blah blah blah blah blah", rate: 20, lat: 42.3601, lng: 71.0589)
-listing6 = Listing.new(city: 'Rio', num_beds: 1, title: 'listing6', owner_id: user2.id, description: "listeing description", rate: 20, lat: 42.3640, lng: 71.0585)
-listing7 = Listing.new(city: 'Sydney', num_beds: 2, title: 'listing7', owner_id: user2.id, description: "nice", rate: 20, lat: 42.3605, lng: 71.0581)
-listing8 = Listing.new(city: 'Rio', num_beds: 1, title: 'listing8', owner_id: user2.id, description: "nice", rate: 20, lat: 42.3654, lng: 71.0510)
+listing1 = Listing.new(city: 'Montevideo', num_beds: 1, title: 'Beach front property in Uruguay', owner_id: user1.id, description: "spacious and clean with pool access", rate: 20, lat: -34.936119, lng: -56.159996)
+listing2 = Listing.new(city: 'Cartagena', num_beds: 2, title: 'Beach cottage in Cartagena', owner_id: user2.id, description: "close walk to town", rate: 20, lat: 10.394625, lng: -75.551956)
+listing3 = Listing.new(city: 'Cabo', num_beds: 5, title: 'Apartment with ocean views', owner_id: user2.id, description: "pool side seating and access to the beach", rate: 20, lat: 22.875107, lng: -109.906824)
+listing4 = Listing.new(city: 'Phuket', num_beds: 3, title: 'Relaxed beach getaway', owner_id: user2.id, description: "on the beach with nice outdoor area", rate: 20, lat: 7.839679, lng: 98.357185)
+listing5 = Listing.new(city: 'Lagos', num_beds: 1, title: 'Remote beach property', owner_id: user1.id, description: "close to both the beach and city of lagos", rate: 20, lat: 6.423737, lng: 3.459086)
+listing6 = Listing.new(city: 'Sydney', num_beds: 1, title: 'Modern apartment overlooking the ocean', owner_id: user2.id, description: "kitchen and outdoor space", rate: 20, lat: -33.695518, lng: 151.311610)
+listing7 = Listing.new(city: 'Rio', num_beds: 2, title: 'Apartment near Copacabana', owner_id: user2.id, description: "nice", rate: 20, lat: -22.978758, lng: -43.191549)
+listing8 = Listing.new(city: 'Rio', num_beds: 1, title: 'Modern space with easy access to town', owner_id: user2.id, description: "perfect for groups and close to public transportation", rate: 20, lat: -22.988398, lng: -43.192794)
 
 #photos 
 listing1.photos.attach(io: File.open("app/assets/images/listing1pic2.jpg"), filename: "listing1pic1.jpg")

@@ -21,7 +21,7 @@ class Api::ListingsController < ApplicationController
         if params[:max_price] 
             @listings = @listings.select { |lis| lis.rate <= params[:max_price].to_i }
         end
-        debugger
+        
         if params[:search_city] && params[:search_city] != "null"
             @listings = @listings.select { |lis| lis.city == params[:search_city] }
         end

@@ -6,7 +6,7 @@ import {withRouter} from 'react-router-dom';
 class CitiesIndex extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { cities: ["Boston", "London", "Sydney", "New York", "Tokyo", "Buenos Aires"], lowerIdx: 0, uppderIdx: 5 }
+    this.state = { cities: ["Cabo", "Rio", "Phuket", "Montevideo", "Cartagena", "Sydney", "Lagos"], lowerIdx: 0, uppderIdx: 5 }
     this.incrementRange = this.incrementRange.bind(this);
     this.decrementRange = this.decrementRange.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -24,7 +24,7 @@ class CitiesIndex extends React.Component {
   }
 
   incrementRange() {
-    if(this.state.uppderIdx < 6) {
+    if(this.state.uppderIdx < 7) {
      this.setState({lowerIdx: this.state.lowerIdx + 1, uppderIdx: this.state.uppderIdx + 1});
     }
   }
@@ -36,18 +36,20 @@ class CitiesIndex extends React.Component {
   }
 
   renderImage(city) {
-    if (city === "Boston") {
-      return <img src={window.bostonURL} />;
-    } else if (city === "New York") {
-      return <img src={window.newyorkURL} />;
-    } else if (city === "London") {
-      return <img src={window.londonURL} />;
+    if (city === "Lagos") {
+      return <img src={window.lagosURL} />;
+    } else if (city === "Phuket") {
+      return <img src={window.phuketURL} />;
+    } else if (city === "Rio") {
+      return <img src={window.rioURL} />;
     } else if (city === "Sydney") {
       return <img src={window.sydneyURL} />;
-    } else if (city === "Buenos Aires") {
-      return <img src={window.buenosairesURL} />;
-    } else if (city === "Tokyo") {
-      return <img src={window.tokyoURL} />;
+    } else if (city === "Cartagena") {
+      return <img src={window.cartagenaURL} />;
+    } else if (city === "Montevideo") {
+      return <img src={window.montevideoURL} />;
+    } else if(city === "Cabo") {
+     return <img src={window.caboURL} />;
     }
   }
 
