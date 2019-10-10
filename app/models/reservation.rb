@@ -54,4 +54,12 @@ class Reservation < ApplicationRecord
             errors.add(:start_date, :invalid_date_range)
         end
     end
+
+    def date_available?(listing, date) #takes a date and returns true if does not fall in any conflicting reservation
+        listing.reservations.each do |res|
+            return false if date > res.start_date && date < res.end_date
+        end
+
+        true
+    end
 end
