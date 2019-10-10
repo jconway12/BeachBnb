@@ -1,4 +1,5 @@
 To dos:
+- CHECK SESSION ERRORS!!!!!!!!!!
 - Reservations: form w/ react dates does not work, errors are insufficient, need to see unavailable dates
 - README
 - Routes: make modal pop open if try to access protected route

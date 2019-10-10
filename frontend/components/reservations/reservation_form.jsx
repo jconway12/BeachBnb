@@ -106,7 +106,7 @@ class ReservationForm extends React.Component {
             onFocusChange={({ focused }) => this.setState({ focused1: focused })} // PropTypes.func.isRequired
             id="3" // PropTypes.string.isRequired,
             small={true}
-            numberOfMonths={1}
+            numberOfMonths={1} //NEED TO ADD DATE AVAILABLE
           />
       </label>
 
@@ -121,7 +121,7 @@ class ReservationForm extends React.Component {
             onFocusChange={({ focused }) => this.setState({ focused2: focused })} // PropTypes.func.isRequired
             id="4" // PropTypes.string.isRequired,
             small={true}
-            numberOfMonths={1}
+            numberOfMonths={1} //NEED TO BLOCK OFF UNABILABLE DATES
           />
         <br />
       </label>
