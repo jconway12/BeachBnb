@@ -1,6 +1,7 @@
 To dos:
 - Reservations: form w/ react dates does not work, errors are insufficient, need to see unavailable dates
 - README
+- Routes: make modal pop open if try to access protected route
 - Google maps markers: must be a way to view listing related to marker 
 - Search: date and bounds search does not function, only city can be null, date buttons on search bar when working (styling is hard) (OVERALL REWORK THE QUERYING)
 - Efficiency: N+1 queries, normalize state using jbuilder (reviews, listings) (instead of complicated fetching)
