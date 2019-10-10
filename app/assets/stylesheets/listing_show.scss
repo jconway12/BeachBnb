@@ -6,12 +6,15 @@
   width: 100%;
   height: 500px;
   background-color: lightcoral;
+  overflow: hidden;
   // border: 2px solid black;
 }
 
 .image-container img {
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: -15%;
 }
 
 .description {
@@ -42,6 +45,7 @@
   font-family: 'Lato', sans-serif;
   color: #484848;
   font-size: 40px;
+  width: 300px;
 }
 
 // .reserve-form {
@@ -72,7 +76,7 @@
 // }
 
 .map-container {
-  margin-left: 300px;
+  margin-left: 23%;
   height: 400px;
   width: 500px;
   background-color: white;
@@ -86,5 +90,5 @@
   border: 1px solid white;
   position: absolute;
   top: 10px;
-  left: 45%;
+  left: 50%;
 }

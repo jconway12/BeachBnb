@@ -49,6 +49,7 @@ class ListingShow extends React.Component {
         <div>
           <h1>{listing.title}</h1>
           <p>{listing.description}</p>
+
         </div>
         <div className="profile-image">
             <img src={owner.photoURL} alt="" />
@@ -65,9 +66,9 @@ class ListingShow extends React.Component {
       <div className="reviews-container">
         <ReviewIndex reviewableId={this.props.listingId} reviewableType={"Listing"}/>
       </div>
-      {/* <div className="map-container">
+      <div className="map-container">
           <ListingMap listings={[listing]} updateBounds={this.updateBounds}/>
-      </div> */}
+      </div>
       </div>
     )
   }
