@@ -51,7 +51,7 @@ class Reservation < ApplicationRecord
 
     def no_overlap 
         if self.does_overlap_any?
-            errors.add(:start_date, :invalid_date_range)
+            errors.add(:start_date, :dates_taken)
         end
     end
 
