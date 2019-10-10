@@ -33,6 +33,7 @@ class ReservationShow extends React.Component {
             <div className="reservation-show covered-by-search">
             <h1>You are going to {listing.city}!</h1>
             <h2>Dates: {reservation.start_date} to {reservation.end_date}</h2>
+            <h2>Number of guests: {reservation.num_guests}</h2>            
             <div className="listing-click">
                 <ListingItem className="res-listing" key={listing.id} listing={listing} />
             </div>

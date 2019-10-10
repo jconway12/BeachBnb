@@ -4,6 +4,7 @@ import {createRes, removeResErrors} from '../../actions/reservation_actions';
 import {withRouter} from 'react-router-dom';
 import 'react-dates/initialize';
 import { SingleDatePicker } from 'react-dates';
+// import moment from 'react-moment';
 
 class ReservationForm extends React.Component {
   constructor(props) {
@@ -77,6 +78,19 @@ class ReservationForm extends React.Component {
   }
 
   render() {
+    // debugger
+    // // const tempStartDate = moment(this.state.start_date).format('DD-MM-YYYY');
+    // const tempStartDate = moment(this.state.start_date);
+    // const tempEndDate = moment(this.state.end_date);
+        // const momentString = momentObj.format('YYYY-MM-DD'); // 2016-07-15
+
+    // const startDateString = this.state.start_date;
+    // const dateObj1 = new Date(startDateString);
+    // const momentObj1 = moment(dateObj1);
+
+    // const endDateString = this.state.end_date;
+    // const dateObj2 = new Date(endDateString);
+    // const momentObj2 = moment(dateObj2);
     // debugger
     return (
     <form onSubmit={this.submit}>

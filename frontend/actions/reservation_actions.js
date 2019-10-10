@@ -16,6 +16,10 @@ export const fetchReservations = (userId)=> dispatch => {
 }
 
 export const createRes = res => dispatch => {
+    // debugger
+    // res.start_date = String(res.start_date);
+    // res.end_date = String(res.end_date);
+    // debugger
     return ResAPI.createRes(res).then(res => { dispatch({ type: RECEIVE_RESERVATION, reservation: res }) },
         errors => dispatch({ type: RECEIVE_RES_ERRORS, errors }));
 }

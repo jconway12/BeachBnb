@@ -4,7 +4,7 @@ To dos:
 - Google maps markers: must be a way to view listing related to marker 
 - Search: date and bounds search does not function, only city can be null, date buttons on search bar when working (styling is hard) (OVERALL REWORK THE QUERYING)
 - Efficiency: N+1 queries, normalize state using jbuilder (reviews, listings) (instead of complicated fetching)
-- Profile: host profile has link to reservations show of given listing, host/ renter profiles should be available w/ reviews to relevant users
+- Profile: host profile has link to reservations show of given listing, host/ renter profiles should be available w/ reviews to relevant users (overall bare)
 - Reviews: currently only for listings, not using review form (where have you been), add rating capability (avg. rating for listings, filter..)
 
 Styling: 

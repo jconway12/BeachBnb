@@ -13,6 +13,7 @@ export const fetchRes = id => {
 }
 
 export const createRes = res => {
+    // debugger
     return $.ajax({
         method: 'POST',
         url: `api/reservations/`,
