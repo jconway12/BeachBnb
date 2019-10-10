@@ -5,6 +5,8 @@ export default class MarkerManager {
     this.markers = {};
   }
 
+  //add show info method?
+
   updateMarkers(listings) {
     // console.log("time to update");
     const listingsObj = {};
