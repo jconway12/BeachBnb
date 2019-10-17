@@ -4,7 +4,7 @@ import {createRes, removeResErrors} from '../../actions/reservation_actions';
 import {withRouter} from 'react-router-dom';
 import 'react-dates/initialize';
 import { SingleDatePicker } from 'react-dates';
-// import moment from 'react-moment';
+import moment from 'moment'
 
 class ReservationForm extends React.Component {
   constructor(props) {
@@ -78,19 +78,15 @@ class ReservationForm extends React.Component {
   }
 
   render() {
-    // debugger
-    // // const tempStartDate = moment(this.state.start_date).format('DD-MM-YYYY');
-    // const tempStartDate = moment(this.state.start_date);
-    // const tempEndDate = moment(this.state.end_date);
-        // const momentString = momentObj.format('YYYY-MM-DD'); // 2016-07-15
+    let start_date = this.state.start_date || new Date();
+    let end_date = this.state.end_date || new Date();
 
-    // const startDateString = this.state.start_date;
-    // const dateObj1 = new Date(startDateString);
-    // const momentObj1 = moment(dateObj1);
-
-    // const endDateString = this.state.end_date;
-    // const dateObj2 = new Date(endDateString);
-    // const momentObj2 = moment(dateObj2);
+    if(start_date === "null") {
+      start_date = new Date();
+    }
+    if (end_date === "null") {
+      end_date = new Date();
+    }
     // debugger
     return (
     <form onSubmit={this.submit}>
@@ -100,7 +96,7 @@ class ReservationForm extends React.Component {
         <br/>
         {/* <input type="date" value={this.state.start_date} onChange={this.update('start_date')}/> */}
           <SingleDatePicker
-            date={this.state.start_date} // momentPropTypes.momentObj or null
+            date={moment(start_date)} // momentPropTypes.momentObj or null
             onDateChange={start_date => this.setState({ start_date })} // PropTypes.func.isRequired
             focused={this.state.focused1} // PropTypes.bool
             onFocusChange={({ focused }) => this.setState({ focused1: focused })} // PropTypes.func.isRequired
@@ -115,7 +111,7 @@ class ReservationForm extends React.Component {
         <br/>
         {/* <input type="date" value={this.state.end_date} onChange={this.update('end_date')} /> */}
           <SingleDatePicker
-            date={this.state.end_date} // momentPropTypes.momentObj or null
+              date={moment(end_date)} // momentPropTypes.momentObj or null
             onDateChange={end_date => this.setState({ end_date })} // PropTypes.func.isRequired
             focused={this.state.focused2} // PropTypes.bool
             onFocusChange={({ focused }) => this.setState({ focused2: focused })} // PropTypes.func.isRequired

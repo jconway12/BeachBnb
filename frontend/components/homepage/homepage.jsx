@@ -3,7 +3,7 @@ import React from 'react';
 import {withRouter} from 'react-router-dom';
 import 'react-dates/initialize';
 import { SingleDatePicker } from 'react-dates';
-
+import moment from 'moment'
 
 class HomepageComponent extends React.Component {
     constructor(props) {
@@ -81,6 +81,14 @@ class HomepageComponent extends React.Component {
 
     render() {
         // debugger
+        let start_date = this.state.start_date || new Date();
+        let end_date = this.state.end_date || new Date();
+        if (start_date === "null") {
+            start_date = new Date();
+        }
+        if (end_date === "null") {
+            end_date = new Date();
+        }
         return (
             <div id='welcome-form'>
                 <p>Book unique places to stay and things to do.</p>
@@ -96,7 +104,7 @@ class HomepageComponent extends React.Component {
                             CHECK IN
                             <br/>
                            <SingleDatePicker
-                                date={this.state.start_date} // momentPropTypes.momentObj or null
+                                date={moment(start_date)} // momentPropTypes.momentObj or null
                                 onDateChange={start_date => this.setState({ start_date })} // PropTypes.func.isRequired
                                 focused={this.state.focused1} // PropTypes.bool
                                 onFocusChange={({ focused }) => this.setState({ focused1: focused })} // PropTypes.func.isRequired
@@ -109,7 +117,7 @@ class HomepageComponent extends React.Component {
                             CHECK OUT
                             <br />
                             <SingleDatePicker
-                                date={this.state.end_date} // momentPropTypes.momentObj or null
+                                date={moment(end_date)} // momentPropTypes.momentObj or null
                                 onDateChange={end_date => this.setState({ end_date })} // PropTypes.func.isRequired
                                 focused={this.state.focused2} // PropTypes.bool
                                 onFocusChange={({ focused }) => this.setState({ focused2: focused })} // PropTypes.func.isRequired

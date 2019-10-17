@@ -11,6 +11,13 @@ class DatePicker extends React.Component {
   }
 
   render() { 
+    // const startDateString = this.state.start_date;
+    // const dateObj1 = new Date(startDateString);
+    // const momentObj1 = moment(dateObj1);
+
+    // const endDateString = this.state.end_date;
+    // const dateObj2 = new Date(endDateString);
+    // const momentObj2 = moment(dateObj2);
     return (
      <DateRangePicker
       startDate = { this.state.startDate } // momentPropTypes.momentObj or null,

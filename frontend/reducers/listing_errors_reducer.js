@@ -4,6 +4,7 @@ import {
 } from "../actions/listing_actions";
 
 const ListingErrorsReducer = (state = [], action) => {
+  // debugger
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_LISTING_ERRORS: {

@@ -1,5 +1,5 @@
 To dos:
-- CHECK SESSION ERRORS!!!!!!!!!!
+- CHECK SESSION ERRORS, FIX HEROKU, FIX REACT DATES, README by friday
 - Reservations: form w/ react dates does not work, errors are insufficient, need to see unavailable dates
 - README
 - Routes: make modal pop open if try to access protected route
@@ -17,16 +17,12 @@ Styling:
 
 npm install webpack webpack-cli react react-dom react-redux redux redux-logger @babel/core @babel/preset-react @babel/preset-env babel-loader
 
-places: (8 listing photos, 5 location photos, 1 background photo)
-- uruguay *
-- mexico *
-- australia *
-- thailand *
-- newport
-- brazil *
-- bali 
-- croatia
-- france 
-- portugal *
-- italy 
-- carribean 
+
+ADD RESERVTIONS TO JBUILDER:
+    reservations = @listing.reservations || []
+    resIds = []
+    reservations.each do |res|
+        resIds << res.id
+    end
+    json.reservations resIds
+
