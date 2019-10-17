@@ -1,5 +1,5 @@
 To dos:
-- CHECK SESSION ERRORS, FIX HEROKU, FIX REACT DATES, README by friday
+- FIX RES PAGE, CHECK SESSION ERRORS, FIX HEROKU, README by friday
 - Reservations: form w/ react dates does not work, errors are insufficient, need to see unavailable dates
 - README
 - Routes: make modal pop open if try to access protected route

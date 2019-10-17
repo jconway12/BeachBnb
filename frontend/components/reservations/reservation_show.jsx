@@ -11,24 +11,26 @@ class ReservationShow extends React.Component {
     componentDidMount() {
         this.props.fetchListing(this.props.listingId);
         this.props.fetchUser(this.props.userId);
-        this.props.fetchReservations();
+        this.props.fetchReservations(this.props.userId);
     }
 
     render() {
-        // debugger
         const user = this.props.user || {};
         const listing = this.props.listing || {};
-        const userRes = user.reservations || [];
-        const listingRes = listing.reservations || [];
+        // const userRes = user.reservations || [];
+        // const listingRes = listing.reservations || [];
         const reservations = this.props.reservations || {};
-        let reservationId;
-        for (let i = 0; i < userRes.length; i++) {
-            if (listingRes.includes(userRes[i])) {
-                reservationId = userRes[i];
+        const reservationArr = Object.values(reservations);
+        let reservation = {};
+        for (let i = 0; i < reservationArr.length; i++) {
+            // debugger
+            if (reservationArr[i]["renter_id"] === this.props.userId && reservationArr[i]["listing_id"] === parseInt(this.props.listingId)) {
+                // debugger
+                reservation = reservationArr[i];
             }
         }
-        const reservation = reservations[reservationId] || {};
-
+        // const reservation = reservations[reservationId] || {};
+        // debugger
         return (
             <div className="reservation-show covered-by-search">
             <h1>You are going to {listing.city}!</h1>
@@ -59,7 +61,7 @@ const mdp = dispatch => {
     return {
         fetchUser: id => dispatch(fetchUser(id)),
         fetchListing: id => dispatch(fetchListing(id)),
-        fetchReservations: () => dispatch(fetchReservations())
+        fetchReservations: (userId) => dispatch(fetchReservations(userId))
     }
 }
 
