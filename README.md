@@ -1,23 +1,19 @@
 # README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+BeachBnb: Find unique places to stay by the beach
 
 * Ruby version
-
-* System dependencies
+2.5.1
 
 * Configuration
+npm install
+bundle install
+npm run webpack to run locally through localhost:3000
 
 * Database creation
-
-* Database initialization
-
-* How to run the test suite
+Database is run through Postrgresql and manged through Rails
 
 * Services (job queues, cache servers, search engines, etc.)
+Offers user authentication, search, and reservation booking services
 
 * Deployment instructions
-
+Deployed through Heroku
