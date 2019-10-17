@@ -1,7 +1,7 @@
 To dos:
-- FIX RES PAGE, CHECK SESSION ERRORS, FIX HEROKU, README by friday
-- Reservations: form w/ react dates does not work, errors are insufficient, need to see unavailable dates
-- README
+- FIX HEROKU, README by friday
+- profile picture: add upload profile picture capability to profile page
+- Reservations: errors are insufficient, need to see unavailable dates
 - Routes: make modal pop open if try to access protected route
 - Google maps markers: must be a way to view listing related to marker 
 - Search: date and bounds search does not function, only city can be null, date buttons on search bar when working (styling is hard) (OVERALL REWORK THE QUERYING)
@@ -18,7 +18,7 @@ Styling:
 npm install webpack webpack-cli react react-dom react-redux redux redux-logger @babel/core @babel/preset-react @babel/preset-env babel-loader
 
 
-ADD RESERVTIONS TO JBUILDER:
+ADD RESERVTIONS TO JBUILDER: - not rlly working
     reservations = @listing.reservations || []
     resIds = []
     reservations.each do |res|

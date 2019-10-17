@@ -7,6 +7,8 @@ class Api::UsersController < ApplicationController
   def create
     # debugger
     @user = User.new(user_params)
+    @user.photo.attach(io: File.open("app/assets/images/defaultProf.png"), filename: "defaultProf.png") unless user_params[:photo]
+
     if @user.save
       login!(@user)
       render :show
