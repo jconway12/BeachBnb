@@ -42,9 +42,9 @@ class HomepageComponent extends React.Component {
             return (
                 <div id="guest-dropdown">
                     <div id="label">Guests</div>
-                    <div id="less" onClick={this.decreaseGuest}>-</div>
+                    <div id="less" onClick={this.decreaseGuest}><img src={window.minusURL} /></div>
                     <div id="num-guests">{this.state.min_beds}</div>
-                    <div id="more" onClick={this.increaseGuest}>+</div>
+                    <div id="more" onClick={this.increaseGuest}><img src={window.plusURL} /></div>
                 </div>
             )
         }

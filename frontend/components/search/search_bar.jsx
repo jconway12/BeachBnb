@@ -72,15 +72,15 @@ class SearchBar extends React.Component {
                 <div id="price-dropdown">
                     <div id="min-price">
                         <div className="label">Minimum Price</div>
-                        <div className="less" onClick={this.decreaseField("min_price", 'PriceDropDown')}>-</div>
+                        <div className="less" onClick={this.decreaseField("min_price", 'PriceDropDown')}><img src={window.minusURL} /></div>
                         <div className="count">{this.state.min_price}</div>
-                        <div className="more" onClick={this.increaseField("min_price", 'PriceDropDown')}>+</div>
+                        <div className="more" onClick={this.increaseField("min_price", 'PriceDropDown')}><img src={window.plusURL} /></div>
                     </div>
                     <div id="why"> 
                         <div className="label">Maximum Price</div>
-                        <div className="less" onClick={this.decreaseField("max_price", 'PriceDropDown')}>-</div>
+                        <div className="less" onClick={this.decreaseField("max_price", 'PriceDropDown')}><img src={window.minusURL} /></div>
                         <div className="count">{this.state.max_price}</div>
-                        <div className="more" onClick={this.increaseField("max_price", 'PriceDropDown')}>+</div>
+                        <div className="more" onClick={this.increaseField("max_price", 'PriceDropDown')}><img src={window.plusURL} /></div>
                     </div>
                 </div>
             )
@@ -93,15 +93,15 @@ class SearchBar extends React.Component {
                 <div id="bed-dropdown">
                     <div id="min-bed">
                         <div className="label">Minimum Beds</div>
-                        <div className="less" onClick={this.decreaseField("min_beds", 'BedDropDown')}>-</div>
+                        <div className="less" onClick={this.decreaseField("min_beds", 'BedDropDown')}><img src={window.minusURL} /></div>
                         <div className="min">{this.state.min_beds}</div>
-                        <div className="more" onClick={this.increaseField("min_beds", 'BedDropDown')}>+</div>
+                        <div className="more" onClick={this.increaseField("min_beds", 'BedDropDown')}><img src={window.plusURL} /></div>
                     </div>
                     <div id="max-bed">
                         <div className="label">Maximum Beds</div>
-                        <div className="less" onClick={this.decreaseField("max_beds", 'BedDropDown')}>-</div>
+                        <div className="less" onClick={this.decreaseField("max_beds", 'BedDropDown')}><img src={window.minusURL} /></div>
                         <div className="count">{this.state.max_beds}</div>
-                        <div className="more" onClick={this.increaseField("max_beds", 'BedDropDown')}>+</div>
+                        <div className="more" onClick={this.increaseField("max_beds", 'BedDropDown')}><img src={window.plusURL} /></div>
                     </div>
                 </div>
             )

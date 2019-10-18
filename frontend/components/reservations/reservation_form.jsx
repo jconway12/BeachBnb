@@ -69,9 +69,9 @@ class ReservationForm extends React.Component {
       return (
         <div id="guest-dropdown2">
           <div id="label2">Guests</div>
-          <div id="less2" onClick={this.decreaseGuest}>-</div>
+          <div id="less2" onClick={this.decreaseGuest}><img src={window.minusURL} /></div>
           <div id="num-guests2">{this.state.num_guests}</div>
-          <div id="more2" onClick={this.increaseGuest}>+</div>
+          <div id="more2" onClick={this.increaseGuest}><img src={window.plusURL} /></div>
         </div>
       )
     }
