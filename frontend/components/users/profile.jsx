@@ -21,7 +21,7 @@ class Profile extends React.Component {
                 listings.push(all_listings[i]);
             }
         }
-
+        const listingLabel = listings.length === 0 ? "You have no current listings" : "Your listings: ";
         return  (
             <div className="profile-page covered-by-search">
                 <div className="profile-box">
@@ -35,7 +35,7 @@ class Profile extends React.Component {
                     </div>
                 
                 <ul className='listings'>
-                        <h3>Your listings: </h3>
+                        <h3>{listingLabel}</h3>
                         {listings.map(lis => {
                             return (
                                 <li key={lis.id}>{lis.title}</li>
