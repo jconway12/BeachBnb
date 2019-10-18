@@ -10,6 +10,7 @@ class ListingIndex extends React.Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0);
     if (this.props.city) {
     this.props.fetchListings({city: this.props.city});
     } else {

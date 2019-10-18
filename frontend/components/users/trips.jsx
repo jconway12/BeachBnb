@@ -7,6 +7,7 @@ import {Link} from 'react-router-dom';
 
 class Trips extends React.Component {
     componentDidMount() {
+        window.scrollTo(0, 0);
         this.props.fetchListings();
         // debugger
         this.props.fetchReservations(this.props.user.id);

@@ -1,6 +1,6 @@
 To dos:
 - profile picture: add upload profile picture capability to profile page
-- styling (logout button, picture skewing, sign in errors toggle, profile page, new listing form)
+- styling (dropdown logos, picture skewing, sign in errors toggle, profile page, new listing form)
 - general UI/UX needs improvement
 - Reservations: errors are insufficient, need to see unavailable dates, stay put with scroll
 - Routes: make modal pop open if try to access protected route

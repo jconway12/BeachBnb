@@ -12,6 +12,7 @@ class SearchListings extends React.Component {
     }
 
     componentDidMount() {
+        window.scrollTo(0, 0);
         // debugger
         this.props.fetchListings({...this.bounds, ...this.props.filters});
     }
