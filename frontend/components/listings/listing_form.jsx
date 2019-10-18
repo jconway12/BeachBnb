@@ -68,9 +68,9 @@ class ListingForm extends React.Component {
             return (
                 <div id="guest-dropdown3">
                     <div id="label3">Guests</div>
-                    <div id="less3" onClick={this.decreaseGuest}>-</div>
+                    <div id="less3" onClick={this.decreaseGuest}><img src={window.minusURL} /></div>
                     <div id="num-guests3">{this.state.num_beds}</div>
-                    <div id="more3" onClick={this.increaseGuest}>+</div>
+                    <div id="more3" onClick={this.increaseGuest}><img src={window.plusURL} /></div>
                 </div>
             )
         }
