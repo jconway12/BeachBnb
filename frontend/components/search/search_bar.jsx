@@ -112,7 +112,7 @@ class SearchBar extends React.Component {
         return (
         <div id="search-bar">
             <form onSubmit={this.submit}>
-                    <input type="text" value={this.state.city} placeholder="City" onChange={this.update('city')}/>
+                    <input type="text" value={this.state.city} placeholder="     Try 'Montevideo'" onChange={this.update('city')}/>
 
                 <div className="filters">
                 <div className="filter-button" onClick={this.PriceDropDown}>Price</div>

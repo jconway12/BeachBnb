@@ -34,5 +34,25 @@
    background-size: cover;
  }
 
+ #home-footer div {
+     margin-left: 87%;
+     margin-bottom: 20px;
+    height: 50px;
+    width: 80px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid #d7d6d6;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12) !important;
+ }
+
+ #home-footer div img {
+     height: 40px;
+     width: 40px;
+     border: 1px solid white;
+     border-radius: 40px;
+     margin-top: 5px;
+     margin-left: 18px;
+ }
+
 
 

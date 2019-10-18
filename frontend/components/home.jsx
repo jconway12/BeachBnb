@@ -17,6 +17,7 @@ const Home = props => {
         </header>
         <HomepageComponent />
         <CitiesIndex />
+        <footer id='home-footer'><a href="https://github.com/jconway12/BeachBnb"><div><img src={window.gitURL} /></div></a></footer>
       </div>
     </>
   )
