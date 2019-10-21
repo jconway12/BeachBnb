@@ -29,7 +29,7 @@ const Protected = ({ component: Component, path, loggedIn, exact }) => (
         path={path}
         exact={exact}
         render={props =>
-            loggedIn ? <Component {...props} /> : <Redirect to="/" /> //automaticaly open sign up modal?
+            loggedIn ? <Component {...props} /> : <Redirect to="/home/modal" /> //automaticaly open sign up modal?
         }
     />
 );

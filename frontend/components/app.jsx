@@ -14,6 +14,7 @@ import UpdateListingContainer from './listings/edit_listing_container';
 import SearchListings from './search/search_listings';
 import SearchBar from './search/search_bar';
 import ReservationShow from './reservations/reservation_show';
+import HomeModal from './homepage/home_modal';
 
 const App = props => {
   return (
@@ -37,6 +38,7 @@ const App = props => {
       <Route exact path="/listings" component={ListingIndexContainer} />
       <ProtectedRoute path="/profile" component={ProfileContainer} />
       <ProtectedRoute path="/trips" component={TripsContainer} />
+      <Route path="/home/modal" component={HomeModal} />
     </Switch>
   </div>
   </>
