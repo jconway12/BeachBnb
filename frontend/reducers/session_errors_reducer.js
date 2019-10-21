@@ -8,7 +8,7 @@ const SessionErrorsReducer = (state = [], action) => {
       if (action.errors.responseJSON) {
       return action.errors.responseJSON;
       } else {
-        return ["Invalid Crednetials"]; //FIX
+        return ["Invalid Crednetials"];
       }
     }
     case RESET_SESSION_ERRORS: {

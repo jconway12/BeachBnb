@@ -1,5 +1,6 @@
 To dos:
-- styling (dropdown go away on click/ redirect, new listing form/ profile, sign in nicer/ errors toggle, general UI/UX)
+- add more seeds
+- styling (dropdown go away on click/ redirect, new listing form/ profile, sign in nicer/ errors toggle (fix email error), general UI/UX)
 - Routes: make modal pop open if try to access protected route
 - Profile: can edit profile (add photo) - modal
 - Reservations: errors are insufficient, need to see unavailable dates, stay put with scroll

@@ -44,7 +44,7 @@ class SessionForm extends React.Component {
   }
 
   renderEmailError() {
-    if (this.props.errors.includes("Email can't be blank")) {
+    if (this.props.errors.includes("Email can't be blank") || this.props.errors.includes("Email is invalid")) {
       return <p class="session-error">Email is invalid</p>;
     }
   }
