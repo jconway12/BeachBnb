@@ -15,6 +15,14 @@ class NavBar extends React.Component {
     this.backToHome = this.backToHome.bind(this);
   }
 
+  componentDidMount() {
+    document.addEventListener('click', e => {
+      if (this.state.dropDown == true && (e.clientX < 700 || e.clientY > 100)) {
+        this.setState({ dropDown: false });
+      }
+    })
+  }
+
   dropDown() {
     if (!this.state.dropDown) {
     this.setState({dropDown: true});
