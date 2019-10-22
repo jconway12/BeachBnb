@@ -19,6 +19,7 @@ class ListingShow extends React.Component {
 
   componentDidMount() {
     // debugger
+    window.scrollTo(0, 0);
     this.props.fetchListing(this.props.listingId);
     this.props.fetchUser(this.props.ownerId);
   }
