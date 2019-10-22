@@ -23,6 +23,7 @@ class SearchItem extends React.Component {
         <div className="search-description">
           <h3>{this.props.listing.title} - {this.props.listing.num_beds} {beds}</h3>
           <p>{this.props.listing.description}</p>
+          <h4>${this.props.listing.rate} <div> / night</div></h4>
         </div>
         <div className="search-image">
           <img src={this.props.listing.photoURL} alt=""/>

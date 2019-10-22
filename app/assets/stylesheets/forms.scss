@@ -31,7 +31,7 @@ form {
      width: 385px;
      height: 40px;
      border-radius: 0px;
-     border: 2px solid rgb(237, 234, 234);
+     border: 1px solid rgb(237, 234, 234);
      font-size: 15px;
      font-family: 'Lato', sans-serif; 
      color: rgb(115, 131, 147);
@@ -244,12 +244,13 @@ div p input:hover {
 }
 
 #check-out input {
-    width: 160px;
+    width: 165px;
     border: 2px solid #ebebeb;
 }
 
 #check-in input {
-    width: 160px;
+    margin-top: 1px;
+    width: 195px;
     border: 2px solid #ebebeb;
 }
 

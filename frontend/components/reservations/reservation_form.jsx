@@ -91,8 +91,8 @@ class ReservationForm extends React.Component {
     return (
     <form onSubmit={this.submit}>
       <div className="date-range">
-      <label>
-        Start Date
+      <label className='start-date'>
+           Dates
         <br/>
         {/* <input type="date" value={this.state.start_date} onChange={this.update('start_date')}/> */}
           <SingleDatePicker
@@ -106,8 +106,7 @@ class ReservationForm extends React.Component {
           />
       </label>
 
-      <label>
-        End Date
+      <label className='end-date'>
         <br/>
         {/* <input type="date" value={this.state.end_date} onChange={this.update('end_date')} /> */}
           <SingleDatePicker

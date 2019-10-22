@@ -1,5 +1,6 @@
 To dos:
 - add more seeds
+- add price to search listings
 - styling (dropdown go away on click/ redirect, new listing form/ profile, sign in nicer/ errors toggle (fix email error), general UI/UX)
 - Profile: can edit profile (add photo) - modal
 - Reservations: errors are insufficient, need to see unavailable dates, stay put with scroll

@@ -126,7 +126,7 @@
 
  .date-range {
    display: flex;
-   justify-content: space-around;
+   justify-content: flex-start;
    margin-left: -25px;
  }
 
@@ -170,6 +170,11 @@
  .reservation-form form {
   width: 90%; 
   margin: 0 auto;
+ }
+
+ .reservation-form label {
+   font-size: 12px;
+   font-weight: 600;
  }
 
  #res-errors {

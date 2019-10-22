@@ -43,6 +43,26 @@
   font-size: 20px;
 }
 
+.search-description h3 {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.search-description h4 {
+  font-size: 20px;
+  display: flex;
+}
+
+.search-description h4 div {
+  font-weight: 300;
+  margin-left: 5px;
+}
+
+.search-description p {
+  font-size: 15px;
+  font-weight: 400;
+}
+
 //listing square image
 .search-image {
   height: 180px;
