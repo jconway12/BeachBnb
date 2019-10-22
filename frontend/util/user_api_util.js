@@ -14,3 +14,11 @@ export const updateUser = (formData, id) => {
     processData: false
   })
 }
+
+export const updateBio = (user) => {
+  return $.ajax({
+    method: 'PATCH',
+    url: `api/users/${user.id}`,
+    data: {user}
+  })
+}

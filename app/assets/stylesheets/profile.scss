@@ -117,3 +117,91 @@
   margin-right: 10px;
   margin-left: 0;
 }
+
+#prof-form form {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+#bio {
+  margin-left: 10px;
+  border-bottom: 1px solid rgb(201, 203, 205);
+  margin-bottom: 30px;
+}
+
+#edit-prof-link {
+  margin-left: 10px;
+  margin-top: -20px;
+     font-family: 'Lato', sans-serif;
+     color: rgb(65, 109, 186);
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+#prof-form {
+  width: 400px;
+}
+
+#prof-form input:focus {
+     outline-width: 0;
+    border: 2px solid rgb(65, 109, 186);
+} 
+
+#prof-form textarea:focus {
+       outline-width: 0;
+    border: 2px solid rgb(65, 109, 186);
+}
+
+#prof-form textarea {
+      width: 380px;
+     border-radius: 3px;
+     border: 1px solid rgb(237, 234, 234);
+     font-size: 15px;
+     font-family: 'Lato', sans-serif; 
+     color: rgb(115, 131, 147);
+}
+
+#prof-form input {
+  border-radius: 3px;
+}
+
+#save {
+    margin-left: 10px;
+  width: 50px;
+   color: white;
+     background-color: #1171F2;
+     height: 50px;
+     width: 100px;
+     border-radius: 10px;
+     margin-top: 20px;
+}
+
+#cancel {
+     color: rgb(65, 109, 186);
+     margin-left: 20px;
+     margin-top: 40px;
+}
+
+#save:hover {
+  cursor: pointer;
+}
+
+#cancel:hover {
+  cursor: pointer;
+}
+
+.options {
+  display: flex;
+}
+
+#prof-form label {
+  margin-top: 10px;
+}
+
+#bio p img {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}

@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 import {fetchListings} from '../../actions/listing_actions';
 import { fetchReservations } from '../../actions/reservation_actions';
 import { openModal, closeModal } from "../../actions/modal_actions";
-import { updateUser } from '../../actions/user_actions';
+import { updateBio } from '../../actions/user_actions';
 import ProfileForm from './profile_form';
 
 class Profile extends React.Component {
@@ -14,12 +14,13 @@ class Profile extends React.Component {
         super(props);
         this.handleModalClick = this.handleModalClick.bind(this);
         this.renderForm = this.renderForm.bind(this);
-        // this.state.form = false;
     }
 
     componentDidMount() {
         this.props.fetchListings();
         // this.props.fetchReservations(this.props.user.id);
+        const form = document.getElementById('prof-form');
+        form.style.height = "0px";
     }
 
     handleModalClick() {
@@ -27,7 +28,8 @@ class Profile extends React.Component {
     }
 
     renderForm() {
-        return <div className='prof-form'><ProfileForm user={this.props.user} updateUser={this.props.updateUser} /></div>;
+        const form = document.getElementById('prof-form');
+        form.style.height = "400px";
     }
 
     render() {
@@ -40,6 +42,7 @@ class Profile extends React.Component {
             }
         }
         const listingLabel = listings.length === 0 ? "You have no current listings" : "Your listings: ";
+    
         return  (
             <div className="profile-page covered-by-search">
                 <div className="profile-box">
@@ -56,10 +59,11 @@ class Profile extends React.Component {
                 </div>
                 <div className="profile-description">
                     <h1>Hi, I'm {this.props.user.first_name}</h1>
-                    <div onClick={this.renderForm}>Edit Profile</div>
+                    <div onClick={this.renderForm} id="edit-prof-link">Edit Profile</div>
+                    <div id='prof-form'><ProfileForm user={this.props.user} updateUser={this.props.updateUser} /></div>
                     <div id='bio'>
                         <p>{this.props.user.bio}</p>
-                        <p>{this.props.user.hometown}</p>
+                        <p><img src={window.houseURL} />Lives in {this.props.user.hometown}</p>
                     </div>
                     <div className="add-listing">
                       <Link to="/listings/new">Add New Listing</Link>
@@ -96,7 +100,7 @@ const mdp = dispatch => {
         fetchReservations: userId => dispatch(fetchReservations(userId)),
         closeModal: () => dispatch(closeModal()),
         openModal: modal => dispatch(openModal(modal)),
-        updateUser: user => dispatch(updateUser(user))
+        updateUser: user => dispatch(updateBio(user))
     }
 }
 

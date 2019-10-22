@@ -102,7 +102,7 @@ class SessionForm extends React.Component {
             </label>
           </form>
           {/* {this.renderSessionErrors()} */}
-          <p>Already have a Wherebnb account? <input type='submit' value="Log In" onClick={() => this.props.openModal('login')} /></p>
+          <p class='already'>Already have a Wherebnb account? <input type='submit' value="Log In" onClick={() => this.props.openModal('login')} /></p>
         </div>
       )
     } else {
@@ -125,7 +125,7 @@ class SessionForm extends React.Component {
             </label>
           </form>
           {this.renderErrors()}
-          <p>Don't have an account? <input type='submit' value="Sign Up" onClick={() => this.props.openModal('signup')} /> 
+          <p class='no-account'>Don't have an account? <input type='submit' value="Sign Up" onClick={() => this.props.openModal('signup')} /> 
           or <input type='submit' value="Demo Login" onClick={this.demoLogin} /></p>
         </div>
       )

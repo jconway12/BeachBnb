@@ -8,3 +8,7 @@ export const fetchUser = id => dispatch => {
 export const updateUser = (formData, id) => dispatch => {
   return UserUtil.updateUser(formData, id).then(user => {dispatch({type: RECEIVE_USER, user})});
 }
+
+export const updateBio = (user) => dispatch => {
+  return UserUtil.updateBio(user).then(user => { dispatch({ type: RECEIVE_USER, user }) });
+}
