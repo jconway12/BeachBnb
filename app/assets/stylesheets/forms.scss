@@ -254,5 +254,36 @@ div p input:hover {
     border: 2px solid #ebebeb;
 }
 
+.edit-user-form {
+    height: 300px;
+    width: 500px;
+    background-color: white;
+}
+
+.edit-user-form form {
+    margin-left: 50px;
+}
+
+.edit-user-form .button {
+     color: white;
+     background-color: #1171F2;
+     height: 50px;
+     width: 385px;
+     border-radius: 10px;
+     margin-top: 12px;
+     margin-left: 10px;
+}
+
+.edit-user-form .button:hover {
+    cursor: pointer;
+}
+
+.edit-user-form label {
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+
 
 

@@ -18,8 +18,19 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  def update 
+    debugger
+    @user = User.find(params[:id])
+    if @user && @user.update(user_params)
+      render :show
+      debugger
+    else
+      render json: ['Upload Error']
+    end
+  end
+
   private
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :password, :photo)
+    params.require(:user).permit(:first_name, :last_name, :email, :password, :photo, :bio, :hometown)
   end
 end

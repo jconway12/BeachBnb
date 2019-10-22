@@ -36,7 +36,7 @@
 .profile-description a {
        border: none;
      font-family: 'Lato', sans-serif;
-     color: rgb(135, 174, 240);
+     color: rgb(65, 109, 186);
     font-family: 'Lato', sans-serif;
     font-size: 20px;
     text-decoration: none;
@@ -61,3 +61,59 @@
   margin-left: -30px;
 }
 
+.edit-profile-link {
+  margin-left: 34%;
+  margin-top: 10px;
+  color: rgb(65, 109, 186);
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  // text-decoration: underline;
+}
+
+.edit-profile-link:hover {
+  cursor: pointer;
+}
+
+#reviews {
+  border-top: 1px solid rgb(201, 203, 205);
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 30px;
+}
+
+#provided {
+  border-top: 1px solid rgb(201, 203, 205);
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 10px;
+}
+
+.profile-box h3 div {
+  margin-top: 0px;
+  font-weight: 300;
+  font-family: 'Lato', sans-serif;
+  font-size: 17px;
+  color: rgb(65, 65, 65);
+}
+
+.profile-box h3 {
+  margin-top: 30px;
+  display: flex;
+}
+
+.profile-box h2 {
+  margin-top: 30px;
+    font-weight: 800;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  color: rgb(65, 65, 65);
+}
+
+.profile-box div img {
+  height: 20px;
+  width: 20px;
+  margin-top: 0;
+  margin-right: 10px;
+  margin-left: 0;
+}

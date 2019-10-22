@@ -5,11 +5,29 @@ import UpdateListingContainer from '../listings/edit_listing_container';
 import {Link} from 'react-router-dom';
 import {fetchListings} from '../../actions/listing_actions';
 import { fetchReservations } from '../../actions/reservation_actions';
+import { openModal, closeModal } from "../../actions/modal_actions";
+import { updateUser } from '../../actions/user_actions';
+import ProfileForm from './profile_form';
 
 class Profile extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleModalClick = this.handleModalClick.bind(this);
+        this.renderForm = this.renderForm.bind(this);
+        // this.state.form = false;
+    }
+
     componentDidMount() {
         this.props.fetchListings();
         // this.props.fetchReservations(this.props.user.id);
+    }
+
+    handleModalClick() {
+        this.props.openModal('user');
+    }
+
+    renderForm() {
+        return <div className='prof-form'><ProfileForm user={this.props.user} updateUser={this.props.updateUser} /></div>;
     }
 
     render() {
@@ -26,10 +44,23 @@ class Profile extends React.Component {
             <div className="profile-page covered-by-search">
                 <div className="profile-box">
                     <img src={this.props.user.photoURL} alt="" />
-                    {/* {ADD UPLOAD IMAGE FORM} */}
+                    <div className="edit-profile-link" onClick={this.handleModalClick}>Update Photo</div>
+                    <div id='reviews'>
+                        <h3><img src={window.checkURL} /> <div>0 reviews</div></h3>
+                        <h3><img src={window.checkURL} /> <div>Verified</div></h3>
+                    </div>
+                    <div id='provided'>
+                        <h2>{this.props.user.first_name} provided</h2>
+                        <h3><img src={window.checkURL} /> <div>Email Address</div></h3>
+                    </div>
                 </div>
                 <div className="profile-description">
                     <h1>Hi, I'm {this.props.user.first_name}</h1>
+                    <div onClick={this.renderForm}>Edit Profile</div>
+                    <div id='bio'>
+                        <p>{this.props.user.bio}</p>
+                        <p>{this.props.user.hometown}</p>
+                    </div>
                     <div className="add-listing">
                       <Link to="/listings/new">Add New Listing</Link>
                     </div>
@@ -63,6 +94,9 @@ const mdp = dispatch => {
     return {
         fetchListings: () => dispatch(fetchListings()),
         fetchReservations: userId => dispatch(fetchReservations(userId)),
+        closeModal: () => dispatch(closeModal()),
+        openModal: modal => dispatch(openModal(modal)),
+        updateUser: user => dispatch(updateUser(user))
     }
 }
 
