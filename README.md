@@ -1,7 +1,7 @@
 # README
 ## BeachBnb
 
-##Ruby version: 2.5.1
+### Ruby version: 2.5.1
 
 ## About
 BeachBnb is an application clone of Airbnb (https://www.airbnb.com/). Because this project was built with a time constraint, I was unable to clone all of Airbnb's many features. Instead, I aimed to attain the basic listing, reservation, and reviews structure. This README consists of design, features, schema, and code details.
@@ -56,5 +56,8 @@ BeachBnb was built using a Ruby on Rails backend with a React-Redux frontend. Th
 ## Search Code Snippet 
 ![Code Snippet](/images/code_snippet.png)
 Format: ![Alt Text](url)
+
+![alt text](/Users/jessicaconway/Desktop/bnb/bnb/app/assets/images/code_snippet.png)
+
 
 
