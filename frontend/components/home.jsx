@@ -26,3 +26,6 @@ const Home = props => {
 
 
 export default Home;
+
+
+{/* <a href="www.linkedin.com/in/jessica-conway-35120815b"><div>Linkdn img</div></a> */}

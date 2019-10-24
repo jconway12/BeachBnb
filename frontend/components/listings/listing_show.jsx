@@ -49,7 +49,9 @@ class ListingShow extends React.Component {
       <div className="description">
         <div>
           <h1>{listing.title}</h1>
-          <p>{listing.description}</p>
+          <p>Description:
+          <p id='desc'>{listing.description}</p>
+            </p>
 
         </div>
         <div className="profile-image">

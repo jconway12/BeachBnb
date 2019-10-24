@@ -19,7 +19,7 @@
 
 .description {
   // margin-left: 25%;
-  height: 500px;
+  height: 400px;
   width: 100%;
   background-color: white;
   position: relative;
@@ -38,6 +38,7 @@
   font-family: 'Lato', sans-serif;
   color: #484848;
   font-size: 20px;
+  font-weight: bold;
 }
 
 .description h1 {
@@ -45,7 +46,7 @@
   font-family: 'Lato', sans-serif;
   color: #484848;
   font-size: 40px;
-  width: 300px;
+  width: 360px;
 }
 
 // .reserve-form {
@@ -91,4 +92,9 @@
   position: absolute;
   top: 10px;
   left: 50%;
+}
+
+#desc {
+  margin-top: 10px;
+  font-weight: 400;
 }
