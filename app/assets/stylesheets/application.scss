@@ -35,14 +35,21 @@
  }
 
  #home-footer div {
-     margin-left: 87%;
-     margin-bottom: 20px;
+     margin-bottom: 30px;
     height: 50px;
     width: 80px;
     border-radius: 5px;
     background-color: white;
     border: 1px solid #d7d6d6;
     box-shadow: 0 10px 30px rgba(0,0,0,0.12) !important;
+ }
+
+ #home-footer div:first-of-type {
+    margin-right: 10px;
+ }
+
+  #home-footer div:last-of-type {
+     margin-right: 20px;
  }
 
  #home-footer div img {
@@ -52,6 +59,11 @@
      border-radius: 40px;
      margin-top: 5px;
      margin-left: 18px;
+ }
+
+ #home-footer {
+     display: flex;
+     justify-content: flex-end;
  }
 
 

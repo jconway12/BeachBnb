@@ -2,7 +2,7 @@ class Review < ApplicationRecord
     validates :body, :reviewable_type, presence: true
     validates :reviewable_type, inclusion: { in: ["Listing", "User"] }
     # validate :no_self_review
-
+    # validate :no_repeat
 
     has_one :author,
     foreign_key: :author_id,
@@ -24,4 +24,8 @@ class Review < ApplicationRecord
 
         false
     end
+
+    # def no_repeat
+
+    # end
 end

@@ -57,7 +57,6 @@ BeachBnb was built using a Ruby on Rails backend with a React-Redux frontend. Th
 ![Code Snippet](/images/code_snippet.png)
 Format: ![Alt Text](url)
 
-![alt text](/Users/jessicaconway/Desktop/bnb/bnb/app/assets/images/code_snippet.png)
 
 
 

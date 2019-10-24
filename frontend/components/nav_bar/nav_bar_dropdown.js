@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 class NavBarDropdown extends React.Component {
   constructor(props) {
@@ -8,7 +8,7 @@ class NavBarDropdown extends React.Component {
   }
 
   logoutHelper() {
-    this.props.logout();
+    this.props.logout().then(() => this.props.history.push("/"));
   }
 
   render() {
@@ -21,4 +21,4 @@ class NavBarDropdown extends React.Component {
   }
 }
 
-export default NavBarDropdown;
+export default withRouter(NavBarDropdown);

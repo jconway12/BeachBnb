@@ -17,7 +17,10 @@ const Home = props => {
         </header>
         <HomepageComponent />
         <CitiesIndex />
-        <footer id='home-footer'><a href="https://github.com/jconway12/BeachBnb"><div><img src={window.gitURL} /></div></a></footer>
+        <footer id='home-footer'>
+        <a href="https://github.com/jconway12/BeachBnb"><div><img src={window.gitURL} /></div></a>
+          <a href="https://www.linkedin.com/in/jessica-conway-35120815b"><div><img src={window.linkedinURL}/></div></a>
+        </footer>
       </div>
     </>
   )
@@ -27,5 +30,3 @@ const Home = props => {
 
 export default Home;
 
-
-{/* <a href="www.linkedin.com/in/jessica-conway-35120815b"><div>Linkdn img</div></a> */}

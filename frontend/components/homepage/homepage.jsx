@@ -80,14 +80,17 @@ class HomepageComponent extends React.Component {
     }
 
     render() {
-        // debugger
-        let start_date = this.state.start_date || new Date();
-        let end_date = this.state.end_date || new Date();
+        const today = new Date();
+        const tomorrow = new Date();
+        tomorrow.setDate(today.getDate() + 1);
+
+        let start_date = this.state.start_date || tomorrow;
+        let end_date = this.state.end_date || tomorrow;
         if (start_date === "null") {
-            start_date = new Date();
+            start_date = tomorrow;
         }
         if (end_date === "null") {
-            end_date = new Date();
+            end_date = tomorrow;
         }
         return (
             <div id='welcome-form'>

@@ -1,16 +1,19 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {createReview} from '../../actions/review_actions';
+import {withRouter} from 'react-router-dom';
 
 class ReviewForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.review;
+    this.submit = this.submit.bind(this);
+    this.update = this.update.bind(this);
   }
 
   submit(e) {
     e.preventDefault();
-    this.props.createReview(this.state);
+    this.props.createReview(this.state).then(() => this.props.history.push(`/users/${this.props.listing.owner_id}/listings/${this.props.listing.id}`));
   }
 
   update(e) {
@@ -25,19 +28,18 @@ class ReviewForm extends React.Component {
           <textarea value={this.state.body} onChange={this.update}/>
         </label>
 
-        <input type="submit" value="Add Review" onClick={this.submit}/>
+        <input id="review-button" type="submit" value="Add Review" onClick={this.submit}/>
       </form>
     )
   }
 }
 
 const msp = (state, ownProps) => {
-  // debugger
-  const author_id = state.session.id;
-  const reviewable_id = ownProps.match.params.listingId || state.session.id;
-  const reviewable_type = ownProps.match.params.listingId ? "Listing" : 'User';
+  const author_id = ownProps.user.id;
+  const reviewable_id = ownProps.listing.id || state.session.id;
+  const reviewable_type = "Listing";
   const review = { author_id, reviewable_id, reviewable_type, body: "" }
-  // debugger
+
   return {
     review
   }
@@ -50,4 +52,4 @@ const mdp = (dispatch) => {
   }
 }
 
-export default connect(msp, mdp)(ReviewForm);
+export default withRouter(connect(msp, mdp)(ReviewForm));
