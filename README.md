@@ -47,7 +47,7 @@ BeachBnb was built using a Ruby on Rails backend with a React-Redux frontend. Th
 * * map detailing listings locations
 
 ## Schema 
-# Tables 
+### Tables 
 * users 
 * listings 
 * reservations
