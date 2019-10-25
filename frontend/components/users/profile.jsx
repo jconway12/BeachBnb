@@ -8,6 +8,7 @@ import { fetchReservations } from '../../actions/reservation_actions';
 import { openModal, closeModal } from "../../actions/modal_actions";
 import { updateBio } from '../../actions/user_actions';
 import ProfileForm from './profile_form';
+import HostResShow from './host_reservation_show';
 
 class Profile extends React.Component {
     constructor(props) {

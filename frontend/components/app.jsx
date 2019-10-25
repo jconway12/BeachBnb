@@ -15,6 +15,7 @@ import SearchListings from './search/search_listings';
 import SearchBar from './search/search_bar';
 import ReservationShow from './reservations/reservation_show';
 import HomeModal from './homepage/home_modal';
+import HostProfile from './users/host_profile';
 
 const App = props => {
   return (
@@ -22,7 +23,7 @@ const App = props => {
   <div>
     <Modal />
     <div id="white-nav">
-          <Route path={["/listings", "/profile", "/trips", "/users/:userId/listings", "/search"]} component={NavBarContainer} />
+          <Route path={["/listings", "/profile", "/trips", "/users/:userId/listings", "/search", "/host/:userId/profile"]} component={NavBarContainer} />
     </div>
       <Route exact path="/" component={Home} />
   </div>
@@ -36,6 +37,7 @@ const App = props => {
       <ProtectedRoute path="/listings/:listingId/reservations" component={ReservationShow}/>
       <Route exact path="/listings/:city" component={ListingIndexContainer} />
       <Route exact path="/listings" component={ListingIndexContainer} />
+      <ProtectedRoute path="/host/:userId/profile" component={HostProfile} />
       <ProtectedRoute path="/profile" component={ProfileContainer} />
       <ProtectedRoute path="/trips" component={TripsContainer} />
       <Route path="/home/modal" component={HomeModal} />

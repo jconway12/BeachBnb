@@ -5,6 +5,7 @@ import ReservationForm from '../reservations/reservation_form';
 import ListingMap from './listing_map';
 import {fetchUser} from '../../actions/user_actions';
 import ReviewIndex from '../reviews/review_index';
+import {Link} from 'react-router-dom';
 
 class ListingShow extends React.Component {
   constructor(props) {
@@ -54,9 +55,10 @@ class ListingShow extends React.Component {
             </p>
 
         </div>
-        <div className="profile-image">
+          <Link to={`/host/${owner.id}/profile`}><div className="profile-image">
             <img src={owner.photoURL} alt="" />
-        </div>
+            <p id="owner">{owner.first_name}</p>
+          </div></Link>
       </div>
       <div className="reserve-form">
         <div className="res-text">

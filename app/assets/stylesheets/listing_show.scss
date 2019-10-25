@@ -94,6 +94,17 @@
   left: 50%;
 }
 
+#owner {
+  position: absolute;
+  top: 50px;
+  left: 51%;
+  font-size: 15px;
+  font-weight: 400;
+    font-family: 'Lato', sans-serif;
+  color: #484848;
+  width: 80px;
+}
+
 #desc {
   margin-top: 10px;
   font-weight: 400;
