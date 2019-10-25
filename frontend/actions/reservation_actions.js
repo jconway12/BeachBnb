@@ -15,6 +15,10 @@ export const fetchReservations = (userId)=> dispatch => {
     return ResAPI.fetchReservations(userId).then(reses => { dispatch({ type: RECEIVE_RESERVATIONS, reservations: reses})});
 }
 
+export const fetchAllReservations = () => dispatch => {
+    return ResAPI.fetchAllReservations().then(reses => { dispatch({ type: RECEIVE_RESERVATIONS, reservations: reses }) });
+}
+
 export const createRes = res => dispatch => {
     // debugger
     res.start_date = String(res.start_date);

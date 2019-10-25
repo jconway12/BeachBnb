@@ -5,9 +5,13 @@ class Api::ReservationsController < ApplicationController
     end
 
     def index 
-        user = User.find(params[:user_id])
-        @reservations = user.reservations
-
+        if params[:user_id] 
+            user = User.find(params[:user_id])
+            @reservations = user.reservations
+        else 
+           @reservations = Reservation.all 
+        end
+        
         render :index
     end
 

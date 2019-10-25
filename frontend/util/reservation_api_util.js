@@ -5,6 +5,13 @@ export const fetchReservations = (userId) => {
     })
 }
 
+export const fetchAllReservations = () => {
+    return $.ajax({
+        method: 'GET',
+        url: `api/reservations`,
+    })
+}
+
 export const fetchRes = id => {
     return $.ajax({
         method: 'GET',

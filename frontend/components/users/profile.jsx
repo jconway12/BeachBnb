@@ -16,6 +16,7 @@ class Profile extends React.Component {
         this.handleModalClick = this.handleModalClick.bind(this);
         this.renderForm = this.renderForm.bind(this);
         this.modalHelper = this.modalHelper.bind(this);
+        // this.mouseOver = this.mouseOver.bind(this);
     }
 
     componentDidMount() {
@@ -37,6 +38,11 @@ class Profile extends React.Component {
     modalHelper() {
         this.props.openModal('listing');
     }
+
+    // mouseOver(id) {
+    //     const ele = document.getElementById(id);
+    //     ele.addAttribute('style', 'height: 10px');
+    // }
 
     render() {
         const all_listings = this.props.listings || [];
@@ -80,7 +86,7 @@ class Profile extends React.Component {
                         <h3>{listingLabel}</h3>
                         {listings.map(lis => {
                             return (
-                                <li key={lis.id}>{lis.title}</li>
+                                <Link to={`/host/listings/${lis.id}/reservations`} className="listing-links" key={lis.id}><li>{lis.title}</li></Link>
                                 )
                         })}  
                 </ul>

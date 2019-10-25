@@ -55,10 +55,10 @@ class ListingShow extends React.Component {
             </p>
 
         </div>
-          <Link to={`/host/${owner.id}/profile`}><div className="profile-image">
-            <img src={owner.photoURL} alt="" />
-            <p id="owner">{owner.first_name}</p>
-          </div></Link>
+          <div className="profile-image">
+            <Link to={`/host/${owner.id}/profile`}><img src={owner.photoURL} alt="" />
+            <p id="owner">{owner.first_name}</p></Link>
+          </div>
       </div>
       <div className="reserve-form">
         <div className="res-text">
