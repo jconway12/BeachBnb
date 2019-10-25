@@ -1,11 +1,12 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {closeModal} from '../../actions/modal_actions';
+import {createListing} from "../../actions/listing_actions";
 
 class ListingForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = this.props.listing;
-        this.state.dropDown = false;
+        this.state = {...this.props.listing, dropDown: false};
         this.photoFile = null;
         this.update = this.update.bind(this);
         this.submit = this.submit.bind(this);
@@ -40,7 +41,7 @@ class ListingForm extends React.Component {
         formData.append('listing[num_beds]', this.state.num_beds);
         formData.append('listing[rate]', this.state.rate);
 
-        this.props.action(formData).then(() => this.props.history.push("/profile"));
+        this.props.action(formData).then(() => this.props.closeModal());
     }
 
     dropDown() {
@@ -78,10 +79,9 @@ class ListingForm extends React.Component {
 
     render() {
         return (
-            <>
-        <h1 id="new-listing-title">New Listing:</h1>
         <div className="listing-form">
         <form onSubmit={this.submit}>
+            <div onClick={this.props.closeModal} id="listing-x">X</div>
             <label>
                 Title
                 <br />
@@ -133,13 +133,27 @@ class ListingForm extends React.Component {
            </label>
 
             <label className='button'>
-             <input type="submit" value={this.props.formType} onClick={this.submit}/>
+             <input type="submit" value='Create Listing' onClick={this.submit}/>
             </label>
         </form>
         </div >
-        </>
         )
     }
 }
 
-export default ListingForm;
+const msp = state => {
+    const currUserId = state.session.id;
+    const listing = { owner_id: currUserId, title: "", description: "", rate: 0, num_beds: 1, city: "", lat: null, lng: null };
+    return {
+        listing
+    }
+}
+
+const mdp = dispatch => {
+    return {
+        closeModal: () => dispatch(closeModal()),
+        action: listing => dispatch(createListing(listing))
+    }
+}
+
+export default connect(msp, mdp)(ListingForm);

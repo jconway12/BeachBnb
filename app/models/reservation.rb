@@ -1,6 +1,7 @@
 class Reservation < ApplicationRecord 
     validates :start_date, :end_date, :num_guests, presence: true 
     validate :no_overlap
+    validate :no_self_booking
 
     after_initialize :set_passed
 
@@ -61,5 +62,14 @@ class Reservation < ApplicationRecord
         end
 
         true
+    end
+
+    def no_self_booking 
+        #need validation on not booking your own listing
+        user = User.find(self.renter_id)
+        listing = Listing.find(self.listing_id)
+        if user.listings.include?(listing)
+            errors[:renter_id] << 'Cannot book own listing'
+        end
     end
 end

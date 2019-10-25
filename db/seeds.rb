@@ -91,10 +91,10 @@ listing18.save!
 listing19.save!
 listing20.save!
 
-res1 = Reservation.create!(listing_id: listing1.id, renter_id: user1.id, start_date: Date.new(2019, 12, 1), end_date: Date.new(2020, 1, 2), num_guests: 1)
+res1 = Reservation.create!(listing_id: listing1.id, renter_id: user2.id, start_date: Date.new(2019, 12, 1), end_date: Date.new(2020, 1, 2), num_guests: 1)
 res4 = Reservation.create!(listing_id: listing2.id, renter_id: demoUser.id, start_date: Date.new(2019, 12, 20), end_date: Date.new(2020, 1, 15), num_guests: 2)
-res2 = Reservation.create!(listing_id: listing1.id, renter_id: user1.id, start_date: Date.new(2019, 1, 6), end_date: Date.new(2019, 1, 10), num_guests: 3)
-res3 = Reservation.create!(listing_id: listing2.id, renter_id: demoUser.id, start_date: Date.new(2019, 1, 1), end_date: Date.new(2019, 1, 5), num_guests: 2)
+res2 = Reservation.create!(listing_id: listing5.id, renter_id: user2.id, start_date: Date.new(2019, 1, 6), end_date: Date.new(2019, 1, 10), num_guests: 3)
+res3 = Reservation.create!(listing_id: listing4.id, renter_id: demoUser.id, start_date: Date.new(2019, 1, 1), end_date: Date.new(2019, 1, 5), num_guests: 2)
 
 user1.photo.attach(io: File.open("app/assets/images/user1.jpg"), filename: "user1.jpg")
 user2.photo.attach(io: File.open("app/assets/images/user2.jpg"), filename: "user2.jpg")
@@ -114,7 +114,6 @@ review10 = Review.create!(author_id: demoUser.id, body: "Great place in a great 
 review11 = Review.create!(author_id: user2.id, body: "Hated it", reviewable_id: listing7.id, reviewable_type: 'Listing')
 review12 = Review.create!(author_id: user3.id, body: "Wonderful place with a wonderful host, 10/10 would stay again", reviewable_id: listing8.id, reviewable_type: 'Listing')
 review13 = Review.create!(author_id: demoUser.id, body: "Great place in a great location", reviewable_id: listing3.id, reviewable_type: 'Listing')
-review14 = Review.create!(author_id: user2.id, body: "Hated it", reviewable_id: listing3.id, reviewable_type: 'Listing')
 review15 = Review.create!(author_id: user3.id, body: "Wonderful place with a wonderful host, 10/10 would stay again", reviewable_id: listing3.id, reviewable_type: 'Listing')
 review16 = Review.create!(author_id: demoUser.id, body: "Great place in a great location", reviewable_id: listing9.id, reviewable_type: 'Listing')
 review17 = Review.create!(author_id: user2.id, body: "Hated it", reviewable_id: listing9.id, reviewable_type: 'Listing')

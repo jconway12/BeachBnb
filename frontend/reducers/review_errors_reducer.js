@@ -4,7 +4,11 @@ const RevErrorsReducer = (state = [], action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_REV_ERRORS: {
-      return action.errors.responseJSON;
+      if (action.errors) {
+        return action.errors.responseJSON;
+      } else {
+        return state;
+      }
     }
     default: 
     return state;

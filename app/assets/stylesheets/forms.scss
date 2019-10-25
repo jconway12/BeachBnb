@@ -225,17 +225,28 @@ div p input:hover {
 
 .listing-form {
         border: 1px solid rgb(250, 250, 250);
-     border-radius: 7px;
+     border-radius: 2px;
       box-shadow: 0 8px 25px rgba(0,0,0,0.12) !important;
-    margin-top: 0px;
-    margin-left: 30%;
-    height: 650px;
+    margin-top: 1%;
+    margin-left: 1%;
+    height: 610px;
     width: 500px;
+    background-color: white;
 }
 
 .listing-form form {
-    margin-top: 100px;
-    margin-left: 50px;
+    margin-top: 70px;
+    margin-left: 45px;
+}
+
+#listing-x {
+    margin-left: 120%;
+    margin-top: 45px;
+    margin-bottom: -15px;
+}
+
+#listing-x:hover {
+    cursor: pointer;
 }
 
 #check-out {
@@ -281,6 +292,7 @@ div p input:hover {
 .edit-user-form label {
     font-family: 'Lato', sans-serif;
 }
+
 
 
 

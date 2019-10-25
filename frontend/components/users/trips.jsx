@@ -40,17 +40,19 @@ class Trips extends React.Component {
                         return <ListingItem key={idx} listing={lis} upcoming={true}/>;
                     })}
                 </ul>
+                <div id="lower">
                 <h1 id="covered">Where You've Been</h1>
                 <ul className='trips-index'>
                     {old_listings.map((lis, idx) => {
                         return (
-                         <div className="past-trips">
-                            <ListingItem key={idx} listing={lis} />
+                        <div className="past-trips" key={idx}>
+                            <ListingItem listing={lis} />
                             <ReviewForm listing={lis} user={this.props.user} />
                          </div>
                         )
                     })}
                 </ul>
+                </div>
             </div>
         )
     }

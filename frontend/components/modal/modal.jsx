@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import LoginFormContainer from '../session_forms/login_container';
 import SignupFormContainer from '../session_forms/signup_container';
 import EditUserContainer from '../users/edit_user_form';
+import ListingForm from '../listings/listing_form';
 
 function Modal({ modal, closeModal }) {
   if (!modal) {
@@ -19,6 +20,9 @@ function Modal({ modal, closeModal }) {
       break;
     case 'user':
       component = <EditUserContainer />
+      break;
+    case 'listing':
+      component = <ListingForm />
       break;
     default:
       return null;

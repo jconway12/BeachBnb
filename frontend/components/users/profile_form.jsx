@@ -43,7 +43,7 @@ class ProfileForm extends React.Component {
                     <br />
                     <input type="text" value={this.state.hometown} onChange={this.update('hometown')}/>
                 </label>
-                <div class='options'>
+                <div className='options'>
                 <input id='save' type="submit" value='Save' onClick={this.submit}/>
                 <div id='cancel' onClick={this.close}>cancel</div>
                 </div>

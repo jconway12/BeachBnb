@@ -14,6 +14,7 @@ class Profile extends React.Component {
         super(props);
         this.handleModalClick = this.handleModalClick.bind(this);
         this.renderForm = this.renderForm.bind(this);
+        this.modalHelper = this.modalHelper.bind(this);
     }
 
     componentDidMount() {
@@ -30,6 +31,10 @@ class Profile extends React.Component {
     renderForm() {
         const form = document.getElementById('prof-form');
         form.style.height = "400px";
+    }
+
+    modalHelper() {
+        this.props.openModal('listing');
     }
 
     render() {
@@ -66,7 +71,8 @@ class Profile extends React.Component {
                         <p><img src={window.houseURL} />Lives in {this.props.user.hometown}</p>
                     </div>
                     <div className="add-listing">
-                      <Link to="/listings/new">Add New Listing</Link>
+                      {/* <Link to="/listings/new">Add New Listing</Link> */}
+                      <div id="add-listing" onClick={this.modalHelper}>Add New Listing</div>
                     </div>
                 
                 <ul className='listings'>
