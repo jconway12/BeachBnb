@@ -1,6 +1,5 @@
 To dos:
 - Reservations: errors are insufficient, need to see unavailable dates, stay put with scroll
-    - reservation showpage for hosts?? on click on profile?
 - styling (sign in errors toggle, general UI/UX)
 - Google maps markers: must be a way to view listing related to marker 
 - Search: date and bounds search does not function, date buttons on search bar when working (styling is hard) (OVERALL REWORK THE QUERYING)
