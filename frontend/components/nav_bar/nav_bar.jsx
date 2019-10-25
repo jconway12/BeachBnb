@@ -17,7 +17,7 @@ class NavBar extends React.Component {
 
   componentDidMount() {
     document.addEventListener('click', e => {
-      if (this.state.dropDown == true && (e.clientX < 700 || e.clientY > 100)) {
+      if (this.state.dropDown == true && (e.clientY > 80)) {
         this.setState({ dropDown: false });
       }
     })
