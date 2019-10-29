@@ -39,7 +39,7 @@ class HostProfile extends React.Component {
                 <div className="profile-box">
                     <img src={user.photoURL} alt="" />
                     <div id='reviews'>
-                        <h3><img src={window.checkURL} /> <div>0 reviews</div></h3>
+                        <h3><img src={window.checkURL} /> <div>0 reviews by hosts</div></h3>
                         <h3><img src={window.checkURL} /> <div>Verified</div></h3>
                     </div>
                     <div id='provided'>

@@ -66,3 +66,28 @@
   font-weight: bold;
   margin-left: 26%;
 }
+
+.rev-body {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 5;
+}
+
+.delete-review {
+  margin: 0;
+  height: 30px;
+  width: 80px;
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 5px;
+  background-color: #1171F2;
+  color: white;
+  font-size: 10px;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+
+.delete-review:hover {
+  cursor: pointer;
+}

@@ -61,7 +61,7 @@ class Profile extends React.Component {
                     <img src={this.props.user.photoURL} alt="" />
                     <div className="edit-profile-link" onClick={this.handleModalClick}>Update Photo</div>
                     <div id='reviews'>
-                        <h3><img src={window.checkURL} /> <div>0 reviews</div></h3>
+                        <h3><img src={window.checkURL} /> <div>0 reviews by hosts</div></h3>
                         <h3><img src={window.checkURL} /> <div>Verified</div></h3>
                     </div>
                     <div id='provided'>

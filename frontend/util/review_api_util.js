@@ -18,14 +18,14 @@ export const createReview = review => {
 export const updateReview = review => {
   return $.ajax({
     method: 'PATCH',
-    url: `api/reviews${review.id}`,
+    url: `api/reviews/${review.id}`,
     data: {review}
   })
 }
 
 export const deleteReview = id => {
   return $.ajax({
-    method: "POST",
-    url: `api/reviews${id}`,
+    method: "DELETE",
+    url: `api/reviews/${id}`,
   });
 }
