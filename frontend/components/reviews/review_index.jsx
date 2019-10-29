@@ -13,12 +13,16 @@ class ReviewIndex extends React.Component {
   render() {
     const reviews = this.props.reviews || [];
     // debugger
+    const noReviews = this.props.reviews.length === 0 ? <h4 id="no-reviews">0 reviews</h4> : null;
     return (
+      <>
+      {noReviews}
       <ul className="reviews">
         {reviews.map(review => {
           return <ReviewItem key={review.id} review={review} authorId={review.author_id} fetchUser={this.props.fetchUser}/>
         })}
       </ul>
+      </>
     )
   }
 }

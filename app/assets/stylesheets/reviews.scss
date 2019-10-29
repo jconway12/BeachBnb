@@ -3,6 +3,16 @@
   width: 60%;
 } 
 
+.reviews-container h3 {
+  margin-left: 25%;
+  margin-top: 0px;
+  margin-bottom: 5px;
+    font-family: 'Lato', sans-serif;
+  color: #484848;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 //ul
 .reviews {
   width: 500px;
@@ -10,7 +20,7 @@
   flex-direction: column;
   justify-content: flex-start;
   list-style: none;
-  margin-left: 25%;
+  margin-left: 21%;
 }
 
 //div w/ img and h5
@@ -47,4 +57,12 @@
 .reviews li p {
   color: #484848;
   font-family: 'Lato', sans-serif; 
+}
+
+#no-reviews {
+      font-family: 'Lato', sans-serif;
+  color: #484848;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 26%;
 }

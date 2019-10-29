@@ -69,6 +69,7 @@ class ListingShow extends React.Component {
         </div>
       </div>
       <div className="reviews-container">
+        <h3>Reviews:</h3>
         <ReviewIndex reviewableId={this.props.listingId} reviewableType={"Listing"}/>
       </div>
       <div className="map-container">
