@@ -53,9 +53,15 @@ BeachBnb was built using a Ruby on Rails backend with a React-Redux frontend. Th
 * reservations
 * reviews 
 
+## Homepage 
+![Picture](https://user-images.githubusercontent.com/48730725/67796550-9d051c00-fa56-11e9-87c9-47a670109ac6.png)
+
+## Homepage Popular Cities Index
+![Picture](https://user-images.githubusercontent.com/48730725/67796584-aabaa180-fa56-11e9-8d2b-52ad358e5a8e.png)
+
 ## Search Code Snippet 
-![Code Snippet](/images/code_snippet.png)
-Format: ![Alt Text](url)
+![Picture](https://user-images.githubusercontent.com/48730725/67796678-d178d800-fa56-11e9-8e5c-65400a71753d.png)
+
 
 
 
