@@ -17,6 +17,7 @@ import ReservationShow from './reservations/reservation_show';
 import HomeModal from './homepage/home_modal';
 import HostProfile from './users/host_profile';
 import HostResShowContainer from './users/host_reservation_show';
+import Footer from './footer';
 
 const App = props => {
   return (
@@ -44,6 +45,7 @@ const App = props => {
       <ProtectedRoute path="/trips" component={TripsContainer} />
       <Route path="/home/modal" component={HomeModal} />
     </Switch>
+      <Route path={["/listings", "/profile", "/trips", "/users/:userId/listings", "/search", "/host/:userId/profile", "/host/listings/:listingId/reservations"]} component={Footer} />
   </div>
   </>
   )

@@ -40,8 +40,8 @@
     width: 80px;
     border-radius: 5px;
     background-color: white;
-    border: 1px solid #d7d6d6;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.12) !important;
+    border: 1px solid #f2f1f1;
+    box-shadow: 0 10px 30px rgba(41, 41, 41, 0.12) !important;
  }
 
  #home-footer div:first-of-type {
@@ -64,6 +64,7 @@
  #home-footer {
      display: flex;
      justify-content: flex-end;
+     margin-top: 10px;
  }
 
 
