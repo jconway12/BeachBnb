@@ -1,4 +1,5 @@
 To dos:
+- search bar dropdown
 - Reservations: errors are insufficient, need to see unavailable dates, stay put with scroll
 - styling (sign in errors toggle, general UI/UX)
 - Google maps markers: must be a way to view listing related to marker 
@@ -10,13 +11,3 @@ To dos:
 
 
 npm install webpack webpack-cli react react-dom react-redux redux redux-logger @babel/core @babel/preset-react @babel/preset-env babel-loader
-
-
-ADD RESERVTIONS TO JBUILDER: - not rlly working
-    reservations = @listing.reservations || []
-    resIds = []
-    reservations.each do |res|
-        resIds << res.id
-    end
-    json.reservations resIds
-

@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {withRouter} from 'react-router-dom';
+import SearchAutocomplete from './search_autocomplete';
 //text input for city
 //button for beds w/ min and max on dropdown 
 //button for bed w/ min max on dropdown
@@ -8,7 +9,7 @@ import {withRouter} from 'react-router-dom';
 class SearchBar extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {bounds: {}, min_beds: 1, max_beds: 5, max_price: 200, min_price: 10, city: "", start_date: null, end_date: null};
+        this.state = {bounds: {}, min_beds: 1, max_beds: 5, max_price: 200, min_price: 10, city: "", start_date: null, end_date: null, auto: false};
         this.state.PriceDropDown = false;
         this.state.BedDropDown = false;
         this.update = this.update.bind(this);
@@ -19,11 +20,29 @@ class SearchBar extends React.Component {
         this.renderPriceDropDown = this.renderPriceDropDown.bind(this);
         this.increaseField = this.increaseField.bind(this);
         this.decreaseField = this.decreaseField.bind(this);
+        this.renderAuto = this.renderAuto.bind(this);
+        this.focus = this.focus.bind(this);
+    }
+
+    focus() {
+        // debugger
+        this.setState({auto: true});
+    }
+ 
+    renderAuto(val) {
+        // debugger
+        if (this.state.auto && this.state.city != "") {
+            return <SearchAutocomplete value={val}/>;
+        }
     }
 
     update(filter) {
         return e => {
             this.setState({[filter]: e.target.value});
+            //if filter is city => want to update autocomplete component state
+            if (filter === "city") {
+                this.setState({auto: true})
+            }
         }
     }
 
@@ -31,7 +50,9 @@ class SearchBar extends React.Component {
         e.preventDefault();
         delete this.state.PriceDropDown;
         delete this.state.BedDropDown;
-        this.props.history.push(`/search/${this.state.bounds}/${this.state.city}/${this.state.min_price}/${this.state.max_price}/${this.state.min_beds}/${this.state.max_beds}/${this.state.start_date}/${this.state.end_date}`)
+        delete this.state.auto;
+        const city = document.getElementById("search-bar-input").value === "" ? "null" : document.getElementById("search-bar-input").value;
+        this.props.history.push(`/search/${this.state.bounds}/${city}/${this.state.min_price}/${this.state.max_price}/${this.state.min_beds}/${this.state.max_beds}/${this.state.start_date}/${this.state.end_date}`)
     }
 
     PriceDropDown() {
@@ -109,11 +130,16 @@ class SearchBar extends React.Component {
     }
 
     render() {
+        let city = this.state.city;
+        if (document.getElementById("search-bar-input") && document.getElementById("search-bar-input").value != "") {
+            city = document.getElementById("search-bar-input").value;
+        }
+
         return (
         <div id="search-bar">
             <form onSubmit={this.submit}>
-                    <input type="text" value={this.state.city} placeholder="     Try 'Montevideo'" onChange={this.update('city')}/>
-
+                    <input type="text" id="search-bar-input" value={city} placeholder="'Try 'Montevideo'" onChange={this.update('city')} onClick={this.focus} />
+                    {this.renderAuto(this.state.city)}
                 <div className="filters">
                 <div className="filter-button" onClick={this.PriceDropDown}>Price</div>
                 <div id="price-dropdown-holder">{this.renderPriceDropDown()}</div>
