@@ -1,12 +1,12 @@
 To dos:
 - search bar dropdown
-- Reservations: errors are insufficient, need to see unavailable dates, stay put with scroll
+- Reservations: errors are insufficient, need to see unavailable dates, stay put with scroll, reservation cancelation
 - styling (sign in errors toggle, general UI/UX)
 - Google maps markers: must be a way to view listing related to marker 
 - Search: date and bounds search does not function, date buttons on search bar when working (styling is hard) (OVERALL REWORK THE QUERYING)
 - Efficiency: N+1 queries, normalize state using jbuilder (reviews, listings) (instead of complicated fetching)
 - Profile: host/ renter profiles should be available w/ reviews to relevant users (overall bare)
-- Reviews: currently only for listings, not using review form (where have you been), add rating capability (avg. rating for listings, filter..)
+- Reviews: currently only for listings, not using review form (where have you been), add rating capability (avg. rating for listings, filter..), add backend validation on reservation
 - New Listing: lat/ lng pre-fill, image preview, make prettier
 
 

@@ -138,7 +138,7 @@ class SearchBar extends React.Component {
         return (
         <div id="search-bar">
             <form onSubmit={this.submit}>
-                    <input type="text" id="search-bar-input" value={city} placeholder="'Try 'Montevideo'" onChange={this.update('city')} onClick={this.focus} />
+                    <input autocomplete="off" type="text" id="search-bar-input" value={city} placeholder="'Try 'Montevideo'" onChange={this.update('city')} onClick={this.focus} />
                     {this.renderAuto(this.state.city)}
                 <div className="filters">
                 <div className="filter-button" onClick={this.PriceDropDown}>Price</div>
